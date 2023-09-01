@@ -1,0 +1,49 @@
+이미지 alt 부분 반드시 수정할 것
+
+브랜드
+이미지 bw2.jpg
+브랜드img.jpg
+bw_book1.jpg
+bw_book2.jpg
+kcy_book1.png
+kcy_book2.png
+
+김초엽 - <지구 끝의 온실>, <우리가 빛의 속도로 갈 수 없다면>
+베르나르 베르베르 - <기억>, <심판>
+줄리언 반스 - <예감은 틀리지 않는다>
+
+---
+장강명 - <댓글부대>
+히가시노 게이고 - <나미야 작화점의 기적>
+
+//동작
+베르나르 베르베르의 말 중
+전진을 멈추지 말 것에 깜빡거리는 효과??넣기
+
+
+// 폰트
+Playfair Display - 영어
+IBM Plex Sans KR - 한글
+Song Myung - 한글
+
+//
+김초엽 영어
+Kim ChoYeop
+베르나르 베르베르
+Bernard Werber
+//
+김초엽 작가 <우리가 빛의 속도로 갈 수 없다면> 표지 출처
+http://xyzorba.co.kr/?p=2857
+베르나르 베르베르 작가 얼굴사진 1 2출처
+https://m.blog.naver.com/deartravel/223114562335
+
+베르나르 베르베르 북1 출처
+https://www.yes24.com/Product/Goods/91860730?pid=123487&cosemkid=go15988569107483523&gclid=EAIaIQobChMI0Nmau7L3gAMVvGwPAh0wgwSLEAAYASAAEgIUE_D_BwE
+
+김초엽 - 지구 끝의 온실 표지 출처
+교보문고 홈페이지 지구 끝의 온실 검색 후 표지 저장
+베르나르 베르베르 - 심판 표지 출처
+교보문고 홈페이지 심판 검색 후 표지 저장
+
+슬라이드 속 책 설명 출처
+알라딘 책소개

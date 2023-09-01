@@ -1,0 +1,496 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@600&family=Raleway:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Song+Myung&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ol, ul, li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  width: 100%;
+}
+header .inner {
+  width: 100%;
+  height: 100px;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+header .inner h1 a {
+  font: bold 40px/1 "Playfair Display";
+  color: #222;
+}
+header .inner nav #gnb {
+  display: flex;
+}
+header .inner nav #gnb li {
+  width: 100%;
+}
+header .inner nav #gnb li a {
+  display: block;
+  padding: 10px 20px;
+  font: bold 20px/1 "IBM Plex Sans KR";
+  color: #777;
+}
+header .inner nav #gnb li a::after {
+  content: "";
+  display: block;
+  width: 100%;
+  margin-bottom: -2px;
+  border-bottom: 2px solid black;
+  background-color: #222;
+  opacity: 0;
+}
+header .inner nav #gnb li a:hover {
+  color: #222;
+}
+header .inner nav #gnb li a:hover::after {
+  opacity: 1;
+}
+
+#banner {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.05);
+  position: relative;
+}
+#banner .inner {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+  background-image: url(../img/Bernard_Werber1.png);
+  background-position: left center;
+  background-position-x: 20%;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+#banner .inner p {
+  font: bold 50px/1.5 "IBM Plex Sans KR";
+  letter-spacing: 4px;
+  position: absolute;
+  top: 10%;
+  right: 19%;
+  text-align: right;
+  color: #000;
+}
+#banner .inner p span {
+  color: #8b8687;
+}
+
+#news {
+  width: 100%;
+  height: 104vh;
+  position: relative;
+}
+#news .inner h1 {
+  font: bold 55px/1.2 "IBM Plex Sans KR";
+  letter-spacing: 4px;
+  text-align: left;
+  position: absolute;
+  top: 20%;
+  left: 15%;
+  color: #222;
+}
+#news .inner h1 span {
+  color: #566270;
+}
+#news .inner h1 p {
+  position: absolute;
+  bottom: -50%;
+  right: 0;
+  font-size: 20px;
+}
+#news .inner .wrap {
+  width: 100%;
+  background-color: #e3dede;
+  position: absolute;
+  bottom: 0vh;
+}
+#news .inner .wrap nav {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#news .inner .wrap nav a {
+  font: 15px/1 "IBM Plex Sans KR";
+  color: #999;
+  position: relative;
+}
+#news .inner .wrap nav a::after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 100%;
+  right: 50%;
+  background-color: #222;
+  opacity: 0;
+  transition: 0.5s;
+}
+#news .inner .wrap nav a::before {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 100%;
+  left: 50%;
+  background-color: #222;
+  opacity: 0;
+  transition: 0.5s;
+}
+#news .inner .wrap nav a.on {
+  background-color: #000;
+  color: #fff;
+  transition: 0.5s;
+}
+#news .inner .wrap nav a.on::after {
+  right: 110%;
+  opacity: 1;
+}
+#news .inner .wrap nav a.on::before {
+  left: 110%;
+  opacity: 1;
+}
+#news .inner .wrap > div {
+  display: none;
+  width: 100%;
+  height: 400px;
+  position: relative;
+}
+#news .inner .wrap > div.on {
+  display: block;
+}
+#news .inner .wrap > div article {
+  background-color: #8b8687;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+#news .inner .wrap > div article .inner {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+#news .inner .wrap > div article .inner .pic {
+  width: 30%;
+  height: 100%;
+  margin-left: -9999px;
+  opacity: 0;
+}
+#news .inner .wrap > div article .inner .pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#news .inner .wrap > div article .inner h2 {
+  width: 80%;
+  padding: 30px;
+  font: normal 30px/1.2 "IBM Plex Sans KR";
+  transform: translateX(9999px);
+  opacity: 0;
+}
+#news .inner .wrap > div article .inner h2 a {
+  font: 50px/1 "IBM Plex Sans KR";
+  color: #222;
+  letter-spacing: 2px;
+}
+#news .inner .wrap > div article .inner h2 p {
+  width: 85%;
+  height: 50%;
+  margin-top: 50px;
+  color: #555;
+}
+#news .inner .wrap > div article .inner h2 span {
+  font-size: 25px;
+  color: #333;
+}
+#news .inner .wrap > div.active article .inner {
+  opacity: 1;
+}
+#news .inner .wrap > div.active article .inner .pic {
+  margin-left: 0;
+  opacity: 1;
+  transition: 1s;
+}
+#news .inner .wrap > div.active article .inner h2 {
+  transform: translateX(0);
+  opacity: 1;
+  transition: 0.6s 0.2s;
+}
+
+footer {
+  width: 100%;
+}
+footer .inner {
+  width: 100%;
+  background-color: #566270;
+  padding: 100px;
+}
+footer .inner address {
+  text-align: right;
+  color: #E0E3DA;
+}
+footer .inner p {
+  padding-bottom: 20px;
+  color: #E0E3DA;
+}
+
+main {
+  width: 100%;
+  height: 104vh;
+  position: relative;
+  overflow: hidden;
+  background-color: #222;
+}
+main section {
+  width: 100%;
+}
+main section article {
+  width: 24vw;
+  height: 70vh;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  margin-top: -20vh;
+  margin-left: -12vw;
+  z-index: 1;
+  transition-property: width, height, transform, opacity, margin-left, margin-top, top, left;
+  transition-duration: 0.5s;
+  transition-delay: 0s;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+}
+main section article .txt {
+  width: 100%;
+  height: 40%;
+  background-color: #444;
+  padding: 20px 20px 20px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transition: 0.5s;
+}
+main section article .txt strong {
+  font: 1vw/1 "Playfair Display";
+  color: #888;
+}
+main section article .txt p {
+  font: bold 2vw/1.2 "IBM Plex Sans KR";
+  color: #ddd;
+  position: relative;
+  padding-bottom: 20px;
+}
+main section article .txt h2 {
+  font: 2vw/1 "Playfair Display";
+  color: #809EAD;
+  position: absolute;
+  top: 75%;
+  left: 2vw;
+  z-index: 2;
+  transition: 0.5s;
+  text-shadow: 5px 5px 3px rgba(0, 0, 0, 0.2);
+}
+main section article .txt h2::before {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 0;
+  background-color: #fff;
+  top: 0;
+  left: -10px;
+  transition: height 1s 0.5s;
+}
+main section article .txt .desc {
+  width: 75%;
+  visibility: hidden;
+  position: absolute;
+  top: 60%;
+  left: 5vw;
+  font: 18px/1.3 "IBM Plex Sans KR";
+  color: #999;
+}
+main section article .pic {
+  width: 100%;
+  height: 60%;
+  background-color: #000;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: 0.5s;
+}
+main section article .pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.5;
+  transition: opacity 0.5s;
+}
+main section article .open {
+  width: 0%;
+  height: 60px;
+  background-color: #fff;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.5s;
+}
+main section article .open span {
+  font: 16px/1 "IBM Plex Sans KR";
+  color: #000;
+  transform: translateX(-200px);
+  opacity: 0;
+  transition: 0.5s;
+}
+main section article .open i {
+  margin-right: -1000px;
+  opacity: 0;
+  color: #555;
+  transition: 0.5s;
+}
+main section article .close {
+  cursor: pointer;
+  position: absolute;
+  top: 11vh;
+  right: -10vh;
+  font: bold 20px/1 "Playfair Display";
+  letter-spacing: 2px;
+  color: #ddd;
+  opacity: 0;
+  transition: all 0.5s;
+}
+main section article:nth-of-type(1) {
+  transform: translateX(-260%);
+  opacity: 0;
+}
+main section article:nth-of-type(2) {
+  transform: translateX(-130%);
+  opacity: 0.8;
+}
+main section article:nth-of-type(3) {
+  transform: translateX(0%);
+  opacity: 1;
+}
+main section article:nth-of-type(3) .txt h2::before {
+  height: 100%;
+}
+main section article:nth-of-type(3) .txt svg path {
+  stroke-dashoffset: 0;
+  fill: #111;
+}
+main section article:nth-of-type(3) .pic img {
+  opacity: 0.8;
+}
+main section article:nth-of-type(3) .open {
+  width: 100%;
+}
+main section article:nth-of-type(3) .open span {
+  transform: translateX(50%);
+  opacity: 1;
+  transition: 0.5s 0.5s;
+}
+main section article:nth-of-type(3) .open i {
+  margin-right: 30px;
+  opacity: 1;
+  transition: 0.5s 0.8s;
+}
+main section article:nth-of-type(4) {
+  transform: translateX(130%);
+  opacity: 0.8;
+}
+main section article:nth-of-type(5) {
+  transform: translateX(260%);
+  opacity: 0;
+}
+main section article.on {
+  width: 100%;
+  height: 100%;
+  margin-top: 0;
+  margin-left: 0;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  transition-duration: 0.8s;
+  transition-delay: 0.5s;
+}
+main section article.on .txt {
+  width: 55%;
+  height: 100%;
+  padding: 5vw;
+  transition: 0.5s 0.5s;
+}
+main section article.on .txt strong {
+  top: 15vh;
+  left: 5vw;
+}
+main section article.on .txt h2 {
+  top: calc(100% - 5vw);
+  left: 5vw;
+  transition: 0.5s;
+}
+main section article.on .txt .desc {
+  visibility: visible;
+  top: 30%;
+  transition: 1s 1s;
+}
+main section article.on .pic {
+  width: 45%;
+  height: 100%;
+  transition: 0.5s 0.5s;
+}
+main section article.on .open {
+  opacity: 0;
+  margin-top: 1000px;
+}
+main section article.on .close {
+  opacity: 1;
+  right: 5vw;
+  transition: 0.5s 1s;
+  transition-timing-function: cubic-bezier(0.48, -0.67, 0.54, 1.68);
+}
+main section article.hide {
+  margin-top: -10000px;
+  opacity: 0;
+}
+main nav {
+  position: absolute;
+  display: flex;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  gap: 50px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+main nav p {
+  width: 200px;
+  height: 40px;
+  font: bold 30px/40px "Playfair Display";
+  text-align: center;
+  background-color: #fff;
+  border-radius: 5px;
+}
+main nav p:hover {
+  background-color: #566270;
+  color: #fff;
+}
+
+/*# sourceMappingURL=style.css.map */

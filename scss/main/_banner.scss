@@ -1,0 +1,35 @@
+#banner {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.05);
+    position: relative;
+    
+    .inner {
+        // width: 1180px;
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
+        position: relative;
+        background-image: url(../img/Bernard_Werber1.png);
+        background-position: left center;
+        background-position-x: 20%;
+        background-repeat: no-repeat;
+        background-size: contain;
+        // .pic{
+        //     width: 100%;
+        //     height: 100%;
+        // }
+        p{
+            font: bold 50px/1.5 "IBM Plex Sans KR";
+            letter-spacing: 4px;
+            position: absolute;
+            top: 10%;
+            right: 19%;
+            text-align: right;
+            color: #000;
+            span{
+                color: #8b8687;
+            }
+        }
+    }
+}

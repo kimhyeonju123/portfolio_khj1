@@ -1,0 +1,183 @@
+#news {
+    width: 100%;
+    height: 104vh;
+
+    position: relative;
+
+    .inner {
+        // width: 100%;
+        // margin: 0 auto;
+
+        h1 {
+            font: bold 55px/1.2 "IBM Plex Sans KR";
+            letter-spacing: 4px;
+            text-align: left;
+            position: absolute;
+            top: 20%;
+            left: 15%;
+            color: #222;
+
+            span {
+                color: #566270;
+            }
+
+            p {
+                position: absolute;
+                bottom: -50%;
+                right: 0;
+                font-size: 20px;
+            }
+        }
+
+        .wrap {
+            width: 100%;
+            background-color: #e3dede;
+            position: absolute;
+            bottom: 0vh;
+
+            nav {
+                width: 100%;
+                height: 40px;
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+
+                a {
+                    font: 15px/1 "IBM Plex Sans KR";
+                    color: #999;
+                    position: relative;
+
+
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        width: 2px;
+                        height: 100%;
+                        right: 50%;
+                        background-color: #222;
+                        opacity: 0;
+                        transition: 0.5s;
+                    }
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        width: 2px;
+                        height: 100%;
+                        left: 50%;
+                        background-color: #222;
+                        opacity: 0;
+                        transition: 0.5s;
+                    }
+
+                    &.on {
+                        background-color: #000;
+                        color: #fff;
+                        transition: 0.5s;
+
+                        &::after {
+                            right: 110%;
+                            opacity: 1;
+                        }
+                        &::before {
+                            left: 110%;
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+
+            // 공통 부분 (근데 구조가 다 똑같아서 굳이 바꿀 필요 없음)
+            >div {
+                display: none;
+                width: 100%;
+                height: 400px;
+                position: relative;
+
+                &.on {
+                    display: block;
+                }
+
+                article {
+                    background-color: #8b8687;
+                    position: absolute;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    overflow: hidden;
+
+                    .inner {
+                        display: flex;
+                        width: 100%;
+                        height: 100%;
+                        opacity: 0;
+                        // margin-left: -9999px;
+
+                        .pic {
+                            width: 30%;
+                            height: 100%;
+                            margin-left: -9999px;
+                            opacity: 0;
+
+                            img {
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;
+                            }
+                        }
+
+                        h2 {
+                            width: 80%;
+                            padding: 30px;
+                            font: normal 30px/1.2 "IBM Plex Sans KR";
+                            transform: translateX(9999px);
+                            opacity: 0;
+
+                            a {
+                                // display: block;
+                                // width: 50%;
+                                // height: 40px;
+                                font: 50px/1 "IBM Plex Sans KR";
+                                color: #222;
+                                letter-spacing: 2px;
+                            }
+
+                            p {
+                                width: 85%;
+                                height: 50%;
+                                margin-top: 50px;
+                                color: #555;
+                            }
+
+                            span {
+                                font-size: 25px;
+                                color: #333;
+                            }
+                        }
+                    }
+                }
+
+                &.active {
+                    article {
+                        .inner {
+                            // margin-left: 0;
+                            opacity: 1;
+
+                            .pic {
+                                margin-left: 0;
+                                opacity: 1;
+                                transition: 1s;
+                            }
+
+                            h2 {
+                                transform: translateX(0);
+                                opacity: 1;
+                                // 오 사진자리까지 가다가 같이 밀리는 느낌
+                                transition: 0.6s 0.2s;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
