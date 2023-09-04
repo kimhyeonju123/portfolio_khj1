@@ -2,15 +2,26 @@ footer{
     width: 100%;
     .inner{
         width: 100%;
-        background-color: #566270;
-        padding: 100px;
-        address{
-            text-align: right;
-            color: #E0E3DA;
-        }
+        height: 300px;
+        background-color: #353b33;
+        position: relative;
         p{
-            padding-bottom: 20px;
+            padding-top: 50px;
             color: #E0E3DA;
+            text-align: center;
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        address{
+            padding-top: 50px;
+            color: #E0E3DA;
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
         }
     }
 }

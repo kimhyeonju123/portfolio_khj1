@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@600&family=Raleway:wght@100&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Song+Myung&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Diphylleia&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -26,6 +27,7 @@ header .inner {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  background-color: #606C5D;
 }
 header .inner h1 a {
   font: bold 40px/1 "Playfair Display";
@@ -41,14 +43,14 @@ header .inner nav #gnb li a {
   display: block;
   padding: 10px 20px;
   font: bold 20px/1 "IBM Plex Sans KR";
-  color: #777;
+  color: #EEE0C9;
 }
 header .inner nav #gnb li a::after {
   content: "";
   display: block;
   width: 100%;
   margin-bottom: -2px;
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid #EEE0C9;
   background-color: #222;
   opacity: 0;
 }
@@ -61,9 +63,8 @@ header .inner nav #gnb li a:hover::after {
 
 #banner {
   width: 100%;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.05);
-  position: relative;
+  height: 1000px;
+  background-color: #F1F0E8;
 }
 #banner .inner {
   width: 100%;
@@ -86,179 +87,26 @@ header .inner nav #gnb li a:hover::after {
   color: #000;
 }
 #banner .inner p span {
-  color: #8b8687;
+  color: #1e9700;
 }
-
-#news {
-  width: 100%;
-  height: 104vh;
-  position: relative;
-}
-#news .inner h1 {
-  font: bold 55px/1.2 "IBM Plex Sans KR";
-  letter-spacing: 4px;
-  text-align: left;
-  position: absolute;
-  top: 20%;
-  left: 15%;
-  color: #222;
-}
-#news .inner h1 span {
-  color: #566270;
-}
-#news .inner h1 p {
-  position: absolute;
-  bottom: -50%;
-  right: 0;
-  font-size: 20px;
-}
-#news .inner .wrap {
-  width: 100%;
-  background-color: #e3dede;
-  position: absolute;
-  bottom: 0vh;
-}
-#news .inner .wrap nav {
-  width: 100%;
-  height: 40px;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-}
-#news .inner .wrap nav a {
-  font: 15px/1 "IBM Plex Sans KR";
-  color: #999;
-  position: relative;
-}
-#news .inner .wrap nav a::after {
-  content: "";
-  position: absolute;
-  width: 2px;
-  height: 100%;
-  right: 50%;
-  background-color: #222;
-  opacity: 0;
-  transition: 0.5s;
-}
-#news .inner .wrap nav a::before {
-  content: "";
-  position: absolute;
-  width: 2px;
-  height: 100%;
-  left: 50%;
-  background-color: #222;
-  opacity: 0;
-  transition: 0.5s;
-}
-#news .inner .wrap nav a.on {
-  background-color: #000;
-  color: #fff;
-  transition: 0.5s;
-}
-#news .inner .wrap nav a.on::after {
-  right: 110%;
-  opacity: 1;
-}
-#news .inner .wrap nav a.on::before {
-  left: 110%;
-  opacity: 1;
-}
-#news .inner .wrap > div {
-  display: none;
-  width: 100%;
-  height: 400px;
-  position: relative;
-}
-#news .inner .wrap > div.on {
-  display: block;
-}
-#news .inner .wrap > div article {
-  background-color: #8b8687;
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
-#news .inner .wrap > div article .inner {
-  display: flex;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-}
-#news .inner .wrap > div article .inner .pic {
-  width: 30%;
-  height: 100%;
-  margin-left: -9999px;
-  opacity: 0;
-}
-#news .inner .wrap > div article .inner .pic img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-#news .inner .wrap > div article .inner h2 {
-  width: 80%;
-  padding: 30px;
-  font: normal 30px/1.2 "IBM Plex Sans KR";
-  transform: translateX(9999px);
-  opacity: 0;
-}
-#news .inner .wrap > div article .inner h2 a {
-  font: 50px/1 "IBM Plex Sans KR";
-  color: #222;
-  letter-spacing: 2px;
-}
-#news .inner .wrap > div article .inner h2 p {
-  width: 85%;
-  height: 50%;
-  margin-top: 50px;
-  color: #555;
-}
-#news .inner .wrap > div article .inner h2 span {
-  font-size: 25px;
-  color: #333;
-}
-#news .inner .wrap > div.active article .inner {
-  opacity: 1;
-}
-#news .inner .wrap > div.active article .inner .pic {
-  margin-left: 0;
-  opacity: 1;
-  transition: 1s;
-}
-#news .inner .wrap > div.active article .inner h2 {
-  transform: translateX(0);
-  opacity: 1;
-  transition: 0.6s 0.2s;
-}
-
-footer {
-  width: 100%;
-}
-footer .inner {
-  width: 100%;
-  background-color: #566270;
-  padding: 100px;
-}
-footer .inner address {
-  text-align: right;
-  color: #E0E3DA;
-}
-footer .inner p {
-  padding-bottom: 20px;
-  color: #E0E3DA;
+#banner .inner p b {
+  color: crimson;
 }
 
 main {
   width: 100%;
-  height: 104vh;
+  height: 100vh;
   position: relative;
   overflow: hidden;
-  background-color: #222;
+  background-color: #606C5D;
 }
 main section {
   width: 100%;
+  opacity: 0;
+  transition: 0.5s;
+}
+main section.view {
+  opacity: 1;
 }
 main section article {
   width: 24vw;
@@ -272,12 +120,12 @@ main section article {
   transition-property: width, height, transform, opacity, margin-left, margin-top, top, left;
   transition-duration: 0.5s;
   transition-delay: 0s;
-  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
 }
 main section article .txt {
   width: 100%;
   height: 40%;
-  background-color: #444;
+  background-color: #112D4E;
   padding: 20px 20px 20px;
   position: absolute;
   top: 0;
@@ -289,20 +137,21 @@ main section article .txt strong {
   color: #888;
 }
 main section article .txt p {
-  font: bold 2vw/1.2 "IBM Plex Sans KR";
-  color: #ddd;
+  font: bold 2vw/1.2 "Nanum Myeongjo";
+  color: #F1F0E8;
   position: relative;
   padding-bottom: 20px;
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
 }
 main section article .txt h2 {
   font: 2vw/1 "Playfair Display";
-  color: #809EAD;
+  color: #769FCD;
   position: absolute;
   top: 75%;
   left: 2vw;
   z-index: 2;
   transition: 0.5s;
-  text-shadow: 5px 5px 3px rgba(0, 0, 0, 0.2);
+  text-shadow: 5px 5px 3px rgba(0, 0, 0, 0.3);
 }
 main section article .txt h2::before {
   content: "";
@@ -321,7 +170,8 @@ main section article .txt .desc {
   top: 60%;
   left: 5vw;
   font: 18px/1.3 "IBM Plex Sans KR";
-  color: #999;
+  letter-spacing: 2px;
+  color: #aaa;
 }
 main section article .pic {
   width: 100%;
@@ -417,6 +267,7 @@ main section article:nth-of-type(4) {
   opacity: 0.8;
 }
 main section article:nth-of-type(5) {
+  width: 25vw;
   transform: translateX(260%);
   opacity: 0;
 }
@@ -481,16 +332,215 @@ main nav {
   cursor: pointer;
 }
 main nav p {
-  width: 200px;
+  width: 150px;
   height: 40px;
   font: bold 30px/40px "Playfair Display";
+  letter-spacing: 8px;
   text-align: center;
-  background-color: #fff;
   border-radius: 5px;
 }
 main nav p:hover {
-  background-color: #566270;
+  border-bottom: 1px solid #fff;
   color: #fff;
+}
+
+#news {
+  width: 100%;
+  height: 1000px;
+  position: relative;
+  background-color: #EFEAD8;
+}
+#news .inner h1 {
+  font: bold 55px/1.2 "Diphylleia";
+  letter-spacing: 4px;
+  text-align: left;
+  position: absolute;
+  top: 20%;
+  left: 15%;
+  color: #222;
+}
+#news .inner h1 > span {
+  color: #566270;
+}
+#news .inner h1 p {
+  position: absolute;
+  bottom: -50%;
+  right: 0;
+  font-size: 20px;
+}
+#news .inner .wrap {
+  width: 100%;
+  background-color: #606C5D;
+  position: absolute;
+  bottom: 0vh;
+}
+#news .inner .wrap nav {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border-bottom: 1px solid #222;
+  margin-bottom: -1px;
+}
+#news .inner .wrap nav a {
+  font: 15px/1 "IBM Plex Sans KR";
+  color: #EFEAD8;
+  position: relative;
+}
+#news .inner .wrap nav a::after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 100%;
+  right: 50%;
+  background-color: #222;
+  opacity: 0;
+  transition: 0.5s;
+}
+#news .inner .wrap nav a::before {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 100%;
+  left: 50%;
+  background-color: #222;
+  opacity: 0;
+  transition: 0.5s;
+}
+#news .inner .wrap nav a.on {
+  color: #F1C376;
+  transition: 0.5s;
+}
+#news .inner .wrap nav a.on::after {
+  right: 110%;
+  opacity: 1;
+}
+#news .inner .wrap nav a.on::before {
+  left: 110%;
+  opacity: 1;
+}
+#news .inner .wrap > div {
+  display: none;
+  width: 100%;
+  height: 400px;
+  position: relative;
+}
+#news .inner .wrap > div.on {
+  display: block;
+}
+#news .inner .wrap > div article {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+#news .inner .wrap > div article .inner {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+#news .inner .wrap > div article .inner .pic {
+  width: 30%;
+  height: 100%;
+  margin-left: -9999px;
+  opacity: 0;
+}
+#news .inner .wrap > div article .inner .pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#news .inner .wrap > div article .inner h2 {
+  width: 80%;
+  padding: 30px;
+  font: normal 30px/1.2 "IBM Plex Sans KR";
+  transform: translateX(9999px);
+  opacity: 0;
+}
+#news .inner .wrap > div article .inner h2 a {
+  display: inline-flex;
+  font: 50px/1 "IBM Plex Sans KR";
+  color: #222;
+  letter-spacing: 2px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5) inset;
+}
+#news .inner .wrap > div article .inner h2 a:hover {
+  animation-name: vibration;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+}
+#news .inner .wrap > div article .inner h2 p {
+  width: 85%;
+  margin-bottom: 60px;
+  margin-top: 50px;
+  color: #222;
+}
+#news .inner .wrap > div article .inner h2 p:hover > span {
+  color: #F1C376;
+}
+#news .inner .wrap > div article .inner h2 > span {
+  font-size: 25px;
+  color: #333;
+}
+#news .inner .wrap > div.active article .inner {
+  opacity: 1;
+}
+#news .inner .wrap > div.active article .inner .pic {
+  margin-left: 0;
+  opacity: 1;
+  transition: 1s;
+}
+#news .inner .wrap > div.active article .inner h2 {
+  transform: translateX(0);
+  opacity: 1;
+  transition: 0.6s 0.2s;
+}
+
+@keyframes vibration {
+  0% {
+    transform: rotate(1deg);
+  }
+  30% {
+    transform: rotate(10deg);
+  }
+  70% {
+    transform: rotate(-10deg);
+  }
+  100% {
+    transform: rotate(1deg);
+  }
+}
+footer {
+  width: 100%;
+}
+footer .inner {
+  width: 100%;
+  height: 300px;
+  background-color: #353b33;
+  position: relative;
+}
+footer .inner p {
+  padding-top: 50px;
+  color: #E0E3DA;
+  text-align: center;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+footer .inner address {
+  padding-top: 50px;
+  color: #E0E3DA;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 /*# sourceMappingURL=style.css.map */

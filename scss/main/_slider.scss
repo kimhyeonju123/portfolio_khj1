@@ -1,0 +1,310 @@
+main {
+    width: 100%;
+    height: 100vh;
+    // height: 1000px;
+    // position: relative;
+    position: relative;
+    overflow: hidden;
+    background-color: #606C5D;
+
+    section {
+        width: 100%;
+        opacity: 0; //
+        transition: 0.5s; //
+
+        &.view{
+            opacity: 1;
+        }
+        
+        article {
+            // visibility: hidden; //
+            width: 24vw; //
+            // width: 0;
+            height: 70vh;
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            margin-top: -20vh;
+            margin-left: -12vw;
+            z-index: 1;
+            transition-property: width, height, transform, opacity, margin-left, margin-top, top, left;
+            transition-duration: 0.5s;
+            transition-delay: 0s;
+            // box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
+            
+            // &.eee{ //
+            //     visibility: visible;
+            //     width: 24vw;
+            // }
+
+            
+
+            .txt {
+                width: 100%;
+                height: 40%;
+                background-color: #112D4E;
+                padding: 20px 20px 20px;
+                position: absolute;
+                top: 0;
+                right: 0;
+                transition: 0.5s;
+
+                strong {
+                    font: 1vw/1 "Playfair Display";
+                    color: #888;
+                }
+
+                p {
+                    font: bold 2vw/1.2 "Nanum Myeongjo";
+                    color: #F1F0E8;
+                    position: relative;
+                    padding-bottom: 20px;
+                    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+                }
+
+                h2 {
+                    font: 2vw/1 "Playfair Display";
+                    // color: #D53854;
+                    color: #769FCD;
+                    position: absolute;
+                    top: 75%;
+                    left: 2vw;
+                    z-index: 2;
+                    transition: 0.5s;
+                    text-shadow: 5px 5px 3px rgba(0, 0, 0, 0.3);
+
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        width: 1px;
+                        height: 0;
+                        background-color: #fff;
+                        top: 0;
+                        left: -10px;
+                        transition: height 1s 0.5s;
+
+                    }
+                }
+
+                .desc {
+                    width: 75%;
+                    visibility: hidden;
+                    position: absolute;
+                    top: 60%;
+                    left: 5vw;
+                    font: 18px/1.3 "IBM Plex Sans KR";
+                    letter-spacing: 2px;
+                    color: #aaa;
+                }
+            }
+
+            .pic {
+                width: 100%;
+                height: 60%;
+                background-color: #000;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                transition: 0.5s;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    opacity: 0.5;
+                    transition: opacity 0.5s;
+                }
+            }
+
+            .open {
+                width: 0%;
+                height: 60px;
+                background-color: #fff;
+                position: absolute;
+                bottom: 0px;
+                left: 0px;
+                overflow: hidden;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                cursor: pointer;
+                transition: 0.5s;
+
+                span {
+                    font: 16px/1 "IBM Plex Sans KR";
+                    color: #000;
+                    transform: translateX(-200px);
+                    opacity: 0;
+                    transition: 0.5s;
+                }
+
+                i {
+                    margin-right: -1000px;
+                    opacity: 0;
+                    color: #555;
+                    transition: 0.5s;
+                }
+            }
+
+            .close {
+                cursor: pointer;
+                position: absolute;
+                top: 11vh;
+                right: -10vh;
+                font: bold 20px/1 "Playfair Display";
+                letter-spacing: 2px;
+                color: #ddd;
+                opacity: 0;
+                transition: all 0.5s;
+            }
+
+            &:nth-of-type(1) {
+                transform: translateX(-260%);
+                opacity: 0;
+            }
+
+            &:nth-of-type(2) {
+                transform: translateX(-130%);
+                opacity: 0.8;
+            }
+
+            &:nth-of-type(3) {
+                transform: translateX(0%);
+                opacity: 1;
+
+                .txt {
+                    h2::before {
+                        height: 100%;
+                    }
+                    svg{
+                        path{
+                            stroke-dashoffset: 0;
+                            fill: #111;
+                        }
+                    }
+                }
+
+                .pic {
+                    img {
+                        opacity: 0.8;
+                    }
+                }
+
+                .open {
+                    width: 100%;
+
+                    span {
+                        transform: translateX(50%);
+                        opacity: 1;
+                        transition: 0.5s 0.5s;
+                    }
+
+                    i {
+                        margin-right: 30px;
+                        opacity: 1;
+                        transition: 0.5s 0.8s;
+                    }
+                }
+
+            }
+
+            &:nth-of-type(4) {
+                transform: translateX(130%);
+                opacity: 0.8;
+            }
+
+            &:nth-of-type(5) {
+                width: 25vw;
+                transform: translateX(260%);
+                opacity: 0;
+            }
+        }
+
+        article.on {
+            width: 100%;
+            height: 100%;
+            margin-top: 0;
+            margin-left: 0;
+            top: 0;
+            left: 0;
+            z-index: 2;
+            transition-duration: 0.8s;
+            transition-delay: 0.5s;
+
+            .txt {
+                width: 55%;
+                height: 100%;
+                padding: 5vw;
+                transition: 0.5s 0.5s;
+                
+                strong{
+                    top: 15vh;
+                    left: 5vw;
+                }
+
+                h2 {
+                    top: calc(100% - 5vw);
+                    left: 5vw;
+                    transition: 0.5s;
+                }
+                
+                .desc {
+                    visibility: visible;
+                    top: 30%;
+                    transition: 1s 1s;
+                }
+            }
+
+            .pic {
+                width: 45%;
+                height: 100%;
+                transition: 0.5s 0.5s;
+            }
+
+            .open {
+                opacity: 0;
+                margin-top: 1000px;
+            }
+
+            .close {
+                opacity: 1;
+                right: 5vw;
+                transition: 0.5s 1s;
+                transition-timing-function: cubic-bezier(0.48, -0.67, 0.54, 1.68);
+            }
+
+        }
+
+        article.hide {
+            margin-top: -10000px;
+            opacity: 0;
+        }
+    }
+
+    nav {
+        position: absolute;
+        display: flex;
+        top: 10%;
+        left: 50%;
+        transform: translateX(-50%);            
+        gap: 50px;
+        transition: 0.5s;
+        cursor: pointer;
+        
+        p{
+            width: 150px;
+            height: 40px;
+            font: bold 30px/40px "Playfair Display";
+            letter-spacing: 8px;
+            text-align: center;
+            border-radius: 5px;
+            
+            &:hover{
+                // background-color: #566270;
+                border-bottom: 1px solid #fff;
+                color: #fff;
+            }
+        }
+    }
+}

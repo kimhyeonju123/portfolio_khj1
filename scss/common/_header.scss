@@ -10,6 +10,7 @@ header {
         display: flex;
         justify-content: space-around;
         align-items: center;
+        background-color: #606C5D;
 
         h1 {
             a {
@@ -30,14 +31,14 @@ header {
                         display: block;
                         padding: 10px 20px;
                         font: bold 20px/1 "IBM Plex Sans KR";
-                        color: #777;
+                        color: #EEE0C9;
                         &::after{
                             content: '';
                             display: block;
                             width: 100%;
                             // height: 2px;
                             margin-bottom: -2px;
-                            border-bottom: 2px solid black;
+                            border-bottom: 2px solid #EEE0C9;
                             // position: relative;
                             // top: 10px;
                             background-color: #222;

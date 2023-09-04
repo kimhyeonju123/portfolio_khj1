@@ -1,15 +1,15 @@
 #news {
     width: 100%;
-    height: 104vh;
-
+    height: 1000px;
     position: relative;
+    background-color: #EFEAD8;
 
     .inner {
         // width: 100%;
         // margin: 0 auto;
 
         h1 {
-            font: bold 55px/1.2 "IBM Plex Sans KR";
+            font: bold 55px/1.2 "Diphylleia";
             letter-spacing: 4px;
             text-align: left;
             position: absolute;
@@ -17,7 +17,7 @@
             left: 15%;
             color: #222;
 
-            span {
+            >span {
                 color: #566270;
             }
 
@@ -31,7 +31,7 @@
 
         .wrap {
             width: 100%;
-            background-color: #e3dede;
+            background-color: #606C5D;
             position: absolute;
             bottom: 0vh;
 
@@ -41,10 +41,12 @@
                 display: flex;
                 justify-content: space-evenly;
                 align-items: center;
+                border-bottom: 1px solid #222;
+                margin-bottom: -1px;
 
                 a {
                     font: 15px/1 "IBM Plex Sans KR";
-                    color: #999;
+                    color: #EFEAD8;
                     position: relative;
 
 
@@ -70,8 +72,7 @@
                     }
 
                     &.on {
-                        background-color: #000;
-                        color: #fff;
+                        color: #F1C376;
                         transition: 0.5s;
 
                         &::after {
@@ -98,7 +99,6 @@
                 }
 
                 article {
-                    background-color: #8b8687;
                     position: absolute;
                     top: 0;
                     width: 100%;
@@ -133,22 +133,35 @@
                             opacity: 0;
 
                             a {
-                                // display: block;
-                                // width: 50%;
-                                // height: 40px;
+                                display: inline-flex;
                                 font: 50px/1 "IBM Plex Sans KR";
                                 color: #222;
                                 letter-spacing: 2px;
+                                padding: 15px;
+                                text-align: center;
+                                box-shadow: 0 0 10px rgba(00, 0, 0, 0.5) inset;
+
+                                &:hover{
+                                    animation-name: vibration;
+                                    animation-duration: .5s;
+                                    animation-iteration-count: infinite;
+                                }
                             }
 
                             p {
                                 width: 85%;
-                                height: 50%;
+                                margin-bottom: 60px;
                                 margin-top: 50px;
-                                color: #555;
+                                color: #222;
+                                
+                                &:hover{
+                                    >span{
+                                        color: #F1C376;
+                                    }
+                                }
                             }
 
-                            span {
+                            >span {
                                 font-size: 25px;
                                 color: #333;
                             }
@@ -159,7 +172,6 @@
                 &.active {
                     article {
                         .inner {
-                            // margin-left: 0;
                             opacity: 1;
 
                             .pic {
@@ -179,5 +191,20 @@
                 }
             }
         }
+    }
+}
+
+@keyframes vibration {
+    0%{
+        transform: rotate(1deg);
+    }
+    30%{
+        transform: rotate(10deg);
+    }
+    70%{
+        transform: rotate(-10deg);
+    }
+    100%{
+        transform: rotate(1deg);
     }
 }
