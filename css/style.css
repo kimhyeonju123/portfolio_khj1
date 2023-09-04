@@ -89,9 +89,6 @@ header .inner nav #gnb li a:hover::after {
 #banner .inner p span {
   color: #1e9700;
 }
-#banner .inner p b {
-  color: crimson;
-}
 
 main {
   width: 100%;
@@ -137,7 +134,7 @@ main section article .txt strong {
   color: #888;
 }
 main section article .txt p {
-  font: bold 2vw/1.2 "Nanum Myeongjo";
+  font: bold 2vw/1.2 "Diphylleia";
   color: #F1F0E8;
   position: relative;
   padding-bottom: 20px;
@@ -355,9 +352,15 @@ main nav p:hover {
   letter-spacing: 4px;
   text-align: left;
   position: absolute;
-  top: 20%;
+  top: 100%;
   left: 15%;
   color: #222;
+  opacity: 0;
+  transition: 1s;
+}
+#news .inner h1.on {
+  opacity: 1;
+  top: 20%;
 }
 #news .inner h1 > span {
   color: #566270;

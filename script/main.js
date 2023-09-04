@@ -11,6 +11,7 @@ const closes = frame.querySelectorAll(".close");
 // 뉴스 변수
 const btnNews = document.querySelectorAll("#news>.inner>.wrap>nav>a");
 const boxNews = document.querySelectorAll("#news>.inner>.wrap>div");
+const newsHone = document.querySelectorAll("#news>.inner>h1");
 
 // 슬라이드 부분
 window.addEventListener("scroll",()=>{
@@ -34,6 +35,7 @@ window.addEventListener("scroll",()=>{
     if(scroll > 1800){
         section.classList.remove("view");
     }
+    // if부분 좀 이상함
 })
 
 for (let i = 0; i < 2; i++) {
@@ -71,13 +73,17 @@ btnNews.forEach((el, index) => {
         for (const el of btnNews) {
             el.classList.remove("on");
         } el.classList.add("on");
-
+        
         // 박스 on
         for (const el of boxNews) {
             el.classList.remove("on");
         }
         boxNews[index].classList.add("on");
         
+        for (const el of newsHone) {
+            el.classList.remove("on");
+        }newsHone[index].classList.add("on");
+
         setTimeout(() => {
             for (let el of boxNews) el.classList.remove("active");
             boxNews[index].classList.add("active");

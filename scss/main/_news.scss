@@ -13,9 +13,16 @@
             letter-spacing: 4px;
             text-align: left;
             position: absolute;
-            top: 20%;
+            top: 100%;
             left: 15%;
             color: #222;
+            opacity: 0;
+            transition: 1s;
+
+            &.on{
+                opacity: 1;
+                top: 20%;
+            }
 
             >span {
                 color: #566270;
@@ -154,6 +161,7 @@
                                 margin-top: 50px;
                                 color: #222;
                                 
+
                                 &:hover{
                                     >span{
                                         color: #F1C376;
