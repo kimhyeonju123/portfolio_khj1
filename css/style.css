@@ -200,7 +200,7 @@ main section article {
 main section article .txt {
   width: 100%;
   height: 40%;
-  background-color: #112D4E;
+  background: linear-gradient(45deg, #606C5D, #333);
   padding: 20px 20px 20px;
   position: absolute;
   top: 0;
@@ -465,7 +465,7 @@ main nav p:hover {
   margin-bottom: -1px;
 }
 #news .inner .wrap nav a {
-  font: 15px/1 "IBM Plex Sans KR";
+  font: 15px/1 "Diphylleia";
   color: #EFEAD8;
   position: relative;
 }
@@ -537,13 +537,13 @@ main nav p:hover {
 #news .inner .wrap > div article .inner h2 {
   width: 80%;
   padding: 30px;
-  font: normal 30px/1.2 "IBM Plex Sans KR";
+  font: bold 30px/1.2 "Diphylleia";
   transform: translateX(9999px);
   opacity: 0;
 }
 #news .inner .wrap > div article .inner h2 a {
   display: inline-flex;
-  font: 50px/1 "IBM Plex Sans KR";
+  font: bold 50px/1 "Diphylleia";
   color: #222;
   letter-spacing: 2px;
   padding: 15px;
