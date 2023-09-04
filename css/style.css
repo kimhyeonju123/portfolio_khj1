@@ -71,13 +71,53 @@ header .inner nav #gnb li a:hover::after {
   height: 100%;
   margin: 0 auto;
   position: relative;
+  overflow: hidden;
+}
+#banner .inner .panel {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+#banner .inner .panel li {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  opacity: 0;
+  z-index: 1;
+  transition: 1s;
+}
+#banner .inner .panel li:nth-of-type(1) {
+  left: -1000px;
+}
+#banner .inner .panel li:nth-of-type(2) {
+  left: -1000px;
+}
+#banner .inner .panel li:nth-of-type(3) {
+  left: -1000px;
+}
+#banner .inner .panel li.on {
+  opacity: 1;
+  z-index: 2;
+}
+#banner .inner .panel li.on:nth-of-type(1) {
+  left: 0;
+}
+#banner .inner .panel li.on:nth-of-type(2) {
+  left: 0%;
+}
+#banner .inner .panel li.on:nth-of-type(3) {
+  left: 0;
+}
+#banner .inner .panel #bwBanner {
+  width: 100%;
+  height: 100%;
   background-image: url(../img/Bernard_Werber1.png);
   background-position: left center;
   background-position-x: 20%;
   background-repeat: no-repeat;
   background-size: contain;
 }
-#banner .inner p {
+#banner .inner .panel #bwBanner p {
   font: bold 50px/1.5 "IBM Plex Sans KR";
   letter-spacing: 4px;
   position: absolute;
@@ -86,10 +126,48 @@ header .inner nav #gnb li a:hover::after {
   text-align: right;
   color: #000;
 }
-#banner .inner p span {
+#banner .inner .panel #bwBanner p span {
   color: #1e9700;
 }
-
+#banner .inner .panel #cyBanner {
+  width: 100%;
+  height: 100%;
+  background-image: url(../img/kcy1NoBg.png);
+  background-position: left center;
+  background-position-x: 20%;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+#banner .inner .panel #cyBanner p {
+  font: bold 50px/1.5 "IBM Plex Sans KR";
+  letter-spacing: 4px;
+  position: absolute;
+  top: 10%;
+  right: 19%;
+  text-align: right;
+  color: #000;
+}
+#banner .inner .panel #cyBanner p span {
+  color: #1e9700;
+}
+#banner .inner .panel #jbBanner {
+  width: 100%;
+  height: 100%;
+  background-image: url(../img/Julian_Barnes2NoBg.png);
+  background-position: left center;
+  background-position-x: 20%;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+#banner .inner .panel #jbBanner p {
+  font: bold 50px/1.5 "IBM Plex Sans KR";
+  letter-spacing: 4px;
+  position: absolute;
+  top: 10%;
+  right: 19%;
+  text-align: right;
+  color: #000;
+}
 main {
   width: 100%;
   height: 100vh;
@@ -544,6 +622,14 @@ footer .inner address {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.notDragging {
+  -ms-user-select: none;
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 /*# sourceMappingURL=style.css.map */

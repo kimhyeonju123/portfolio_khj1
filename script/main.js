@@ -13,6 +13,40 @@ const btnNews = document.querySelectorAll("#news>.inner>.wrap>nav>a");
 const boxNews = document.querySelectorAll("#news>.inner>.wrap>div");
 const newsHone = document.querySelectorAll("#news>.inner>h1");
 
+// 배너 부분
+const banner = document.querySelector("#banner");
+const panels = banner.querySelectorAll(".panel>li");
+const len = panels.length - 1;
+let num = 0;
+// const로 줘서 작동하지 않았다..
+let timer = null;
+const interval = 3000;
+
+startRolling();
+
+function startRolling() {
+    active(num);
+    timer = setInterval(rolling, interval);
+    console.log(num);
+}
+
+function active(index) {
+    for (let el of panels) el.classList.remove("on");
+    panels[index].classList.add("on");
+    num = index;
+}
+
+function rolling() {
+    if (num < len) {
+        num++;
+    } else {
+        num = 0;
+    }
+    active(num);
+}
+
+
+
 // 슬라이드 부분
 window.addEventListener("scroll",()=>{
     let scroll = window.scrollY || window.pageYOffset || document.documentElement.scrollTop;
@@ -27,7 +61,7 @@ window.addEventListener("scroll",()=>{
     //     }
     // })
     console.log(section);
-    if(scroll >= 850){ //
+    if(scroll >= 500){ //
         section.classList.add("view");
     }else{
         section.classList.remove("view");
