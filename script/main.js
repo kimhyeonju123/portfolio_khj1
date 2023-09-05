@@ -1,3 +1,6 @@
+// 헤더 변수
+const gnb_li = document.querySelectorAll("#gnb>li");
+
 // 슬라이드 변수
 const frame = document.querySelector(".frame");
 const section = document.querySelector("section"); //
@@ -13,15 +16,48 @@ const btnNews = document.querySelectorAll("#news>.inner>.wrap>nav>a");
 const boxNews = document.querySelectorAll("#news>.inner>.wrap>div");
 const newsHone = document.querySelectorAll("#news>.inner>h1");
 
-// 배너 부분
+// 배너 변수
 const banner = document.querySelector("#banner");
 const panels = banner.querySelectorAll(".panel>li");
 const len = panels.length - 1;
 let num = 0;
-// const로 줘서 작동하지 않았다..
 let timer = null;
 const interval = 3000;
 
+// 헤더 부분
+gnb_li.forEach((el) => {
+    el.addEventListener("mouseenter", (e) => {
+        const sub = e.currentTarget.querySelector(".sub");
+        let isBlock = window.getComputedStyle(sub).getPropertyValue("display");
+        console.log(isBlock);
+        sub.style.height = "0";
+
+        if (isBlock == "none") {
+            sub.style.display = "block";
+            let subHeight = sub.scrollHeight;
+            console.log(subHeight); 
+            sub.style.height = subHeight + "px";
+        }
+    });
+});
+gnb_li.forEach((el) => {
+    el.addEventListener("mouseleave", (e) => {
+        const sub = e.currentTarget.querySelector(".sub");
+        let isBlock = window.getComputedStyle(sub).getPropertyValue("display");
+        sub.style.height = "0";
+
+        if (isBlock == "block") {
+            sub.style.display = "0";
+            sub.addEventListener("transitionend", function end() {
+                sub.removeEventListener("transitionend", end);
+
+                sub.style.display = "none";
+            });
+        }
+    });
+});
+
+// 배너부분
 startRolling();
 
 function startRolling() {

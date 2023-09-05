@@ -36,29 +36,58 @@ header .inner h1 a {
 header .inner nav #gnb {
   display: flex;
 }
-header .inner nav #gnb li {
-  width: 100%;
+header .inner nav #gnb > li {
+  width: 150px;
+  position: relative;
 }
-header .inner nav #gnb li a {
+header .inner nav #gnb > li:hover a {
+  color: #222;
+}
+header .inner nav #gnb > li > a {
   display: block;
   padding: 10px 20px;
   font: bold 20px/1 "IBM Plex Sans KR";
   color: #EEE0C9;
+  text-align: center;
+  margin-right: 10px;
 }
-header .inner nav #gnb li a::after {
-  content: "";
+header .inner nav #gnb > li .sub {
+  position: absolute;
+  left: 0;
+  display: none;
+  overflow: hidden;
+  transition: height 0.5s ease;
+  z-index: 10;
+}
+header .inner nav #gnb > li .sub li a {
   display: block;
-  width: 100%;
-  margin-bottom: -2px;
-  border-bottom: 2px solid #EEE0C9;
-  background-color: #222;
-  opacity: 0;
+  width: 150px;
+  height: 50px;
+  font: 16px/50px "arial";
+  text-align: center;
+  color: #fff;
+  background-color: #434c41;
 }
-header .inner nav #gnb li a:hover {
-  color: #222;
+header .inner nav #gnb > li .sub li a:hover {
+  color: #888;
 }
-header .inner nav #gnb li a:hover::after {
-  opacity: 1;
+header .inner > a {
+  position: fixed;
+  z-index: 10;
+  width: 50px;
+  height: 50px;
+  background-color: #333;
+  border-radius: 50%;
+  right: 2vw;
+  bottom: 2vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header .inner > a i {
+  position: absolute;
+  color: #fff;
+  font-size: 20px;
 }
 
 #banner {
