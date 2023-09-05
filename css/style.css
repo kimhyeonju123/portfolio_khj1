@@ -82,31 +82,15 @@ header .inner nav #gnb li a:hover::after {
   width: 100%;
   height: 100%;
   position: absolute;
+  top: 0;
+  left: 0;
   opacity: 0;
   z-index: 1;
   transition: 1s;
 }
-#banner .inner .panel li:nth-of-type(1) {
-  left: -1000px;
-}
-#banner .inner .panel li:nth-of-type(2) {
-  left: -1000px;
-}
-#banner .inner .panel li:nth-of-type(3) {
-  left: -1000px;
-}
 #banner .inner .panel li.on {
   opacity: 1;
   z-index: 2;
-}
-#banner .inner .panel li.on:nth-of-type(1) {
-  left: 0;
-}
-#banner .inner .panel li.on:nth-of-type(2) {
-  left: 0%;
-}
-#banner .inner .panel li.on:nth-of-type(3) {
-  left: 0;
 }
 #banner .inner .panel #bwBanner {
   width: 100%;
@@ -126,9 +110,6 @@ header .inner nav #gnb li a:hover::after {
   text-align: right;
   color: #000;
 }
-#banner .inner .panel #bwBanner p span {
-  color: #1e9700;
-}
 #banner .inner .panel #cyBanner {
   width: 100%;
   height: 100%;
@@ -146,9 +127,6 @@ header .inner nav #gnb li a:hover::after {
   right: 19%;
   text-align: right;
   color: #000;
-}
-#banner .inner .panel #cyBanner p span {
-  color: #1e9700;
 }
 #banner .inner .panel #jbBanner {
   width: 100%;
@@ -168,6 +146,7 @@ header .inner nav #gnb li a:hover::after {
   text-align: right;
   color: #000;
 }
+
 main {
   width: 100%;
   height: 100vh;
@@ -423,7 +402,7 @@ main nav p:hover {
   width: 100%;
   height: 1000px;
   position: relative;
-  background-color: #EFEAD8;
+  background-color: #fff;
 }
 #news .inner h1 {
   font: bold 55px/1.2 "Diphylleia";
@@ -537,7 +516,7 @@ main nav p:hover {
 #news .inner .wrap > div article .inner h2 {
   width: 80%;
   padding: 30px;
-  font: bold 30px/1.2 "Diphylleia";
+  font: bold 28px/1.2 "Diphylleia";
   transform: translateX(9999px);
   opacity: 0;
 }
