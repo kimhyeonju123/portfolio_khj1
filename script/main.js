@@ -5,7 +5,6 @@ const gnb_li = document.querySelectorAll("#gnb>li");
 const frame = document.querySelector(".frame");
 const section = document.querySelector("section"); //
 const articles = frame.querySelectorAll("article");
-let article_arr = Array.from(articles); //
 const next = document.querySelector(".next");
 const prev = document.querySelector(".prev");
 const opens = frame.querySelectorAll(".open");
