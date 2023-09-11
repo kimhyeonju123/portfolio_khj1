@@ -1,25 +1,35 @@
-main {
+#main {
     width: 100%;
     height: 100vh;
-    // height: 1000px;
-    // position: relative;
     position: relative;
-    overflow: hidden;
+    opacity: 0.8;
     background-color: #606C5D;
+    transition: .5s;
 
-    section {
+    &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
         width: 100%;
-        opacity: 0; //
+        height: 100%;
+    }
+
+    &.on {
+        opacity: 1;
+
+        &::after {
+            display: none;
+        }
+    }
+
+    >.frame {
+        width: 100%;
         transition: 0.5s; //
 
-        &.view{
-            opacity: 1;
-        }
-        
         article {
-            // visibility: hidden; //
             width: 24vw; //
-            // width: 0;
             height: 70vh;
             position: absolute;
             top: 40%;
@@ -30,15 +40,7 @@ main {
             transition-property: width, height, transform, opacity, margin-left, margin-top, top, left;
             transition-duration: 0.5s;
             transition-delay: 0s;
-            // box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
-            
-            // &.eee{ //
-            //     visibility: visible;
-            //     width: 24vw;
-            // }
-
-            
 
             .txt {
                 width: 100%;
@@ -65,7 +67,6 @@ main {
 
                 h2 {
                     font: 2vw/1 "Playfair Display";
-                    // color: #D53854;
                     color: #769FCD;
                     position: absolute;
                     top: 75%;
@@ -177,8 +178,9 @@ main {
                     h2::before {
                         height: 100%;
                     }
-                    svg{
-                        path{
+
+                    svg {
+                        path {
                             stroke-dashoffset: 0;
                             fill: #111;
                         }
@@ -237,8 +239,8 @@ main {
                 height: 100%;
                 padding: 5vw;
                 transition: 0.5s 0.5s;
-                
-                strong{
+
+                strong {
                     top: 15vh;
                     left: 5vw;
                 }
@@ -248,7 +250,7 @@ main {
                     left: 5vw;
                     transition: 0.5s;
                 }
-                
+
                 .desc {
                     visibility: visible;
                     top: 30%;
@@ -287,20 +289,21 @@ main {
         display: flex;
         top: 10%;
         left: 50%;
-        transform: translateX(-50%);            
+        transform: translateX(-50%);
         gap: 50px;
         transition: 0.5s;
         cursor: pointer;
-        
-        p{
+
+        p {
             width: 150px;
             height: 40px;
             font: bold 30px/40px "Playfair Display";
             letter-spacing: 8px;
             text-align: center;
             border-radius: 5px;
-            
-            &:hover{
+            transition: .2s;
+
+            &:hover {
                 // background-color: #566270;
                 border-bottom: 1px solid #fff;
                 color: #fff;

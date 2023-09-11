@@ -1,13 +1,3 @@
-이미지 alt 부분 반드시 수정할 것
-
-브랜드
-이미지 bw2.jpg
-브랜드img.jpg
-bw_book1.jpg
-bw_book2.jpg
-kcy_book1.png
-kcy_book2.png
-
 김초엽 - <지구 끝의 온실>, <우리가 빛의 속도로 갈 수 없다면>
 베르나르 베르베르 - <기억>, <심판>
 줄리언 반스 - <예감은 틀리지 않는다>
@@ -51,4 +41,5 @@ https://m.blog.naver.com/coldpond/221377546650
 슬라이드 속 책 설명 출처
 알라딘 책소개
 
-
+tree 사진 출처
+https://m.blog.naver.com/nrbicbac/221562540486

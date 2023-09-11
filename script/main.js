@@ -3,7 +3,6 @@ const gnb_li = document.querySelectorAll("#gnb>li");
 
 // 슬라이드 변수
 const frame = document.querySelector(".frame");
-const section = document.querySelector("section"); //
 const articles = frame.querySelectorAll("article");
 const next = document.querySelector(".next");
 const prev = document.querySelector(".prev");
@@ -28,13 +27,13 @@ gnb_li.forEach((el) => {
     el.addEventListener("mouseenter", (e) => {
         const sub = e.currentTarget.querySelector(".sub");
         let isBlock = window.getComputedStyle(sub).getPropertyValue("display");
-        console.log(isBlock);
+        // console.log(isBlock);
         sub.style.height = "0";
 
         if (isBlock == "none") {
             sub.style.display = "block";
             let subHeight = sub.scrollHeight;
-            console.log(subHeight); 
+            // console.log(subHeight); 
             sub.style.height = subHeight + "px";
         }
     });
@@ -62,7 +61,7 @@ startRolling();
 function startRolling() {
     active(num);
     timer = setInterval(rolling, interval);
-    console.log(num);
+    // console.log(num);
 }
 
 function active(index) {
@@ -83,30 +82,6 @@ function rolling() {
 
 
 // 슬라이드 부분
-window.addEventListener("scroll",()=>{
-    let scroll = window.scrollY || window.pageYOffset || document.documentElement.scrollTop;
-
-    console.log(scroll);
-
-    // article_arr.map((el, index)=>{
-    //     if(scroll >= 1000){
-    //         for (const el of article_arr) {
-    //             el.classList.add("eee");
-    //         }
-    //     }
-    // })
-    console.log(section);
-    if(scroll >= 500){ //
-        section.classList.add("view");
-    }else{
-        section.classList.remove("view");
-    }
-    if(scroll > 1800){
-        section.classList.remove("view");
-    }
-    // if부분 좀 이상함
-})
-
 for (let i = 0; i < 2; i++) {
     frame.prepend(frame.lastElementChild);
 }

@@ -1,6 +1,7 @@
-header {
+#header {
     width: 100%;
-
+    position: relative; //
+    z-index: 5; //
     .inner {
         // width: 1180px;
         width: 100%;

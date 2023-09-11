@@ -7,11 +7,12 @@
     <title>main</title>
     <link rel="stylesheet" href="css/style.css">
     <script defer src="script/main.js"></script>
+    <script defer src="script/scroll.js"></script>
     <script src="https://kit.fontawesome.com/c12878d3ba.js" crossorigin="anonymous"></script>
 </head>
 
 <body class="notDragging">
-    <header>
+    <section id="header">
         <div class="inner">
             <h1>
                 <a href="index.html">MUSNSORI</a>
@@ -29,19 +30,19 @@
                     <li>
                         <a href="#">ABOUT</a>
                         <ul class="sub">
-                            <li><a href="#">Information</a></li>
+                            <li><a href="information.html">Information</a></li>
                             <li><a href="#">Location</a></li>
                         </ul>
                     </li>
                 </ul>
             </nav>
-            <a href="index.html" title="홈으로">
-                <i class="fa-solid fa-house"></i>
+            <a href="#" title="최상단으로">
+                <i class="fa-solid fa-arrow-up"></i>
             </a>
         </div>
-    </header>
+    </section>
 
-    <div id="banner">
+    <section id="banner">
         <div class="inner">
             <ul class="panel">
                 <li id="bwBanner" class="on">
@@ -57,7 +58,8 @@
                         건네기보다<br>
                         독자들에게<br>
                         건넬 소설에<br>
-                        그런 생각을<br>담으려고 한다
+                        그런 생각을<br>
+                        담으려고 한다
                     </p>
                 </li>
                 <li id="jbBanner">
@@ -70,10 +72,10 @@
                 </li>
             </ul>
         </div>
-    </div>
+    </section>
 
-    <main>
-        <section class="frame">
+    <section id="main">
+        <div class="frame">
             <article>
                 <div class="txt">
                     <h2>SF</h2>
@@ -97,7 +99,7 @@
                     </div>
                 </div>
                 <div class="pic">
-                    <img src="img/bw_book1.jpg" alt="베르나르 베르베르의 책인 기억 1편 표지">
+                    <img src="img/기억_편집.jpg" alt="베르나르 베르베르의 책인 기억 1편 표지">
                 </div>
                 <div class="open">
                     <span>MORE</span>
@@ -123,7 +125,7 @@
                     </div>
                 </div>
                 <div class="pic">
-                    <img src="img/bw_book2.jpg" alt="베르나르 베르베르의 책인 심판_의 표지">
+                    <img src="img/심판_원본.jpg" alt="베르나르 베르베르의 책인 심판_의 표지">
                 </div>
                 <div class="open">
                     <span>MORE</span>
@@ -151,7 +153,7 @@
                     </div>
                 </div>
                 <div class="pic">
-                    <img src="img/kcy_book3_copy.jpg" alt="김초엽의 책인 지구 끝의 온실_의 표지">
+                    <img src="img/지끝온_편집.jpg" alt="김초엽의 책인 지구 끝의 온실_의 표지">
                 </div>
                 <div class="open">
                     <span>MORE</span>
@@ -184,7 +186,7 @@
                     </div>
                 </div>
                 <div class="pic">
-                    <img src="img/kcy_book2_copy22.jpg" alt="김초엽의 책인 우리가 빛의 속도로 갈 수 없다면_의 표지">
+                    <img src="img/우빛속_슬라이드.jpg" alt="김초엽의 책인 우리가 빛의 속도로 갈 수 없다면_의 표지">
                 </div>
                 <div class="open">
                     <span>MORE</span>
@@ -215,7 +217,7 @@
                     </div>
                 </div>
                 <div class="pic">
-                    <img src="img/줄리언반스_book.jpg" alt="줄리언 반스의 책인 예감은 틀리지 않는다_의 표지">
+                    <img src="img/예틀않_편집.jpg" alt="줄리언 반스의 책인 예감은 틀리지 않는다_의 표지">
                 </div>
                 <div class="open">
                     <span>MORE</span>
@@ -223,19 +225,19 @@
                 </div>
                 <div class="close">close</div>
             </article>
-        </section>
+        </div>
         <nav>
             <p class="prev"><span>Prev</span></p>
             <p class="next"><span>Next</span></p>
         </nav>
-    </main>
+    </section>
 
     <section id="news">
         <div class="inner">
             <h1 class="on">
                 당신의 영혼은 젊다는 걸 기억해요.
                 <p>
-                    <심판>
+                    <심판> - 카롤린
                 </p>
             </h1>
             <h1>
@@ -304,17 +306,25 @@
         </div>
     </section>
 
-    <footer>
+    <ul id="scrollBtn">
+        <li class="on" title="상단메뉴바"></li>
+        <li title="배너"></li>
+        <li title="책 줄거리"></li>
+        <li title="작가의 말"></li>
+        <li></li>
+    </ul>
+
+    <section id="footer">
         <div class="inner">
             <p>
-                © 주식회사 우리인재개발원 / 우리컴퓨터아카데미. All Rights Reserved.
+                © (경기)근명고등학교 / 앱서비스과
             </p>
             <address>
-                주소 : 경기 부천시 부천로29번길 7, 12층(심곡동)<br>
-                (주)우리인재개발원 대표자 : 남대일 사업자번호 : 783-87-01686[사업자정보 확인] 대표번호 : 1668-5004
+                주소 : 경기 시흥시 조남동 1069-12<br>
+                (주)MUSNSORI 대표자 : 김현주 / 대표번호 : 1111-2222
             </address>
         </div>
-    </footer>
+    </section>
 </body>
 
 </html>

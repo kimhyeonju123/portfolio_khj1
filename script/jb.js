@@ -44,7 +44,6 @@ vidList.addEventListener("click", (e) => {
     e.preventDefault();
 
     if(!e.target.closest("a")){
-        // 내가 클릭한 대상이 a태그가 아니라면 무시
         return;
     }
 
@@ -62,7 +61,6 @@ vidList.addEventListener("click", (e) => {
 
 vidList.addEventListener("click",(e)=>{
     const pop = vidList.querySelector(".pop");
-    // pop이 존재하면 밑에 if문으로 코드를 시작하고 .. 없으면 무시되어 실행하지 않음
     if(pop){
         const close = pop.querySelector("span");
         if(e.target == close) pop.remove();

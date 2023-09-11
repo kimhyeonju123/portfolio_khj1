@@ -16,10 +16,12 @@ a {
   text-decoration: none;
 }
 
-header {
+#header {
   width: 100%;
+  position: relative;
+  z-index: 5;
 }
-header .inner {
+#header .inner {
   width: 100%;
   height: 100px;
   margin: 0 auto;
@@ -29,21 +31,21 @@ header .inner {
   align-items: center;
   background-color: #606C5D;
 }
-header .inner h1 a {
+#header .inner h1 a {
   font: bold 40px/1 "Playfair Display";
   color: #222;
 }
-header .inner nav #gnb {
+#header .inner nav #gnb {
   display: flex;
 }
-header .inner nav #gnb > li {
+#header .inner nav #gnb > li {
   width: 150px;
   position: relative;
 }
-header .inner nav #gnb > li:hover a {
+#header .inner nav #gnb > li:hover a {
   color: #222;
 }
-header .inner nav #gnb > li > a {
+#header .inner nav #gnb > li > a {
   display: block;
   padding: 10px 20px;
   font: bold 20px/1 "IBM Plex Sans KR";
@@ -51,7 +53,7 @@ header .inner nav #gnb > li > a {
   text-align: center;
   margin-right: 10px;
 }
-header .inner nav #gnb > li .sub {
+#header .inner nav #gnb > li .sub {
   position: absolute;
   left: 0;
   display: none;
@@ -59,7 +61,7 @@ header .inner nav #gnb > li .sub {
   transition: height 0.5s ease;
   z-index: 10;
 }
-header .inner nav #gnb > li .sub li a {
+#header .inner nav #gnb > li .sub li a {
   display: block;
   width: 150px;
   height: 50px;
@@ -69,10 +71,10 @@ header .inner nav #gnb > li .sub li a {
   color: #fff;
   background-color: #434c41;
 }
-header .inner nav #gnb > li .sub li a:hover {
+#header .inner nav #gnb > li .sub li a:hover {
   color: #888;
 }
-header .inner > a {
+#header .inner > a {
   position: fixed;
   z-index: 10;
   width: 50px;
@@ -85,7 +87,7 @@ header .inner > a {
   justify-content: center;
   align-items: center;
 }
-header .inner > a i {
+#header .inner > a i {
   position: absolute;
   color: #fff;
   font-size: 20px;
@@ -295,6 +297,13 @@ sub_header .inner > a i {
   opacity: 1;
   transition: 1s 0.6s;
 }
+#sub_banner .inner .page .txt .info {
+  font: 12px/1 "arial";
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  color: #aaa;
+}
 #sub_banner .inner .page h2 {
   opacity: 1;
   transition: 1s 0.6s;
@@ -379,7 +388,6 @@ sub_header .inner > a i {
   opacity: 1;
   width: 300px;
   height: 300px;
-  background-color: #5F7161;
   border-radius: 10px;
 }
 #sub_banner .inner #page1 .pic img {
@@ -608,22 +616,34 @@ sub_header .inner > a i {
   right: 2vw;
 }
 
-main {
+#main {
   width: 100%;
   height: 100vh;
   position: relative;
-  overflow: hidden;
+  opacity: 0.8;
   background-color: #606C5D;
-}
-main section {
-  width: 100%;
-  opacity: 0;
   transition: 0.5s;
 }
-main section.view {
+#main::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+#main.on {
   opacity: 1;
 }
-main section article {
+#main.on::after {
+  display: none;
+}
+#main > .frame {
+  width: 100%;
+  transition: 0.5s;
+}
+#main > .frame article {
   width: 24vw;
   height: 70vh;
   position: absolute;
@@ -637,7 +657,7 @@ main section article {
   transition-delay: 0s;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
 }
-main section article .txt {
+#main > .frame article .txt {
   width: 100%;
   height: 40%;
   background: linear-gradient(45deg, #606C5D, #333);
@@ -647,18 +667,18 @@ main section article .txt {
   right: 0;
   transition: 0.5s;
 }
-main section article .txt strong {
+#main > .frame article .txt strong {
   font: 1vw/1 "Playfair Display";
   color: #888;
 }
-main section article .txt p {
+#main > .frame article .txt p {
   font: bold 2vw/1.2 "Diphylleia";
   color: #F1F0E8;
   position: relative;
   padding-bottom: 20px;
   text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
 }
-main section article .txt h2 {
+#main > .frame article .txt h2 {
   font: 2vw/1 "Playfair Display";
   color: #769FCD;
   position: absolute;
@@ -668,7 +688,7 @@ main section article .txt h2 {
   transition: 0.5s;
   text-shadow: 5px 5px 3px rgba(0, 0, 0, 0.3);
 }
-main section article .txt h2::before {
+#main > .frame article .txt h2::before {
   content: "";
   position: absolute;
   width: 1px;
@@ -678,7 +698,7 @@ main section article .txt h2::before {
   left: -10px;
   transition: height 1s 0.5s;
 }
-main section article .txt .desc {
+#main > .frame article .txt .desc {
   width: 75%;
   visibility: hidden;
   position: absolute;
@@ -688,7 +708,7 @@ main section article .txt .desc {
   letter-spacing: 2px;
   color: #aaa;
 }
-main section article .pic {
+#main > .frame article .pic {
   width: 100%;
   height: 60%;
   background-color: #000;
@@ -697,14 +717,14 @@ main section article .pic {
   left: 0;
   transition: 0.5s;
 }
-main section article .pic img {
+#main > .frame article .pic img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   opacity: 0.5;
   transition: opacity 0.5s;
 }
-main section article .open {
+#main > .frame article .open {
   width: 0%;
   height: 60px;
   background-color: #fff;
@@ -718,20 +738,20 @@ main section article .open {
   cursor: pointer;
   transition: 0.5s;
 }
-main section article .open span {
+#main > .frame article .open span {
   font: 16px/1 "IBM Plex Sans KR";
   color: #000;
   transform: translateX(-200px);
   opacity: 0;
   transition: 0.5s;
 }
-main section article .open i {
+#main > .frame article .open i {
   margin-right: -1000px;
   opacity: 0;
   color: #555;
   transition: 0.5s;
 }
-main section article .close {
+#main > .frame article .close {
   cursor: pointer;
   position: absolute;
   top: 11vh;
@@ -742,51 +762,51 @@ main section article .close {
   opacity: 0;
   transition: all 0.5s;
 }
-main section article:nth-of-type(1) {
+#main > .frame article:nth-of-type(1) {
   transform: translateX(-260%);
   opacity: 0;
 }
-main section article:nth-of-type(2) {
+#main > .frame article:nth-of-type(2) {
   transform: translateX(-130%);
   opacity: 0.8;
 }
-main section article:nth-of-type(3) {
+#main > .frame article:nth-of-type(3) {
   transform: translateX(0%);
   opacity: 1;
 }
-main section article:nth-of-type(3) .txt h2::before {
+#main > .frame article:nth-of-type(3) .txt h2::before {
   height: 100%;
 }
-main section article:nth-of-type(3) .txt svg path {
+#main > .frame article:nth-of-type(3) .txt svg path {
   stroke-dashoffset: 0;
   fill: #111;
 }
-main section article:nth-of-type(3) .pic img {
+#main > .frame article:nth-of-type(3) .pic img {
   opacity: 0.8;
 }
-main section article:nth-of-type(3) .open {
+#main > .frame article:nth-of-type(3) .open {
   width: 100%;
 }
-main section article:nth-of-type(3) .open span {
+#main > .frame article:nth-of-type(3) .open span {
   transform: translateX(50%);
   opacity: 1;
   transition: 0.5s 0.5s;
 }
-main section article:nth-of-type(3) .open i {
+#main > .frame article:nth-of-type(3) .open i {
   margin-right: 30px;
   opacity: 1;
   transition: 0.5s 0.8s;
 }
-main section article:nth-of-type(4) {
+#main > .frame article:nth-of-type(4) {
   transform: translateX(130%);
   opacity: 0.8;
 }
-main section article:nth-of-type(5) {
+#main > .frame article:nth-of-type(5) {
   width: 25vw;
   transform: translateX(260%);
   opacity: 0;
 }
-main section article.on {
+#main > .frame article.on {
   width: 100%;
   height: 100%;
   margin-top: 0;
@@ -797,46 +817,46 @@ main section article.on {
   transition-duration: 0.8s;
   transition-delay: 0.5s;
 }
-main section article.on .txt {
+#main > .frame article.on .txt {
   width: 55%;
   height: 100%;
   padding: 5vw;
   transition: 0.5s 0.5s;
 }
-main section article.on .txt strong {
+#main > .frame article.on .txt strong {
   top: 15vh;
   left: 5vw;
 }
-main section article.on .txt h2 {
+#main > .frame article.on .txt h2 {
   top: calc(100% - 5vw);
   left: 5vw;
   transition: 0.5s;
 }
-main section article.on .txt .desc {
+#main > .frame article.on .txt .desc {
   visibility: visible;
   top: 30%;
   transition: 1s 1s;
 }
-main section article.on .pic {
+#main > .frame article.on .pic {
   width: 45%;
   height: 100%;
   transition: 0.5s 0.5s;
 }
-main section article.on .open {
+#main > .frame article.on .open {
   opacity: 0;
   margin-top: 1000px;
 }
-main section article.on .close {
+#main > .frame article.on .close {
   opacity: 1;
   right: 5vw;
   transition: 0.5s 1s;
   transition-timing-function: cubic-bezier(0.48, -0.67, 0.54, 1.68);
 }
-main section article.hide {
+#main > .frame article.hide {
   margin-top: -10000px;
   opacity: 0;
 }
-main nav {
+#main nav {
   position: absolute;
   display: flex;
   top: 10%;
@@ -846,15 +866,16 @@ main nav {
   transition: 0.5s;
   cursor: pointer;
 }
-main nav p {
+#main nav p {
   width: 150px;
   height: 40px;
   font: bold 30px/40px "Playfair Display";
   letter-spacing: 8px;
   text-align: center;
   border-radius: 5px;
+  transition: 0.2s;
 }
-main nav p:hover {
+#main nav p:hover {
   border-bottom: 1px solid #fff;
   color: #fff;
 }
@@ -863,7 +884,7 @@ main nav p:hover {
   width: 100%;
   height: 1000px;
   position: relative;
-  background-color: #fff;
+  background-color: #aaa;
 }
 #news .inner h1 {
   font: bold 55px/1.2 "Diphylleia";
@@ -1039,16 +1060,55 @@ main nav p:hover {
     transform: rotate(1deg);
   }
 }
-footer {
+main {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+main #wrap {
+  width: 100%;
+  height: 100%;
+}
+main #wrap .inner {
+  width: 100%;
+  height: 40%;
+  background-image: url(../img/tree.jpg);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+}
+main #wrap .inner i {
+  font-size: 120px;
+  color: #eee;
+}
+main #wrap #info_banner {
+  width: 100%;
+  height: 60%;
+  background-color: #eee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main #wrap #info_banner .box {
+  width: 20%;
+  height: 300px;
+  background-color: #222;
+  margin-right: 100px;
+}
+
+#footer {
   width: 100%;
 }
-footer .inner {
+#footer .inner {
   width: 100%;
   height: 300px;
   background-color: #353b33;
   position: relative;
 }
-footer .inner p {
+#footer .inner p {
   padding-top: 50px;
   color: #E0E3DA;
   text-align: center;
@@ -1057,7 +1117,7 @@ footer .inner p {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-footer .inner address {
+#footer .inner address {
   padding-top: 50px;
   color: #E0E3DA;
   text-align: center;
@@ -1101,6 +1161,30 @@ sub_footer .inner address {
   -khtml-user-select: none;
   -webkit-user-select: none;
   user-select: none;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+ul#scrollBtn {
+  position: fixed;
+  z-index: 10;
+  right: 50px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+ul#scrollBtn li {
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  background: linear-gradient(45deg, #98a594, #333);
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+ul#scrollBtn li.on {
+  height: 70px;
+  background: #000;
 }
 
 /*# sourceMappingURL=style.css.map */
