@@ -8,6 +8,7 @@ const page = document.querySelectorAll(".inner .page");
 const indexx = page.length - 1;
 console.log(indexx);
 
+
 // 헤더 부분
 gnb_li.forEach((el) => {
     el.addEventListener("mouseenter", (e) => {
@@ -45,7 +46,7 @@ gnb_li.forEach((el) => {
 let idx = 0;
 next.addEventListener("click",(e)=>{
     e.preventDefault();
-    if (idx <= 2) {
+    if (idx <= 3) {
         nextBtn();
     }else{
         return
@@ -76,6 +77,7 @@ function nextBtn() {
     }
     if(idx == 3){
         page[idx].style.zIndex = 5;
+        page[idx].classList.add("on");
     }
     idx++;
 }
@@ -96,6 +98,7 @@ function prevBtn() {
         page[idx].style.zIndex = -1;
     }
     if(idx == 3){
+        page[idx].classList.remove("on");
         page[idx].style.zIndex = -2;
     }
 }

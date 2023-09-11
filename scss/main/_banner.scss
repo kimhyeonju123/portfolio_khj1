@@ -123,7 +123,7 @@
             box-shadow: 10px 0px 2px rgba(0, 0, 0, 0.4);
             z-index: -3;
         }
-        
+        // 공통
         .page {
             position: absolute;
             width: 50%;
@@ -135,12 +135,20 @@
             transform-origin: left center;
             transition-duration: 1s;
             transition-timing-function: ease-in;
-            
+
+            .txt{
+                opacity: 1;
+                transition: 1s .6s;
+            }
             h2{
                 opacity: 1;
                 transition: 1s .6s;
             }
             span{
+                opacity: 1;
+                transition: 1s .6s;
+            }
+            p{
                 opacity: 1;
                 transition: 1s .6s;
             }
@@ -153,30 +161,49 @@
 
                 }
             }
+            .story{
+                opacity: 1;
+                transition: 1s .6s;
+            }
+            
             &.on{
                 transform: rotateY(-180deg);
                 background-color: #333;
-                
+                .txt{
+                    transition: .5s;
+                    opacity: 0;   
+                }
                 h2{
-                    transition: 1s;
+                    transition: .5s;
                     opacity: 0;
                 }
                 span{
-                    transition: 1s;
+                    transition: .5s;
+                    opacity: 0;
+                }
+                p{
+                    transition: .5s;
                     opacity: 0;
                 }
                 .pic{
                     opacity: 0;
                     img{
                         opacity: 0;
-                        transition: 1s;
+                        transition: .5s;
                     }
+                }
+                .story{
+                    transition: .5s;
+                    opacity: 0;
+                }
+                article{
+                    visibility: hidden;
+                    transition: .5s;
                 }
             }
         }
-        
+        // 개별
         #page1 {
-            height: 100%;
             z-index: 1;
             box-shadow: 10px 0px 2px rgba(0, 0, 0, 0.4), -2px 0 2px rgba(0, 0, 0, 0.4);
             background-color: #5F7161;
@@ -215,23 +242,219 @@
             
         }
         #page2 {
-            height: 100%;
-            background-color: beige;
+            background-color: #f1f0e8;
             z-index: 0;
             box-shadow: 15px 0px 2px rgba(0, 0, 0, 0.4), -2px 0 2px rgba(0, 0, 0, 0.4);
+            padding: 1vh 2vw;
+            
+            span{
+                width: 100%;
+                display: block;
+                text-align: left;
+                color: #777;
+                font: 24px/1.2 "Diphylleia";
+                margin-top: 2%;
+            }
+            .txt{
+                position: absolute;
+                width: 20vw;
+                height: 40vh;
+                background-color: #fff;
+                box-shadow: inset 2px 2px 10px rgba(0, 0, 0, 0.4);
+                top: 10%;
+                right: 5%;
+                border-radius: 10px;
+                padding: 2vh 1vw;
 
+                h2{
+                    font: bold 30px/1.2 "Diphylleia";
+                    border-bottom: 1px dashed #000;
+                    margin-bottom: 15%;
+                    padding-bottom: 10px;
+                }
+                p{
+                    font: 18px/1.2 "Diphylleia";
+                    margin-bottom: 3%;
+                }
+            }
+            
+            .pic{
+                position: absolute;
+                top: 10%;
+                opacity: 1;
+                width: 15vw;
+                height: 40vh;
+                border-radius: 10px;
+                
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    border-radius: 10px;
+                }
+            }
+            .story{
+                position: absolute;
+                width: 90%;
+                // height: 30vh;
+                background-color: rgba(0, 0, 0, 0.04);
+                top: 65%;
+                border-radius: 30px;
+
+                p{
+                    padding: 2%;
+                    font: 18px/1.5 "Diphylleia";
+                }
+            }
         }
         #page3 {
-            height: 100%;
-            background-color: beige;
+            background-color: #f1f0e8;
             z-index: -1;
             box-shadow: 20px 0px 2px rgba(0, 0, 0, 0.4), -2px 0 2px rgba(0, 0, 0, 0.4);
+            padding: 1vh 2vw;
+
+            span{
+                width: 100%;
+                display: block;
+                text-align: left;
+                color: #777;
+                font: 24px/1.2 "Diphylleia";
+                margin-top: 2%;
+            }
+            .txt{
+                position: absolute;
+                width: 20vw;
+                height: 40vh;
+                background-color: #fff;
+                box-shadow: inset 2px 2px 10px rgba(0, 0, 0, 0.4);
+                top: 10%;
+                right: 5%;
+                border-radius: 10px;
+                padding: 2vh 1vw;
+
+                h2{
+                    font: bold 30px/1.2 "Diphylleia";
+                    border-bottom: 1px dashed #000;
+                    margin-bottom: 15%;
+                    padding-bottom: 10px;
+                }
+                p{
+                    font: 18px/1.2 "Diphylleia";
+                    margin-bottom: 3%;
+                }
+            }
+            
+            .pic{
+                position: absolute;
+                top: 10%;
+                opacity: 1;
+                width: 15vw;
+                height: 40vh;
+                border-radius: 10px;
+                
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    border-radius: 10px;
+                }
+            }
+            .story{
+                position: absolute;
+                width: 90%;
+                // height: 30vh;
+                background-color: rgba(0, 0, 0, 0.04);
+                top: 65%;
+                border-radius: 30px;
+
+                p{
+                    padding: 2%;
+                    font: 18px/1.5 "Diphylleia";
+                }
+            }
         }
         #page4 {
-            height: 100%;
             background-color: #5F7161;
             z-index: -2;
             box-shadow: 25px 0px 2px rgba(0, 0, 0, 0.4), -2px 0 2px rgba(0, 0, 0, 0.4);
+            padding: 1vh 2vw;
+            
+            >h2{
+                width: 100%;
+                display: block;
+                text-align: left;
+                color: black;
+                font: bold 24px/1.2 "Diphylleia";
+                margin-top: 2%;
+            }
+
+            .inner{
+                .vidList {
+                    width: 100%;
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-around;
+                    align-items: center;
+                
+                    article {
+                        width: 47%;
+                        border: 1px solid black;
+                        background-color: rgba(0, 0, 0, 0.04);
+                        margin-bottom: 40px;
+                        margin-right: 10px;
+
+                        .pic {
+                            display: block;
+                            width: 100%;
+                            height: 30%;
+                            padding: 10px;
+                            opacity: 1;
+                            transition: 1s .6s;
+                
+                            img {
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;
+                            }
+                        }
+                
+                        .con {
+                            width: 100%;
+                            height: 40%;
+                            padding: 10px;
+                
+                            h2 {
+                                font: bold 20px/1.2 "Diphylleia";
+                                color: black;
+                                margin-bottom: 15px;
+                                width: 100%;
+                            }
+                        }
+                    }
+                    .pop {
+                        width: 40vw;
+                        height: 100%;
+                        position: fixed;
+                        z-index: inherit;
+                        top: 0;
+                        left: -12%;
+                        background-color: rgba(0, 0, 0, 0.8);
+                        overflow: hidden;
+                        padding: 2vw;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                
+                        .btnClose {
+                            position: absolute;
+                            top: 10px;
+                            right: 10px;
+                            color: #fff;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
         }
     }
     
