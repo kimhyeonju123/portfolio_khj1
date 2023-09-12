@@ -1,11 +1,13 @@
-main{
+main {
     width: 100%;
     height: 100vh;
     position: relative;
-    #wrap{
+
+    #wrap {
         width: 100%;
         height: 100%;
-        .inner{
+
+        .inner {
             width: 100%;
             height: 40%;
             background-image: url(../img/tree.jpg);
@@ -15,23 +17,100 @@ main{
             display: flex;
             justify-content: space-around;
             align-items: flex-end;
-            i{
-                font-size: 120px;
+
+            h2 {
+                position: absolute;
+                width: 80vw;
+                top: 10%;
+                padding: 10px;
+                text-align: center;
+                font: 40px/1 "Playfair Display";
                 color: #eee;
+                background-color: rgba(0, 0, 0, 0.6);
             }
+
+            svg {
+                width: 10%;
+
+                path {
+                    fill: transparent;
+                    stroke: #fff;
+                    stroke-width: 5px;
+                    stroke-dasharray: 1850;
+                    stroke-dashoffset: 1850;
+                    transition: stroke-dashoffset 1s 0s, fill 1s 1s;
+                }
+            }
+
         }
-        #info_banner{
+        &:hover svg path {
+            stroke-dashoffset: 0;
+            fill: #fff;
+        }
+
+        #info_banner {
             width: 100%;
             height: 60%;
             background-color: #eee;
             display: flex;
             justify-content: center;
             align-items: center;
-            .box{
+
+            .box {
                 width: 20%;
-                height: 300px;
+                height: 200px;
                 background-color: #222;
                 margin-right: 100px;
+                z-index: 1;
+                position: relative;
+
+                h2 {
+                    position: absolute;
+                    width: 50%;
+                    height: 40px;
+                    top: 0%;
+                    opacity: 1;
+                    font: 24px/1 "Diphylleia";
+                    color: #fff;
+                    letter-spacing: 1px;
+                    background-color: rgba(0, 0, 0, 0.6);
+                    transition: .5s;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                .pic {
+                    width: 100%;
+                    height: 100%;
+                    overflow: hidden;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    img {
+                        transform: scale(1);
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        transition: .5s;
+                    }
+                }
+                &:hover {
+                    h2 {
+                        top: -40px;
+                        opacity: 1;
+                    }
+                    .pic{
+                        img {
+                            transform: scale(1.3);
+    
+                        }
+                    }
+
+                    
+
+                }
             }
         }
     }

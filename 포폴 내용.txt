@@ -15,6 +15,7 @@
 Playfair Display - 영어
 IBM Plex Sans KR - 한글
 Song Myung - 한글
+Diphylleia
 
 //
 김초엽 영어

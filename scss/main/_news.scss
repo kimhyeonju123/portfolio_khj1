@@ -5,12 +5,13 @@
     background-color: #aaa;
 
     .inner {
+        overflow: hidden;
         h1 {
             font: bold 55px/1.2 "Diphylleia";
             letter-spacing: 4px;
             text-align: left;
             position: absolute;
-            top: 100%;
+            top: 70vh;
             left: 15%;
             color: #222;
             opacity: 0;
@@ -115,6 +116,7 @@
                         height: 100%;
                         opacity: 0;
                         // margin-left: -9999px;
+                        overflow: hidden;
 
                         .pic {
                             width: 30%;
