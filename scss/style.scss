@@ -10,6 +10,7 @@
 @import "main/slider";
 @import "main/news";
 @import "main/info";
+@import "main/location";
 @import "common/footer";
 
 .notDragging{
@@ -22,6 +23,8 @@
 body{
     overflow-x: hidden;
 }
+// $tablet: 1179px;
+// $mobile: 539px;
 
 ul#scrollBtn{
     position: fixed;

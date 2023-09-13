@@ -1,15 +1,12 @@
 #banner {
     width: 100%;
-    // height: 100vh;
     height: 1000px;
     background-color: #F1F0E8;
     .inner {
-        // width: 1180px;
         width: 100%;
         height: 100%;
-        margin: 0 auto;
         position: relative;
-        overflow: hidden; //
+        overflow: hidden;
         
         .panel{
             position: absolute;
@@ -22,12 +19,9 @@
                 position: absolute;
                 top: 0;
                 left: 0;
-
                 opacity: 0;
                 z-index: 1;
                 transition: 1s;
-
-                // 슬라이드 수정
                 &.on{
                     opacity: 1;
                     z-index: 2;
@@ -98,7 +92,6 @@
 #sub_banner{
     width: 100%;
     height: 100vh;
-    // background-color: #fff; //
     position: relative;
 
     .inner{
@@ -123,7 +116,6 @@
             box-shadow: 10px 0px 2px rgba(0, 0, 0, 0.4);
             z-index: -3;
         }
-        // 공통
         .page {
             position: absolute;
             width: 50%;
@@ -175,7 +167,6 @@
             
             &.on{
                 transform: rotateY(-180deg);
-                background-color: #333;
                 .txt{
                     transition: .5s;
                     opacity: 0;   
@@ -490,6 +481,227 @@
         }
         .subNext{
             right: 2vw;
+        }
+    }
+}
+
+@media screen and (max-width: 1179px) {
+    #banner {
+        .inner {
+            .panel{
+                #bwBanner{
+                    background-image: url(../img/Bernard_Werber1.png);
+                    background-position-x: 5%;
+                    background-position-y: 100%;
+                    background-size: 50%;
+                    p{
+                        font: bold 45px/1.5 "IBM Plex Sans KR";
+                    }
+                }
+                #cyBanner{
+                    background-image: url(../img/kcy1NoBg.png);
+                    background-position-x: 0%;
+                    background-position-y: 100%;
+                    background-size: 80%;
+                    p{
+                        font: bold 45px/1.5 "IBM Plex Sans KR";
+                    }
+                }
+                #jbBanner{
+                    background-image: url(../img/Julian_Barnes2NoBg.png);
+                    background-position-x: 0%;
+                    background-position-y: 100%;
+                    background-size: 70%;
+                    p{
+                        font: bold 45px/1.5 "IBM Plex Sans KR";
+                    }
+                }
+            }
+        }
+    }
+
+    #sub_banner{
+        .inner{
+            #page1 {
+                h2{
+                    font: bold 45px/1 "Diphylleia";
+                    margin-top: 90%;
+                }
+                span{
+                    font: 20px/1.2 "Diphylleia";
+                }
+                .pic{
+                    left: 17%;
+                }
+            }
+            #page2 {
+                span{
+                    font: 18px/1.2 "Diphylleia";
+                }
+                .txt{
+                    width: 35.5vw;
+                    height: 40vh;
+                    background-color: #fff;
+                    box-shadow: inset 2px 2px 10px rgba(0, 0, 0, 0.4);
+                    top: 10%;
+                    right: 5%;
+                    border-radius: 10px;
+                    padding: 2vh 1vw;
+                    h2{
+                        font: bold 25px/1.2 "Diphylleia";
+                    }
+                    p{
+                        font: 15px/1.2 "Diphylleia";
+                    }
+                }
+                .pic{
+                    display: none;
+                }
+                .story{
+                    top: 63%;
+                    
+                    p{
+                        padding: 2%;
+                        font: 17px/1.5 "Diphylleia";
+                    }
+                }
+            }
+            #page3 {
+                span{
+                    font: 18px/1.2 "Diphylleia";
+                }
+                .txt{
+                    width: 35.5vw;
+                    height: 40vh;
+                    background-color: #fff;
+                    box-shadow: inset 2px 2px 10px rgba(0, 0, 0, 0.4);
+                    top: 10%;
+                    right: 5%;
+                    border-radius: 10px;
+                    padding: 2vh 1vw;
+                    h2{
+                        font: bold 25px/1.2 "Diphylleia";
+                    }
+                    p{
+                        font: 15px/1.2 "Diphylleia";
+                    }
+                }
+                .pic{
+                    display: none;
+                }
+                .story{
+                    top: 63%;
+                    
+                    p{
+                        padding: 2%;
+                        font: 17px/1.5 "Diphylleia";
+                    }
+                }
+            }
+            // 이 아래부터 수정
+            #page4 {
+                >h2{
+                    font: bold 18px/1.2 "Diphylleia";
+                }
+    
+                .inner{
+                    .vidList {
+                        width: 100%;
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: space-around;
+                        align-items: center;
+                    
+                        article {
+                            width: 47%;
+                            border: 1px solid black;
+                            background-color: rgba(0, 0, 0, 0.04);
+                            margin-bottom: 40px;
+                            margin-right: 10px;
+    
+                            .pic {
+                                display: block;
+                                width: 100%;
+                                height: 30%;
+                                padding: 10px;
+                                opacity: 1;
+                                transition: 1s .6s;
+                    
+                                img {
+                                    width: 100%;
+                                    height: 100%;
+                                    object-fit: cover;
+                                }
+                            }
+                    
+                            .con {
+                                width: 100%;
+                                height: 40%;
+                                padding: 10px;
+                    
+                                h2 {
+                                    font: bold 20px/1.2 "Diphylleia";
+                                    color: black;
+                                    margin-bottom: 15px;
+                                    width: 100%;
+                                }
+                            }
+                        }
+                        .pop {
+                            width: 40vw;
+                            height: 100%;
+                            position: fixed;
+                            z-index: inherit;
+                            top: 0;
+                            left: -12%;
+                            background-color: rgba(0, 0, 0, 0.8);
+                            overflow: hidden;
+                            padding: 2vw;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                    
+                            .btnClose {
+                                position: absolute;
+                                top: 10px;
+                                right: 10px;
+                                color: #fff;
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+        ul.btn{
+            display: flex;
+            li{
+                position: absolute;
+                z-index: 10; //
+                width: 80px;
+                height: 80px;
+                top: 40vh;
+                background-color: #333;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+    
+                a{
+                    display: block;
+                    i{
+                        font-size: 60px;
+                        color: #fff;
+                    }
+                }
+            }
+            .subPrev{
+                left: 2vw;
+            }
+            .subNext{
+                right: 2vw;
+            }
         }
     }
 }

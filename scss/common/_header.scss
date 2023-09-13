@@ -2,11 +2,10 @@
     width: 100%;
     position: relative; //
     z-index: 5; //
+
     .inner {
-        // width: 1180px;
         width: 100%;
         height: 100px;
-        margin: 0 auto;
         position: relative;
         display: flex;
         justify-content: space-around;
@@ -31,6 +30,13 @@
                     &:hover {
                         a{
                             color: #222;
+                            &::after{
+                                content: '';
+                                display: block;
+                                width: 100%;
+                                height: 1px;
+                                background-color: #fff;
+                            }
                         }
                     }
                     >a {
@@ -40,6 +46,15 @@
                         color: #EEE0C9;
                         text-align: center;
                         margin-right: 10px;
+
+                        &::after{
+                            content: '';
+                            display: block;
+                            width: 0;
+                            height: 1px;
+                            background-color: #fff;
+                            transition: 1s;
+                        }
                     }
                     
                     .sub{
@@ -63,6 +78,169 @@
                                     color: #888;
                                 }
                             }
+                        }
+                    }
+                }
+                >a{
+                    display: block;
+                    width: 150px;
+                    padding: 10px 20px;
+                    font: bold 20px/1 "IBM Plex Sans KR";
+                    color: #EEE0C9;
+                    text-align: center;
+                    margin-right: 10px;
+
+                    &::after{
+                        content: '';
+                        display: block;
+                        width: 0;
+                        height: 1px;
+                        background-color: #fff;
+                        transition: 1s;
+                    }
+                    &:hover {
+                        color: #222;
+                        &::after{
+                            content: '';
+                            display: block;
+                            width: 100%;
+                            height: 1px;
+                            background-color: #fff;
+                        }
+                    }
+                }
+            }
+        }
+        >a{
+            position: fixed;
+            z-index: 10;
+            width: 50px;
+            height: 50px;
+            background-color: #333;
+            border-radius: 50%;
+            right: 2vw;
+            bottom: 2vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            i{
+                position: absolute;
+                color: #fff;
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+sub_header {
+    width: 100%;
+    position: relative;
+    z-index: 5;
+
+    .inner {
+        width: 100%;
+        height: 100px;
+        position: relative;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: #606C5D;
+
+        h1 {
+            a {
+                font: bold 40px/1 "Playfair Display";
+                color: #222;
+
+            }
+        }
+
+        nav {
+            #gnb {
+                display: flex;
+
+                >li {
+                    width: 150px;
+                    position: relative;
+                    &:hover {
+                        a{
+                            color: #222;
+                            &::after{
+                                content: '';
+                                display: block;
+                                width: 100%;
+                                height: 1px;
+                                background-color: #fff;
+                            }
+                        }
+                    }
+                    >a {
+                        display: block;
+                        padding: 10px 20px;
+                        font: bold 20px/1 "IBM Plex Sans KR";
+                        color: #EEE0C9;
+                        text-align: center;
+                        margin-right: 10px;
+
+                        &::after{
+                            content: '';
+                            display: block;
+                            width: 0;
+                            height: 1px;
+                            background-color: #fff;
+                            transition: 1s;
+                        }
+                    }
+                    
+                    .sub{
+                        position: absolute;
+                        left: 0;
+                        display: none;
+                        overflow: hidden;
+                        transition: height 0.5s ease;
+                        z-index: 10;
+                        li{
+                            a{
+                                display: block;
+                                width: 150px;
+                                height: 50px;
+                                font: 15px/50px "IBM Plex Sans KR";
+                                letter-spacing: 1px;
+                                text-align: center;
+                                color:#fff;
+                                background-color: #434c41;
+                                &:hover{
+                                    color: #888;
+                                }
+                            }
+                        }
+                    }
+                }
+                >a{
+                    display: block;
+                    width: 150px;
+                    padding: 10px 20px;
+                    font: bold 20px/1 "IBM Plex Sans KR";
+                    color: #EEE0C9;
+                    text-align: center;
+                    margin-right: 10px;
+
+                    &::after{
+                        content: '';
+                        display: block;
+                        width: 0;
+                        height: 1px;
+                        background-color: #fff;
+                        transition: 1s;
+                    }
+                    &:hover {
+                        color: #222;
+                        &::after{
+                            content: '';
+                            display: block;
+                            width: 100%;
+                            height: 1px;
+                            background-color: #fff;
                         }
                     }
                 }
@@ -91,92 +269,28 @@
 }
 
 
-sub_header {
-    width: 100%;
 
-    .inner {
-        // width: 1180px;
-        width: 100%;
-        height: 100px;
-        margin: 0 auto;
-        position: relative;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        background-color: #606C5D;
-
-        h1 {
-            a {
-                font: bold 40px/1 "Playfair Display";
-                color: #222;
-
-            }
-        }
-
-        nav {
-            #gnb {
-                display: flex;
-
-                >li {
-                    width: 150px;
-                    position: relative;
-                    &:hover {
-                        a{
-                            color: #222;
-                        }
-                    }
-                    >a {
-                        display: block;
-                        padding: 10px 20px;
-                        font: bold 20px/1 "IBM Plex Sans KR";
-                        color: #EEE0C9;
-                        text-align: center;
-                        margin-right: 10px;
-                    }
-                    
-                    .sub{
-                        position: absolute;
-                        left: 0;
-                        display: none;
-                        overflow: hidden;
-                        transition: height 0.5s ease;
-                        z-index: 10;
-                        li{
-                            a{
-                                display: block;
-                                width: 150px;
-                                height: 50px;
-                                font: 15px/50px "IBM Plex Sans KR";
-                                letter-spacing: 1px;
-                                text-align: center;
-                                color:#fff;
-                                background-color: #434c41;
-                                &:hover{
-                                    color: #888;
-                                }
-                            }
-                        }
-                    }
+@media screen and (max-width: 1179px) {
+    #header {
+        .inner {
+            >a{
+                width: 40px;
+                height: 40px;
+                i{
+                    font-size: 18px;
                 }
             }
         }
-        >a{
-            position: fixed;
-            z-index: 10;
-            width: 50px;
-            height: 50px;
-            background-color: #333;
-            border-radius: 50%;
-            right: 2vw;
-            bottom: 2vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            
-            i{
-                position: absolute;
-                color: #fff;
-                font-size: 20px;
+    }
+    
+    sub_header {
+        .inner {
+            >a{
+                width: 40px;
+                height: 40px;
+                i{
+                    font-size: 18px;
+                }
             }
         }
     }

@@ -1,0 +1,46 @@
+#location{
+    width: 100%;
+    .inner{
+        width: 1180px;
+        margin: 0 auto;
+        position: relative;
+        h1{
+            width: 100%;
+            padding: 50px 0 20px 0;
+            text-align: center;
+            font: bold 40px/1 "Diphylleia";
+            color: #222;
+            letter-spacing: 3px;
+        }
+        #map{
+            width: 100%;
+            height: 500px;
+            border: 1px solid black;
+            margin-bottom: 20px;
+        }
+        .traffic{
+            display: flex;
+            margin-bottom: 5%;
+            li{
+                margin-right: 20px;
+                a{
+                    display: block;
+                    width: 200px;
+                    height: 40px;
+                    border: 1px solid #555;
+                    font: 14px/40px "IBM Plex Sans KR";
+                    text-align: center;
+                    background-color: #606C5D;
+                    color: #fff;
+                }
+                &.on{
+                    a{
+                        background-color: #fff;
+                        color: #555;
+                        opacity: 0.2;
+                    }
+                }
+            }
+        }
+    }
+}

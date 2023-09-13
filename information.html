@@ -7,7 +7,10 @@
     <title>information</title>
     <link rel="stylesheet" href="css/style.css">
     <script defer src="script/info.js"></script>
+    <script defer src="script/location.js"></script>
     <script src="https://kit.fontawesome.com/c12878d3ba.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=de83d8100c1ab661b2edfb277fd1c2b9"></script>
+
 </head>
 
 <body>
@@ -26,16 +29,10 @@
                             <li><a href="JulianBarnes.html">Julian_Barnes</a></li>
                         </ul>
                     </li>
-                    <li>
-                        <a href="#">ABOUT</a>
-                        <ul class="sub">
-                            <li><a href="information.html">Information</a></li>
-                            <li><a href="#">Location</a></li>
-                        </ul>
-                    </li>
+                    <a href="information.html">ABOUT</a>
                 </ul>
             </nav>
-            <a href="#" title="최상단으로">
+            <a href="#" title="위로">
                 <i class="fa-solid fa-arrow-up"></i>
             </a>
         </div>
@@ -44,7 +41,7 @@
     <main>
         <section id="wrap">
             <div class="inner">
-                <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
+                <h2>Lorem ipsum dolor sit.</h2>
                 <svg xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
                     <path
@@ -71,29 +68,48 @@
                         d="M210.6 5.9L62 169.4c-3.9 4.2-6 9.8-6 15.5C56 197.7 66.3 208 79.1 208H104L30.6 281.4c-4.2 4.2-6.6 10-6.6 16C24 309.9 34.1 320 46.6 320H80L5.4 409.5C1.9 413.7 0 419 0 424.5c0 13 10.5 23.5 23.5 23.5H192v32c0 17.7 14.3 32 32 32s32-14.3 32-32V448H424.5c13 0 23.5-10.5 23.5-23.5c0-5.5-1.9-10.8-5.4-15L368 320h33.4c12.5 0 22.6-10.1 22.6-22.6c0-6-2.4-11.8-6.6-16L344 208h24.9c12.7 0 23.1-10.3 23.1-23.1c0-5.7-2.1-11.3-6-15.5L237.4 5.9C234 2.1 229.1 0 224 0s-10 2.1-13.4 5.9z" />
                 </svg>
             </div>
-            <div id="info_banner">
+            <div id="info_news">
+                <h1>IDENTITY</h1>
                 <div class="box box1">
-                    <h2>소통</h2>
+                    <h2>talk</h2>
                     <div class="pic">
-                        <img src="img/communication.jpg" alt="사람의 머리만 있는 실루엣이 대화하는 모습">
+                        <img src="img/talk.jpg" alt="책을 들고 있는 사람과 컵을 들고 있는 사람이 대화하는 사진">
                     </div>
                 </div>
                 <div class="box box2">
-                    <h2>휴식</h2>
+                    <h2>rest</h2>
                     <div class="pic">
-                        <img src="img/brand_img.jpg" alt="탁자에 놓여있는 화분과 컵, 바구니 안에 있는 책">
+                        <img src="img/rest.jpg" alt="침대 위에 올려진 책과 컵 사진">
                     </div>
                 </div>
                 <div class="box box3">
-                    <h2>Company</h2>
+                    <h2>think</h2>
                     <div class="pic">
-                        <img src="img/building.jpg" alt="회사 건물이 보이는 흑백 사진">
+                        <img src="img/think.jpg" alt="회사 건물이 보이는 흑백 사진">
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
+    <section id="info_banner">
+        <div class="inner">
+            <h2>Lorem ipsum dolor sit.</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, fugit.</p>
+        </div>
+    </section>
+
+    <section id="location">
+        <div class="inner">
+            <!-- 스타일 추가하기 -->
+            <h1>LOCATION</h1>
+            <div id="map"></div>
+                <ul class="traffic">
+                    <li><a href="#">교통정보 보기</a></li>
+                    <li class="on"><a href="#">교통정보 끄기</a></li>
+                </ul>
+          </div>
+    </section>
 
     <section id="footer">
         <div class="inner">

@@ -24,7 +24,6 @@ a {
 #header .inner {
   width: 100%;
   height: 100px;
-  margin: 0 auto;
   position: relative;
   display: flex;
   justify-content: space-around;
@@ -45,6 +44,13 @@ a {
 #header .inner nav #gnb > li:hover a {
   color: #222;
 }
+#header .inner nav #gnb > li:hover a::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: #fff;
+}
 #header .inner nav #gnb > li > a {
   display: block;
   padding: 10px 20px;
@@ -52,6 +58,14 @@ a {
   color: #EEE0C9;
   text-align: center;
   margin-right: 10px;
+}
+#header .inner nav #gnb > li > a::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 1px;
+  background-color: #fff;
+  transition: 1s;
 }
 #header .inner nav #gnb > li .sub {
   position: absolute;
@@ -74,6 +88,33 @@ a {
 #header .inner nav #gnb > li .sub li a:hover {
   color: #888;
 }
+#header .inner nav #gnb > a {
+  display: block;
+  width: 150px;
+  padding: 10px 20px;
+  font: bold 20px/1 "IBM Plex Sans KR";
+  color: #EEE0C9;
+  text-align: center;
+  margin-right: 10px;
+}
+#header .inner nav #gnb > a::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 1px;
+  background-color: #fff;
+  transition: 1s;
+}
+#header .inner nav #gnb > a:hover {
+  color: #222;
+}
+#header .inner nav #gnb > a:hover::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: #fff;
+}
 #header .inner > a {
   position: fixed;
   z-index: 10;
@@ -95,11 +136,12 @@ a {
 
 sub_header {
   width: 100%;
+  position: relative;
+  z-index: 5;
 }
 sub_header .inner {
   width: 100%;
   height: 100px;
-  margin: 0 auto;
   position: relative;
   display: flex;
   justify-content: space-around;
@@ -120,6 +162,13 @@ sub_header .inner nav #gnb > li {
 sub_header .inner nav #gnb > li:hover a {
   color: #222;
 }
+sub_header .inner nav #gnb > li:hover a::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: #fff;
+}
 sub_header .inner nav #gnb > li > a {
   display: block;
   padding: 10px 20px;
@@ -127,6 +176,14 @@ sub_header .inner nav #gnb > li > a {
   color: #EEE0C9;
   text-align: center;
   margin-right: 10px;
+}
+sub_header .inner nav #gnb > li > a::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 1px;
+  background-color: #fff;
+  transition: 1s;
 }
 sub_header .inner nav #gnb > li .sub {
   position: absolute;
@@ -149,6 +206,33 @@ sub_header .inner nav #gnb > li .sub li a {
 sub_header .inner nav #gnb > li .sub li a:hover {
   color: #888;
 }
+sub_header .inner nav #gnb > a {
+  display: block;
+  width: 150px;
+  padding: 10px 20px;
+  font: bold 20px/1 "IBM Plex Sans KR";
+  color: #EEE0C9;
+  text-align: center;
+  margin-right: 10px;
+}
+sub_header .inner nav #gnb > a::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 1px;
+  background-color: #fff;
+  transition: 1s;
+}
+sub_header .inner nav #gnb > a:hover {
+  color: #222;
+}
+sub_header .inner nav #gnb > a:hover::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: #fff;
+}
 sub_header .inner > a {
   position: fixed;
   z-index: 10;
@@ -168,6 +252,22 @@ sub_header .inner > a i {
   font-size: 20px;
 }
 
+@media screen and (max-width: 1179px) {
+  #header .inner > a {
+    width: 40px;
+    height: 40px;
+  }
+  #header .inner > a i {
+    font-size: 18px;
+  }
+  sub_header .inner > a {
+    width: 40px;
+    height: 40px;
+  }
+  sub_header .inner > a i {
+    font-size: 18px;
+  }
+}
 #banner {
   width: 100%;
   height: 1000px;
@@ -176,7 +276,6 @@ sub_header .inner > a i {
 #banner .inner {
   width: 100%;
   height: 100%;
-  margin: 0 auto;
   position: relative;
   overflow: hidden;
 }
@@ -329,7 +428,6 @@ sub_header .inner > a i {
 }
 #sub_banner .inner .page.on {
   transform: rotateY(-180deg);
-  background-color: #333;
 }
 #sub_banner .inner .page.on .txt {
   transition: 0.5s;
@@ -616,6 +714,193 @@ sub_header .inner > a i {
   right: 2vw;
 }
 
+@media screen and (max-width: 1179px) {
+  #banner .inner .panel #bwBanner {
+    background-image: url(../img/Bernard_Werber1.png);
+    background-position-x: 5%;
+    background-position-y: 100%;
+    background-size: 50%;
+  }
+  #banner .inner .panel #bwBanner p {
+    font: bold 45px/1.5 "IBM Plex Sans KR";
+  }
+  #banner .inner .panel #cyBanner {
+    background-image: url(../img/kcy1NoBg.png);
+    background-position-x: 0%;
+    background-position-y: 100%;
+    background-size: 80%;
+  }
+  #banner .inner .panel #cyBanner p {
+    font: bold 45px/1.5 "IBM Plex Sans KR";
+  }
+  #banner .inner .panel #jbBanner {
+    background-image: url(../img/Julian_Barnes2NoBg.png);
+    background-position-x: 0%;
+    background-position-y: 100%;
+    background-size: 70%;
+  }
+  #banner .inner .panel #jbBanner p {
+    font: bold 45px/1.5 "IBM Plex Sans KR";
+  }
+  #sub_banner .inner #page1 h2 {
+    font: bold 45px/1 "Diphylleia";
+    margin-top: 90%;
+  }
+  #sub_banner .inner #page1 span {
+    font: 20px/1.2 "Diphylleia";
+  }
+  #sub_banner .inner #page1 .pic {
+    left: 17%;
+  }
+  #sub_banner .inner #page2 span {
+    font: 18px/1.2 "Diphylleia";
+  }
+  #sub_banner .inner #page2 .txt {
+    width: 35.5vw;
+    height: 40vh;
+    background-color: #fff;
+    box-shadow: inset 2px 2px 10px rgba(0, 0, 0, 0.4);
+    top: 10%;
+    right: 5%;
+    border-radius: 10px;
+    padding: 2vh 1vw;
+  }
+  #sub_banner .inner #page2 .txt h2 {
+    font: bold 25px/1.2 "Diphylleia";
+  }
+  #sub_banner .inner #page2 .txt p {
+    font: 15px/1.2 "Diphylleia";
+  }
+  #sub_banner .inner #page2 .pic {
+    display: none;
+  }
+  #sub_banner .inner #page2 .story {
+    top: 63%;
+  }
+  #sub_banner .inner #page2 .story p {
+    padding: 2%;
+    font: 17px/1.5 "Diphylleia";
+  }
+  #sub_banner .inner #page3 span {
+    font: 18px/1.2 "Diphylleia";
+  }
+  #sub_banner .inner #page3 .txt {
+    width: 35.5vw;
+    height: 40vh;
+    background-color: #fff;
+    box-shadow: inset 2px 2px 10px rgba(0, 0, 0, 0.4);
+    top: 10%;
+    right: 5%;
+    border-radius: 10px;
+    padding: 2vh 1vw;
+  }
+  #sub_banner .inner #page3 .txt h2 {
+    font: bold 25px/1.2 "Diphylleia";
+  }
+  #sub_banner .inner #page3 .txt p {
+    font: 15px/1.2 "Diphylleia";
+  }
+  #sub_banner .inner #page3 .pic {
+    display: none;
+  }
+  #sub_banner .inner #page3 .story {
+    top: 63%;
+  }
+  #sub_banner .inner #page3 .story p {
+    padding: 2%;
+    font: 17px/1.5 "Diphylleia";
+  }
+  #sub_banner .inner #page4 > h2 {
+    font: bold 18px/1.2 "Diphylleia";
+  }
+  #sub_banner .inner #page4 .inner .vidList {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+  }
+  #sub_banner .inner #page4 .inner .vidList article {
+    width: 47%;
+    border: 1px solid black;
+    background-color: rgba(0, 0, 0, 0.04);
+    margin-bottom: 40px;
+    margin-right: 10px;
+  }
+  #sub_banner .inner #page4 .inner .vidList article .pic {
+    display: block;
+    width: 100%;
+    height: 30%;
+    padding: 10px;
+    opacity: 1;
+    transition: 1s 0.6s;
+  }
+  #sub_banner .inner #page4 .inner .vidList article .pic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  #sub_banner .inner #page4 .inner .vidList article .con {
+    width: 100%;
+    height: 40%;
+    padding: 10px;
+  }
+  #sub_banner .inner #page4 .inner .vidList article .con h2 {
+    font: bold 20px/1.2 "Diphylleia";
+    color: black;
+    margin-bottom: 15px;
+    width: 100%;
+  }
+  #sub_banner .inner #page4 .inner .vidList .pop {
+    width: 40vw;
+    height: 100%;
+    position: fixed;
+    z-index: inherit;
+    top: 0;
+    left: -12%;
+    background-color: rgba(0, 0, 0, 0.8);
+    overflow: hidden;
+    padding: 2vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #sub_banner .inner #page4 .inner .vidList .pop .btnClose {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #fff;
+    cursor: pointer;
+  }
+  #sub_banner ul.btn {
+    display: flex;
+  }
+  #sub_banner ul.btn li {
+    position: absolute;
+    z-index: 10;
+    width: 80px;
+    height: 80px;
+    top: 40vh;
+    background-color: #333;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #sub_banner ul.btn li a {
+    display: block;
+  }
+  #sub_banner ul.btn li a i {
+    font-size: 60px;
+    color: #fff;
+  }
+  #sub_banner ul.btn .subPrev {
+    left: 2vw;
+  }
+  #sub_banner ul.btn .subNext {
+    right: 2vw;
+  }
+}
 #main {
   width: 100%;
   height: 100vh;
@@ -1089,15 +1374,16 @@ main #wrap .inner h2 {
   width: 80vw;
   top: 10%;
   padding: 10px;
+  border-radius: 20px;
   text-align: center;
   font: 40px/1 "Playfair Display";
   color: #eee;
   background-color: rgba(0, 0, 0, 0.6);
 }
-main #wrap .inner svg {
-  width: 10%;
+main #wrap .inner > svg {
+  width: 5%;
 }
-main #wrap .inner svg path {
+main #wrap .inner > svg > path {
   fill: transparent;
   stroke: #fff;
   stroke-width: 5px;
@@ -1109,23 +1395,29 @@ main #wrap:hover svg path {
   stroke-dashoffset: 0;
   fill: #fff;
 }
-main #wrap #info_banner {
+main #wrap #info_news {
   width: 100%;
   height: 60%;
   background-color: #eee;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
 }
-main #wrap #info_banner .box {
+main #wrap #info_news > h1 {
+  position: absolute;
+  top: 48%;
+  font: bold 40px/1 "Diphylleia";
+  color: #222;
+  letter-spacing: 3px;
+}
+main #wrap #info_news .box {
   width: 20%;
   height: 200px;
   background-color: #222;
-  margin-right: 100px;
   z-index: 1;
   position: relative;
 }
-main #wrap #info_banner .box h2 {
+main #wrap #info_news .box h2 {
   position: absolute;
   width: 50%;
   height: 40px;
@@ -1140,7 +1432,7 @@ main #wrap #info_banner .box h2 {
   justify-content: center;
   align-items: center;
 }
-main #wrap #info_banner .box .pic {
+main #wrap #info_news .box .pic {
   width: 100%;
   height: 100%;
   overflow: hidden;
@@ -1148,19 +1440,92 @@ main #wrap #info_banner .box .pic {
   justify-content: center;
   align-items: center;
 }
-main #wrap #info_banner .box .pic img {
+main #wrap #info_news .box .pic img {
   transform: scale(1);
   width: 100%;
   height: 100%;
   object-fit: cover;
   transition: 0.5s;
 }
-main #wrap #info_banner .box:hover h2 {
+main #wrap #info_news .box:hover h2 {
   top: -40px;
   opacity: 1;
 }
-main #wrap #info_banner .box:hover .pic img {
+main #wrap #info_news .box:hover .pic img {
   transform: scale(1.3);
+}
+
+#info_banner {
+  width: 100%;
+  padding: 100px 0;
+  background-image: url(../img/library.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+#info_banner .inner {
+  width: 1180px;
+  margin: 0 auto;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 3%;
+}
+#info_banner .inner h2 {
+  font: 35px/1.2 "Playfair Display";
+  color: #fff;
+  text-align: center;
+  letter-spacing: 1px;
+  padding-bottom: 20px;
+}
+#info_banner .inner p {
+  font: 20px/1.2 "Playfair Display";
+  color: #fff;
+  text-align: center;
+}
+
+#location {
+  width: 100%;
+}
+#location .inner {
+  width: 1180px;
+  margin: 0 auto;
+  position: relative;
+}
+#location .inner h1 {
+  width: 100%;
+  padding: 50px 0 20px 0;
+  text-align: center;
+  font: bold 40px/1 "Diphylleia";
+  color: #222;
+  letter-spacing: 3px;
+}
+#location .inner #map {
+  width: 100%;
+  height: 500px;
+  border: 1px solid black;
+  margin-bottom: 20px;
+}
+#location .inner .traffic {
+  display: flex;
+  margin-bottom: 5%;
+}
+#location .inner .traffic li {
+  margin-right: 20px;
+}
+#location .inner .traffic li a {
+  display: block;
+  width: 200px;
+  height: 40px;
+  border: 1px solid #555;
+  font: 14px/40px "IBM Plex Sans KR";
+  text-align: center;
+  background-color: #606C5D;
+  color: #fff;
+}
+#location .inner .traffic li.on a {
+  background-color: #fff;
+  color: #555;
+  opacity: 0.2;
 }
 
 #footer {
@@ -1172,52 +1537,57 @@ main #wrap #info_banner .box:hover .pic img {
   height: 100%;
   background-color: #353b33;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
 }
 #footer .inner p {
-  padding-top: 50px;
   color: #E0E3DA;
   text-align: center;
+}
+#footer .inner::after {
+  content: "";
+  display: block;
   position: absolute;
-  top: 20%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 1px;
+  background-color: #fff;
 }
 #footer .inner address {
-  padding-top: 50px;
   color: #E0E3DA;
   text-align: center;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 
-sub_footer {
-  width: 100%;
-}
-sub_footer .inner {
+footer {
   width: 100%;
   height: 300px;
+}
+footer .inner {
+  width: 100%;
+  height: 100%;
   background-color: #353b33;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
 }
-sub_footer .inner p {
-  padding-top: 50px;
+footer .inner p {
   color: #E0E3DA;
   text-align: center;
-  position: absolute;
-  top: 20%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
-sub_footer .inner address {
-  padding-top: 50px;
+footer .inner::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 80%;
+  height: 1px;
+  background-color: #fff;
+}
+footer .inner address {
   color: #E0E3DA;
   text-align: center;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 
 .notDragging {
