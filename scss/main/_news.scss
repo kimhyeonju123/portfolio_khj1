@@ -3,9 +3,9 @@
     height: 1000px;
     position: relative;
     background-color: #aaa;
+    overflow: hidden;
 
     .inner {
-        overflow: hidden;
         h1 {
             font: bold 55px/1.2 "Diphylleia";
             letter-spacing: 4px;
@@ -20,10 +20,6 @@
             &.on{
                 opacity: 1;
                 top: 20%;
-            }
-
-            >span {
-                color: #566270;
             }
 
             p {
@@ -107,20 +103,18 @@
                     position: absolute;
                     top: 0;
                     width: 100%;
-                    height: 100%;
+                    // height: 100%;
                     overflow: hidden;
 
                     .inner {
                         display: flex;
                         width: 100%;
-                        height: 100%;
-                        opacity: 0;
-                        // margin-left: -9999px;
+                        // height: 100%;
                         overflow: hidden;
 
                         .pic {
                             width: 30%;
-                            height: 100%;
+                            // height: 100%;
                             margin-left: -9999px;
                             opacity: 0;
 
@@ -131,15 +125,15 @@
                             }
                         }
 
-                        h2 {
-                            width: 80%;
-                            padding: 30px;
-                            font: bold 28px/1.2 "Diphylleia";
-                            transform: translateX(9999px);
+                        .box{
+                            width: 70%;
+                            // height: 100%;
                             opacity: 0;
-
+                            transform: translateX(9999px);
+             
                             a {
-                                display: inline-flex;
+                                display: inline-block;
+                                margin: 20px;
                                 font: bold 50px/1 "Diphylleia";
                                 color: #222;
                                 letter-spacing: 2px;
@@ -153,11 +147,11 @@
                                     animation-iteration-count: infinite;
                                 }
                             }
-
+                            
                             p {
-                                width: 85%;
-                                margin-bottom: 60px;
-                                margin-top: 50px;
+                                width: 100%;
+                                padding: 20px;
+                                font: bold 28px/1.2 "Diphylleia";
                                 color: #222;
                                 span{
                                     cursor: pointer;
@@ -165,12 +159,13 @@
                                         color: #F1C376;
                                     }
                                 }
-
                             }
-
                             >span {
-                                font-size: 25px;
+                                display: block;
+                                width: 100%;
+                                font: bold 25px/1.2 "Diphylleia";
                                 color: #333;
+                                padding: 20px;
                             }
                         }
                     }
@@ -187,10 +182,9 @@
                                 transition: 1s;
                             }
 
-                            h2 {
+                            .box {
                                 transform: translateX(0);
                                 opacity: 1;
-                                // 오 사진자리까지 가다가 같이 밀리는 느낌
                                 transition: 0.6s 0.2s;
                             }
                         }
@@ -213,5 +207,92 @@
     }
     100%{
         transform: rotate(1deg);
+    }
+}
+
+$maxHeight: 623px;
+
+@media screen and (max-width: 295px) {
+    #news {
+        height: $maxHeight;
+        .inner {
+            h1 {
+                display: none;
+            }
+            .wrap {
+                height: 100%;
+                background-color: #333;
+                nav {
+                    a {
+                        font-size: 10px;
+                        &::after {
+                            background-color: #fff;
+                        }
+                        &::before {
+                            background-color: #fff;
+                        }
+                    }
+                }
+                >div {
+                    height: 100%;
+                    &.on {
+                        display: block;
+                    }
+                    article {
+                        .inner {
+                            display: block;
+                            .pic {
+                                margin-top: 2vh;
+                                width: 30vw;
+                                height: 20vh;
+                                border-radius: 50%;
+                                img {
+                                    border-radius: 50%;
+                                }
+                            }
+                            .box{
+                                width: 100%;
+                                display: flex;
+                                flex-direction: column;
+                                a {
+                                    font-size: 20px;
+                                    color: #ccc;
+                                }
+                                
+                                p {
+                                    font-size: 15px;
+                                    color: #eee;
+                                    span{
+                                        cursor: pointer;
+                                        &:hover{
+                                            color: #F1C376;
+                                        }
+                                    }
+                                }
+                                >span {
+                                    font-size: 12px;
+                                    color: #999;
+                                }
+                            }
+                        }
+                    }
+    
+                    &.active {
+                        article {
+                            .inner {
+                                .pic {
+                                    margin-left: 30vw;
+                                    transition: 1s;
+                                }
+    
+                                .box {
+                                    transition: 0.8s;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }

@@ -15,14 +15,6 @@
             color: #E0E3DA;
             text-align: center;
         }
-        &::after{
-            content: '';
-            display: block;
-            position: absolute;
-            width: 80%;
-            height: 1px;
-            background-color: #fff;
-        }
         address{
             color: #E0E3DA;
             text-align: center;
@@ -47,14 +39,6 @@ footer{
             color: #E0E3DA;
             text-align: center;
         }
-        &::after{
-            content: '';
-            display: block;
-            position: absolute;
-            width: 80%;
-            height: 1px;
-            background-color: #fff;
-        }
         address{
             color: #E0E3DA;
             text-align: center;
@@ -62,6 +46,27 @@ footer{
     }
 }
 
-@media screen and (max-width: 1179px) {
-    //?할게없음
+@media screen and (max-width: 295px) {
+    #footer{
+        height: 100px;
+        .inner{
+            p{
+                font-size: 10px;
+            }
+            address{
+                font-size: 10px;
+            }
+        }
+    }
+    footer{
+        height: 100px;
+        .inner{
+            p{
+                font-size: 10px;
+            }
+            address{
+                font-size: 10px;
+            }
+        }
+    }
 }

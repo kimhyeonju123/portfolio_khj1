@@ -20,8 +20,8 @@ fetch(url3)
         items.map((el) => {
 
             let title = el.snippet.title;
-            if(title.length > 23){
-                title = title.substr(0, 23) + "...";
+            if(title.length > 18){
+                title = title.substr(0, 18) + "...";
             }
 
             result += `

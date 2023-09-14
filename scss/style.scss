@@ -23,13 +23,14 @@
 body{
     overflow-x: hidden;
 }
-// $tablet: 1179px;
-// $mobile: 539px;
+// 모바일 width - 295 / height - 623
+
+$maxHeight: 623px;
 
 ul#scrollBtn{
     position: fixed;
     z-index: 10;
-    right: 50px;
+    right: 10px;
     top: 50%;
     transform: translateY(-50%);
     li{
@@ -43,5 +44,10 @@ ul#scrollBtn{
             height: 70px;
             background: #000;
         }
+    }
+}
+@media screen and (max-width: 295px) {
+    ul#scrollBtn{
+        display: none;
     }
 }

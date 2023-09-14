@@ -21,18 +21,18 @@
                 left: 0;
                 opacity: 0;
                 z-index: 1;
-                transition: 1s;
+                transition: .5s;
+
                 &.on{
                     opacity: 1;
                     z-index: 2;
-                    
                 }
             }
             #bwBanner{
                 width: 100%;
                 height: 100%;
                 background-image: url(../img/Bernard_Werber1.png);
-                background-position: left center;
+                background-position: bottom left;
                 background-position-x: 20%;
                 background-repeat: no-repeat;
                 background-size: contain;
@@ -51,7 +51,7 @@
                 width: 100%;
                 height: 100%;
                 background-image: url(../img/kcy1NoBg.png);
-                background-position: left center;
+                background-position: bottom left;
                 background-position-x: 20%;
                 background-repeat: no-repeat;
                 background-size: contain;
@@ -70,7 +70,7 @@
                 width: 100%;
                 height: 100%;
                 background-image: url(../img/Julian_Barnes2NoBg.png);
-                background-position: left center;
+                background-position: bottom left;
                 background-position-x: 20%;
                 background-repeat: no-repeat;
                 background-size: contain;
@@ -207,10 +207,10 @@
             background-color: #5F7161;
 
             h2{
-                font: bold 50px/1 "Diphylleia";
+                font: bold 3vw/1 "Diphylleia";
                 color: #fff;
-                margin-top: 60%;
                 text-align: center;
+                margin-bottom: 2%;
             }
             span{
                 display: block;
@@ -218,17 +218,16 @@
                 margin-top: 3%;
                 text-align: center;
                 color: #bbb;
-                font: 24px/1.2 "Diphylleia";
+                font: 1vw/1.2 "Diphylleia";
             }
 
             .pic{
-                position: absolute;
-                top: 10%;
-                left: 30%;
+                margin-top: 4vw;
+                margin-left: 7vw;
+                margin-bottom: 2%;
                 opacity: 1;
-                width: 300px;
-                height: 300px;
-                border-radius: 10px;
+                width: 25vw;
+                height: auto;
                 
                 img{
                     width: 100%;
@@ -293,10 +292,13 @@
             .story{
                 position: absolute;
                 width: 90%;
-                // height: 30vh;
                 background-color: rgba(0, 0, 0, 0.04);
                 top: 65%;
                 border-radius: 30px;
+                padding: 10px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
 
                 p{
                     padding: 2%;
@@ -307,7 +309,7 @@
         #page3 {
             background-color: #f1f0e8;
             z-index: -1;
-            box-shadow: 20px 0px 2px rgba(0, 0, 0, 0.4), -2px 0 2px rgba(0, 0, 0, 0.4);
+             box-shadow: 20px 0px 2px rgba(0, 0, 0, 0.4), -2px 0 2px rgba(0, 0, 0, 0.4);
             padding: 1vh 2vw;
 
             span{
@@ -359,10 +361,13 @@
             .story{
                 position: absolute;
                 width: 90%;
-                // height: 30vh;
                 background-color: rgba(0, 0, 0, 0.04);
                 top: 65%;
                 border-radius: 30px;
+                padding: 10px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
 
                 p{
                     padding: 2%;
@@ -390,15 +395,16 @@
                     width: 100%;
                     display: flex;
                     flex-wrap: wrap;
-                    justify-content: space-around;
-                    align-items: center;
+                    justify-content: space-evenly;
+                    align-items:center;
+                    align-content: center;
+                    position: relative; //
                 
                     article {
-                        width: 47%;
+                        width: 15vw;
                         border: 1px solid black;
-                        background-color: rgba(0, 0, 0, 0.04);
-                        margin-bottom: 40px;
-                        margin-right: 10px;
+                        background-color: rgba(0, 0, 0, 0.09);
+                        margin-bottom: 20px;
 
                         .pic {
                             display: block;
@@ -414,12 +420,12 @@
                                 object-fit: cover;
                             }
                         }
-                
+
                         .con {
                             width: 100%;
                             height: 40%;
                             padding: 10px;
-                
+
                             h2 {
                                 font: bold 20px/1.2 "Diphylleia";
                                 color: black;
@@ -429,14 +435,12 @@
                         }
                     }
                     .pop {
-                        width: 40vw;
+                        width: 39.3vw;
                         height: 100%;
                         position: fixed;
-                        z-index: inherit;
                         top: 0;
-                        left: -12%;
+                        left: -3.8vw;
                         background-color: rgba(0, 0, 0, 0.8);
-                        overflow: hidden;
                         padding: 2vw;
                         display: flex;
                         justify-content: center;
@@ -502,7 +506,7 @@
                     background-image: url(../img/kcy1NoBg.png);
                     background-position-x: 0%;
                     background-position-y: 100%;
-                    background-size: 80%;
+                    background-size: 50%;
                     p{
                         font: bold 45px/1.5 "IBM Plex Sans KR";
                     }
@@ -511,7 +515,7 @@
                     background-image: url(../img/Julian_Barnes2NoBg.png);
                     background-position-x: 0%;
                     background-position-y: 100%;
-                    background-size: 70%;
+                    background-size: 50%;
                     p{
                         font: bold 45px/1.5 "IBM Plex Sans KR";
                     }
@@ -522,33 +526,16 @@
 
     #sub_banner{
         .inner{
-            #page1 {
-                h2{
-                    font: bold 45px/1 "Diphylleia";
-                    margin-top: 90%;
-                }
-                span{
-                    font: 20px/1.2 "Diphylleia";
-                }
-                .pic{
-                    left: 17%;
-                }
-            }
             #page2 {
                 span{
                     font: 18px/1.2 "Diphylleia";
                 }
                 .txt{
                     width: 35.5vw;
-                    height: 40vh;
-                    background-color: #fff;
-                    box-shadow: inset 2px 2px 10px rgba(0, 0, 0, 0.4);
-                    top: 10%;
-                    right: 5%;
-                    border-radius: 10px;
-                    padding: 2vh 1vw;
+                    height: 30vh;
                     h2{
                         font: bold 25px/1.2 "Diphylleia";
+                        margin-bottom: 5%;
                     }
                     p{
                         font: 15px/1.2 "Diphylleia";
@@ -558,8 +545,7 @@
                     display: none;
                 }
                 .story{
-                    top: 63%;
-                    
+                    top: 50%;
                     p{
                         padding: 2%;
                         font: 17px/1.5 "Diphylleia";
@@ -572,15 +558,10 @@
                 }
                 .txt{
                     width: 35.5vw;
-                    height: 40vh;
-                    background-color: #fff;
-                    box-shadow: inset 2px 2px 10px rgba(0, 0, 0, 0.4);
-                    top: 10%;
-                    right: 5%;
-                    border-radius: 10px;
-                    padding: 2vh 1vw;
+                    height: 30vh;
                     h2{
                         font: bold 25px/1.2 "Diphylleia";
+                        margin-bottom: 5%;
                     }
                     p{
                         font: 15px/1.2 "Diphylleia";
@@ -590,55 +571,204 @@
                     display: none;
                 }
                 .story{
-                    top: 63%;
-                    
+                    top: 50%;
                     p{
                         padding: 2%;
                         font: 17px/1.5 "Diphylleia";
                     }
                 }
             }
-            // 이 아래부터 수정
             #page4 {
                 >h2{
                     font: bold 18px/1.2 "Diphylleia";
+                    margin-bottom: 2%;
+                }
+                .inner{
+                    margin-top: 1vw;
+                    .vidList {
+                        article {
+                            width: 22vw;
+                            border: 1px dashed black;
+                            background-color: none;
+                            margin-bottom: 1vw;
+                            &:last-child{
+                                margin-bottom: 0;
+                            }
+                            .con {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        ul.btn{
+            li{
+                width: 50px;
+                height: 50px;
+                a{
+                    i{
+                        font-size: 30px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+$maxHeight: 623px;
+
+@media screen and (max-width: 295px) {
+    #banner {
+        height: 200px;
+        .inner {
+            .panel{
+                #bwBanner{
+                    background-image: none;
+                    background-color: #efead8;
+                    p{
+                        width: 100%;
+                        font: bold 20px/1.5 "IBM Plex Sans KR";
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%,-50%);
+                        text-align: center;
+                    }
+                }
+                #cyBanner{
+                    background-image: none;
+                    background-color: #f7e6c4;
+                    p{
+                        width: 100%;
+                        font: bold 20px/1.5 "IBM Plex Sans KR";
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%,-50%);
+                        text-align: center;
+                    }
+                }
+                #jbBanner{
+                    background-image: none;
+                    background-color: #f1c376;
+                    p{
+                        width: 100%;
+                        font: bold 20px/1.5 "IBM Plex Sans KR";
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%,-50%);
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+    #sub_banner{
+        .inner{
+            width: 100%;
+            height: 70%;
+            position: relative;
+            top: 0%;
+            left: 0%;
+            transform: none;
+            .bar{
+                display: none;
+            }
+            .page {
+                width: 100%;
+                .txt{
+                    .info{
+                        font-size: 5px;
+                        right: 2px;
+                        bottom: 2px;
+                    }
+                }
+            }
+            #page1 {
+                h2{
+                    font-size: 10vw;
+                    color: #fff;
+                    text-align: center;
+                    margin-bottom: 2%;
+                }
+                span{
+                    display: block;
+                    padding: 0 20%;
+                    margin-top: 3%;
+                    text-align: center;
+                    color: #bbb;
+                    font: 1vw/1.2 "Diphylleia";
                 }
     
+                .pic{
+                    margin-top: 30vw;
+                    margin-left: 20vw;
+                    width: 50vw;
+                }
+            }
+            #page2 {
+                span{
+                    font-size: 20px;
+                }
+                .txt{
+                    width: 85vw;
+                    height: 30vh;
+                    h2{
+                        font-size: 15px;
+                        margin-bottom: 5%;
+                    }
+                    p{
+                        font-size: 13px;
+                    }
+                }
+                .story{
+                    top: 55%;
+                    margin-left: 4%;
+                    p{
+                        font: 11px/1.4 "Diphylleia";
+                    }
+                }
+            }
+            #page3 {
+                span{
+                    font-size: 20px;
+                }
+                .txt{
+                    width: 85vw;
+                    height: 30vh;
+                    h2{
+                        font-size: 15px;
+                        margin-bottom: 5%;
+                    }
+                    p{
+                        font-size: 13px;
+                    }
+                }
+                .story{
+                    top: 55%;
+                    margin-left: 4%;
+                    p{
+                        font: 11px/1.4 "Diphylleia";
+                    }
+                }
+            }
+            #page4 {
+                >h2{
+                    font-size: 20px;
+                }
                 .inner{
                     .vidList {
-                        width: 100%;
-                        display: flex;
-                        flex-wrap: wrap;
-                        justify-content: space-around;
-                        align-items: center;
-                    
                         article {
-                            width: 47%;
-                            border: 1px solid black;
-                            background-color: rgba(0, 0, 0, 0.04);
-                            margin-bottom: 40px;
-                            margin-right: 10px;
-    
+                            width: 55vw;
+                            margin-bottom: 0;
                             .pic {
-                                display: block;
-                                width: 100%;
-                                height: 30%;
-                                padding: 10px;
-                                opacity: 1;
-                                transition: 1s .6s;
-                    
-                                img {
-                                    width: 100%;
-                                    height: 100%;
-                                    object-fit: cover;
-                                }
+                                padding: 5px;
                             }
-                    
+    
                             .con {
                                 width: 100%;
                                 height: 40%;
                                 padding: 10px;
-                    
+    
                                 h2 {
                                     font: bold 20px/1.2 "Diphylleia";
                                     color: black;
@@ -648,59 +778,25 @@
                             }
                         }
                         .pop {
-                            width: 40vw;
-                            height: 100%;
-                            position: fixed;
-                            z-index: inherit;
-                            top: 0;
-                            left: -12%;
-                            background-color: rgba(0, 0, 0, 0.8);
-                            overflow: hidden;
-                            padding: 2vw;
-                            display: flex;
-                            justify-content: center;
-                            align-items: center;
-                    
+                            width: 100vw;
                             .btnClose {
-                                position: absolute;
-                                top: 10px;
-                                right: 10px;
-                                color: #fff;
-                                cursor: pointer;
+                                top: 5px;
                             }
                         }
                     }
                 }
             }
         }
-        
         ul.btn{
-            display: flex;
             li{
-                position: absolute;
-                z-index: 10; //
-                width: 80px;
-                height: 80px;
-                top: 40vh;
-                background-color: #333;
-                border-radius: 50%;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-    
+                width: 55px;
+                height: 55px;
+                top: 80vh;
                 a{
-                    display: block;
                     i{
-                        font-size: 60px;
-                        color: #fff;
+                        font-size: 40px;
                     }
                 }
-            }
-            .subPrev{
-                left: 2vw;
-            }
-            .subNext{
-                right: 2vw;
             }
         }
     }

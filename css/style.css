@@ -53,11 +53,11 @@ a {
 }
 #header .inner nav #gnb > li > a {
   display: block;
+  width: 100%;
   padding: 10px 20px;
   font: bold 20px/1 "IBM Plex Sans KR";
   color: #EEE0C9;
   text-align: center;
-  margin-right: 10px;
 }
 #header .inner nav #gnb > li > a::after {
   content: "";
@@ -95,7 +95,6 @@ a {
   font: bold 20px/1 "IBM Plex Sans KR";
   color: #EEE0C9;
   text-align: center;
-  margin-right: 10px;
 }
 #header .inner nav #gnb > a::after {
   content: "";
@@ -268,6 +267,51 @@ sub_header .inner > a i {
     font-size: 18px;
   }
 }
+@media screen and (max-width: 295px) {
+  #header .inner {
+    flex-wrap: wrap;
+  }
+  #header .inner h1 a {
+    font: bold 25px/1 "Playfair Display";
+  }
+  #header .inner nav #gnb > li > a {
+    font: bold 15px/1 "IBM Plex Sans KR";
+  }
+  #header .inner nav #gnb > li .sub li a {
+    width: 100vw;
+    font: 12px/50px "IBM Plex Sans KR";
+  }
+  #header .inner nav #gnb > a {
+    font: bold 15px/1 "IBM Plex Sans KR";
+  }
+  #header .inner > a {
+    display: none;
+  }
+  sub_header {
+    width: 100%;
+    position: relative;
+    z-index: 5;
+  }
+  sub_header .inner {
+    flex-wrap: wrap;
+  }
+  sub_header .inner h1 a {
+    font: bold 25px/1 "Playfair Display";
+  }
+  sub_header .inner nav #gnb > li > a {
+    font: bold 15px/1 "IBM Plex Sans KR";
+  }
+  sub_header .inner nav #gnb > li .sub li a {
+    width: 100vw;
+    font: 12px/50px "IBM Plex Sans KR";
+  }
+  sub_header .inner nav #gnb > a {
+    font: bold 15px/1 "IBM Plex Sans KR";
+  }
+  sub_header .inner > a {
+    display: none;
+  }
+}
 #banner {
   width: 100%;
   height: 1000px;
@@ -292,7 +336,7 @@ sub_header .inner > a i {
   left: 0;
   opacity: 0;
   z-index: 1;
-  transition: 1s;
+  transition: 0.5s;
 }
 #banner .inner .panel li.on {
   opacity: 1;
@@ -302,7 +346,7 @@ sub_header .inner > a i {
   width: 100%;
   height: 100%;
   background-image: url(../img/Bernard_Werber1.png);
-  background-position: left center;
+  background-position: bottom left;
   background-position-x: 20%;
   background-repeat: no-repeat;
   background-size: contain;
@@ -320,7 +364,7 @@ sub_header .inner > a i {
   width: 100%;
   height: 100%;
   background-image: url(../img/kcy1NoBg.png);
-  background-position: left center;
+  background-position: bottom left;
   background-position-x: 20%;
   background-repeat: no-repeat;
   background-size: contain;
@@ -338,7 +382,7 @@ sub_header .inner > a i {
   width: 100%;
   height: 100%;
   background-image: url(../img/Julian_Barnes2NoBg.png);
-  background-position: left center;
+  background-position: bottom left;
   background-position-x: 20%;
   background-repeat: no-repeat;
   background-size: contain;
@@ -466,10 +510,10 @@ sub_header .inner > a i {
   background-color: #5F7161;
 }
 #sub_banner .inner #page1 h2 {
-  font: bold 50px/1 "Diphylleia";
+  font: bold 3vw/1 "Diphylleia";
   color: #fff;
-  margin-top: 60%;
   text-align: center;
+  margin-bottom: 2%;
 }
 #sub_banner .inner #page1 span {
   display: block;
@@ -477,16 +521,15 @@ sub_header .inner > a i {
   margin-top: 3%;
   text-align: center;
   color: #bbb;
-  font: 24px/1.2 "Diphylleia";
+  font: 1vw/1.2 "Diphylleia";
 }
 #sub_banner .inner #page1 .pic {
-  position: absolute;
-  top: 10%;
-  left: 30%;
+  margin-top: 4vw;
+  margin-left: 7vw;
+  margin-bottom: 2%;
   opacity: 1;
-  width: 300px;
-  height: 300px;
-  border-radius: 10px;
+  width: 25vw;
+  height: auto;
 }
 #sub_banner .inner #page1 .pic img {
   width: 100%;
@@ -548,6 +591,10 @@ sub_header .inner > a i {
   background-color: rgba(0, 0, 0, 0.04);
   top: 65%;
   border-radius: 30px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 #sub_banner .inner #page2 .story p {
   padding: 2%;
@@ -608,6 +655,10 @@ sub_header .inner > a i {
   background-color: rgba(0, 0, 0, 0.04);
   top: 65%;
   border-radius: 30px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 #sub_banner .inner #page3 .story p {
   padding: 2%;
@@ -631,15 +682,16 @@ sub_header .inner > a i {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
+  align-content: center;
+  position: relative;
 }
 #sub_banner .inner #page4 .inner .vidList article {
-  width: 47%;
+  width: 15vw;
   border: 1px solid black;
-  background-color: rgba(0, 0, 0, 0.04);
-  margin-bottom: 40px;
-  margin-right: 10px;
+  background-color: rgba(0, 0, 0, 0.09);
+  margin-bottom: 20px;
 }
 #sub_banner .inner #page4 .inner .vidList article .pic {
   display: block;
@@ -666,14 +718,12 @@ sub_header .inner > a i {
   width: 100%;
 }
 #sub_banner .inner #page4 .inner .vidList .pop {
-  width: 40vw;
+  width: 39.3vw;
   height: 100%;
   position: fixed;
-  z-index: inherit;
   top: 0;
-  left: -12%;
+  left: -3.8vw;
   background-color: rgba(0, 0, 0, 0.8);
-  overflow: hidden;
   padding: 2vw;
   display: flex;
   justify-content: center;
@@ -728,7 +778,7 @@ sub_header .inner > a i {
     background-image: url(../img/kcy1NoBg.png);
     background-position-x: 0%;
     background-position-y: 100%;
-    background-size: 80%;
+    background-size: 50%;
   }
   #banner .inner .panel #cyBanner p {
     font: bold 45px/1.5 "IBM Plex Sans KR";
@@ -737,36 +787,21 @@ sub_header .inner > a i {
     background-image: url(../img/Julian_Barnes2NoBg.png);
     background-position-x: 0%;
     background-position-y: 100%;
-    background-size: 70%;
+    background-size: 50%;
   }
   #banner .inner .panel #jbBanner p {
     font: bold 45px/1.5 "IBM Plex Sans KR";
-  }
-  #sub_banner .inner #page1 h2 {
-    font: bold 45px/1 "Diphylleia";
-    margin-top: 90%;
-  }
-  #sub_banner .inner #page1 span {
-    font: 20px/1.2 "Diphylleia";
-  }
-  #sub_banner .inner #page1 .pic {
-    left: 17%;
   }
   #sub_banner .inner #page2 span {
     font: 18px/1.2 "Diphylleia";
   }
   #sub_banner .inner #page2 .txt {
     width: 35.5vw;
-    height: 40vh;
-    background-color: #fff;
-    box-shadow: inset 2px 2px 10px rgba(0, 0, 0, 0.4);
-    top: 10%;
-    right: 5%;
-    border-radius: 10px;
-    padding: 2vh 1vw;
+    height: 30vh;
   }
   #sub_banner .inner #page2 .txt h2 {
     font: bold 25px/1.2 "Diphylleia";
+    margin-bottom: 5%;
   }
   #sub_banner .inner #page2 .txt p {
     font: 15px/1.2 "Diphylleia";
@@ -775,7 +810,7 @@ sub_header .inner > a i {
     display: none;
   }
   #sub_banner .inner #page2 .story {
-    top: 63%;
+    top: 50%;
   }
   #sub_banner .inner #page2 .story p {
     padding: 2%;
@@ -786,16 +821,11 @@ sub_header .inner > a i {
   }
   #sub_banner .inner #page3 .txt {
     width: 35.5vw;
-    height: 40vh;
-    background-color: #fff;
-    box-shadow: inset 2px 2px 10px rgba(0, 0, 0, 0.4);
-    top: 10%;
-    right: 5%;
-    border-radius: 10px;
-    padding: 2vh 1vw;
+    height: 30vh;
   }
   #sub_banner .inner #page3 .txt h2 {
     font: bold 25px/1.2 "Diphylleia";
+    margin-bottom: 5%;
   }
   #sub_banner .inner #page3 .txt p {
     font: 15px/1.2 "Diphylleia";
@@ -804,7 +834,7 @@ sub_header .inner > a i {
     display: none;
   }
   #sub_banner .inner #page3 .story {
-    top: 63%;
+    top: 50%;
   }
   #sub_banner .inner #page3 .story p {
     padding: 2%;
@@ -812,33 +842,160 @@ sub_header .inner > a i {
   }
   #sub_banner .inner #page4 > h2 {
     font: bold 18px/1.2 "Diphylleia";
+    margin-bottom: 2%;
   }
-  #sub_banner .inner #page4 .inner .vidList {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
+  #sub_banner .inner #page4 .inner {
+    margin-top: 1vw;
   }
   #sub_banner .inner #page4 .inner .vidList article {
-    width: 47%;
-    border: 1px solid black;
-    background-color: rgba(0, 0, 0, 0.04);
-    margin-bottom: 40px;
-    margin-right: 10px;
+    width: 22vw;
+    border: 1px dashed black;
+    background-color: none;
+    margin-bottom: 1vw;
+  }
+  #sub_banner .inner #page4 .inner .vidList article:last-child {
+    margin-bottom: 0;
+  }
+  #sub_banner .inner #page4 .inner .vidList article .con {
+    display: none;
+  }
+  #sub_banner ul.btn li {
+    width: 50px;
+    height: 50px;
+  }
+  #sub_banner ul.btn li a i {
+    font-size: 30px;
+  }
+}
+@media screen and (max-width: 295px) {
+  #banner {
+    height: 200px;
+  }
+  #banner .inner .panel #bwBanner {
+    background-image: none;
+    background-color: #efead8;
+  }
+  #banner .inner .panel #bwBanner p {
+    width: 100%;
+    font: bold 20px/1.5 "IBM Plex Sans KR";
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  #banner .inner .panel #cyBanner {
+    background-image: none;
+    background-color: #f7e6c4;
+  }
+  #banner .inner .panel #cyBanner p {
+    width: 100%;
+    font: bold 20px/1.5 "IBM Plex Sans KR";
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  #banner .inner .panel #jbBanner {
+    background-image: none;
+    background-color: #f1c376;
+  }
+  #banner .inner .panel #jbBanner p {
+    width: 100%;
+    font: bold 20px/1.5 "IBM Plex Sans KR";
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  #sub_banner .inner {
+    width: 100%;
+    height: 70%;
+    position: relative;
+    top: 0%;
+    left: 0%;
+    transform: none;
+  }
+  #sub_banner .inner .bar {
+    display: none;
+  }
+  #sub_banner .inner .page {
+    width: 100%;
+  }
+  #sub_banner .inner .page .txt .info {
+    font-size: 5px;
+    right: 2px;
+    bottom: 2px;
+  }
+  #sub_banner .inner #page1 h2 {
+    font-size: 10vw;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 2%;
+  }
+  #sub_banner .inner #page1 span {
+    display: block;
+    padding: 0 20%;
+    margin-top: 3%;
+    text-align: center;
+    color: #bbb;
+    font: 1vw/1.2 "Diphylleia";
+  }
+  #sub_banner .inner #page1 .pic {
+    margin-top: 30vw;
+    margin-left: 20vw;
+    width: 50vw;
+  }
+  #sub_banner .inner #page2 span {
+    font-size: 20px;
+  }
+  #sub_banner .inner #page2 .txt {
+    width: 85vw;
+    height: 30vh;
+  }
+  #sub_banner .inner #page2 .txt h2 {
+    font-size: 15px;
+    margin-bottom: 5%;
+  }
+  #sub_banner .inner #page2 .txt p {
+    font-size: 13px;
+  }
+  #sub_banner .inner #page2 .story {
+    top: 55%;
+    margin-left: 4%;
+  }
+  #sub_banner .inner #page2 .story p {
+    font: 11px/1.4 "Diphylleia";
+  }
+  #sub_banner .inner #page3 span {
+    font-size: 20px;
+  }
+  #sub_banner .inner #page3 .txt {
+    width: 85vw;
+    height: 30vh;
+  }
+  #sub_banner .inner #page3 .txt h2 {
+    font-size: 15px;
+    margin-bottom: 5%;
+  }
+  #sub_banner .inner #page3 .txt p {
+    font-size: 13px;
+  }
+  #sub_banner .inner #page3 .story {
+    top: 55%;
+    margin-left: 4%;
+  }
+  #sub_banner .inner #page3 .story p {
+    font: 11px/1.4 "Diphylleia";
+  }
+  #sub_banner .inner #page4 > h2 {
+    font-size: 20px;
+  }
+  #sub_banner .inner #page4 .inner .vidList article {
+    width: 55vw;
+    margin-bottom: 0;
   }
   #sub_banner .inner #page4 .inner .vidList article .pic {
-    display: block;
-    width: 100%;
-    height: 30%;
-    padding: 10px;
-    opacity: 1;
-    transition: 1s 0.6s;
-  }
-  #sub_banner .inner #page4 .inner .vidList article .pic img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    padding: 5px;
   }
   #sub_banner .inner #page4 .inner .vidList article .con {
     width: 100%;
@@ -852,53 +1009,18 @@ sub_header .inner > a i {
     width: 100%;
   }
   #sub_banner .inner #page4 .inner .vidList .pop {
-    width: 40vw;
-    height: 100%;
-    position: fixed;
-    z-index: inherit;
-    top: 0;
-    left: -12%;
-    background-color: rgba(0, 0, 0, 0.8);
-    overflow: hidden;
-    padding: 2vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 100vw;
   }
   #sub_banner .inner #page4 .inner .vidList .pop .btnClose {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    color: #fff;
-    cursor: pointer;
-  }
-  #sub_banner ul.btn {
-    display: flex;
+    top: 5px;
   }
   #sub_banner ul.btn li {
-    position: absolute;
-    z-index: 10;
-    width: 80px;
-    height: 80px;
-    top: 40vh;
-    background-color: #333;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  #sub_banner ul.btn li a {
-    display: block;
+    width: 55px;
+    height: 55px;
+    top: 80vh;
   }
   #sub_banner ul.btn li a i {
-    font-size: 60px;
-    color: #fff;
-  }
-  #sub_banner ul.btn .subPrev {
-    left: 2vw;
-  }
-  #sub_banner ul.btn .subNext {
-    right: 2vw;
+    font-size: 40px;
   }
 }
 #main {
@@ -909,20 +1031,8 @@ sub_header .inner > a i {
   background-color: #606C5D;
   transition: 0.5s;
 }
-#main::after {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
 #main.on {
   opacity: 1;
-}
-#main.on::after {
-  display: none;
 }
 #main > .frame {
   width: 100%;
@@ -954,7 +1064,7 @@ sub_header .inner > a i {
 }
 #main > .frame article .txt strong {
   font: 1vw/1 "Playfair Display";
-  color: #888;
+  color: #aaa;
 }
 #main > .frame article .txt p {
   font: bold 2vw/1.2 "Diphylleia";
@@ -965,7 +1075,7 @@ sub_header .inner > a i {
 }
 #main > .frame article .txt h2 {
   font: 2vw/1 "Playfair Display";
-  color: #769FCD;
+  color: #9dab87;
   position: absolute;
   top: 75%;
   left: 2vw;
@@ -981,7 +1091,7 @@ sub_header .inner > a i {
   background-color: #fff;
   top: 0;
   left: -10px;
-  transition: height 1s 0.5s;
+  transition: height 1s 0.2s;
 }
 #main > .frame article .txt .desc {
   width: 75%;
@@ -989,7 +1099,7 @@ sub_header .inner > a i {
   position: absolute;
   top: 60%;
   left: 5vw;
-  font: 18px/1.3 "IBM Plex Sans KR";
+  font: 13px/1.2 "IBM Plex Sans KR";
   letter-spacing: 2px;
   color: #aaa;
 }
@@ -1039,8 +1149,7 @@ sub_header .inner > a i {
 #main > .frame article .close {
   cursor: pointer;
   position: absolute;
-  top: 11vh;
-  right: -10vh;
+  top: 10vh;
   font: bold 20px/1 "Playfair Display";
   letter-spacing: 2px;
   color: #ddd;
@@ -1062,10 +1171,6 @@ sub_header .inner > a i {
 #main > .frame article:nth-of-type(3) .txt h2::before {
   height: 100%;
 }
-#main > .frame article:nth-of-type(3) .txt svg path {
-  stroke-dashoffset: 0;
-  fill: #111;
-}
 #main > .frame article:nth-of-type(3) .pic img {
   opacity: 0.8;
 }
@@ -1078,7 +1183,7 @@ sub_header .inner > a i {
   transition: 0.5s 0.5s;
 }
 #main > .frame article:nth-of-type(3) .open i {
-  margin-right: 30px;
+  margin-right: 20px;
   opacity: 1;
   transition: 0.5s 0.8s;
 }
@@ -1108,14 +1213,8 @@ sub_header .inner > a i {
   padding: 5vw;
   transition: 0.5s 0.5s;
 }
-#main > .frame article.on .txt strong {
-  top: 15vh;
-  left: 5vw;
-}
 #main > .frame article.on .txt h2 {
-  top: calc(100% - 5vw);
-  left: 5vw;
-  transition: 0.5s;
+  opacity: 0;
 }
 #main > .frame article.on .txt .desc {
   visibility: visible;
@@ -1138,7 +1237,6 @@ sub_header .inner > a i {
   transition-timing-function: cubic-bezier(0.48, -0.67, 0.54, 1.68);
 }
 #main > .frame article.hide {
-  margin-top: -10000px;
   opacity: 0;
 }
 #main nav {
@@ -1165,13 +1263,66 @@ sub_header .inner > a i {
   color: #fff;
 }
 
+@media screen and (max-width: 295px) {
+  #main {
+    opacity: 1;
+  }
+  #main > .frame article {
+    width: 80vw;
+    margin-left: -40vw;
+  }
+  #main > .frame article .txt strong {
+    font-size: 4vw;
+  }
+  #main > .frame article .txt p {
+    font-size: 4vw;
+    text-align: center;
+  }
+  #main > .frame article .txt h2 {
+    font-size: 7vw;
+    top: 70%;
+    left: 10vw;
+  }
+  #main > .frame article .txt .desc {
+    width: 90%;
+    font-size: 11px;
+    color: #bbb;
+  }
+  #main > .frame article .open {
+    height: 40px;
+  }
+  #main > .frame article .open span {
+    font-size: 12px;
+  }
+  #main > .frame article .close {
+    font-size: 12px;
+  }
+  #main > .frame article:nth-of-type(3) .open {
+    width: 100%;
+  }
+  #main > .frame article.on .txt {
+    width: 100%;
+  }
+  #main > .frame article.on .txt .desc {
+    top: 15%;
+  }
+  #main > .frame article.on .pic {
+    width: 0%;
+  }
+  #main nav {
+    top: 6%;
+    gap: 10px;
+  }
+  #main nav p {
+    width: 120px;
+    font-size: 20px;
+  }
+}
 #news {
   width: 100%;
   height: 1000px;
   position: relative;
   background-color: #aaa;
-}
-#news .inner {
   overflow: hidden;
 }
 #news .inner h1 {
@@ -1188,9 +1339,6 @@ sub_header .inner > a i {
 #news .inner h1.on {
   opacity: 1;
   top: 20%;
-}
-#news .inner h1 > span {
-  color: #566270;
 }
 #news .inner h1 p {
   position: absolute;
@@ -1263,19 +1411,15 @@ sub_header .inner > a i {
   position: absolute;
   top: 0;
   width: 100%;
-  height: 100%;
   overflow: hidden;
 }
 #news .inner .wrap > div article .inner {
   display: flex;
   width: 100%;
-  height: 100%;
-  opacity: 0;
   overflow: hidden;
 }
 #news .inner .wrap > div article .inner .pic {
   width: 30%;
-  height: 100%;
   margin-left: -9999px;
   opacity: 0;
 }
@@ -1284,15 +1428,14 @@ sub_header .inner > a i {
   height: 100%;
   object-fit: cover;
 }
-#news .inner .wrap > div article .inner h2 {
-  width: 80%;
-  padding: 30px;
-  font: bold 28px/1.2 "Diphylleia";
-  transform: translateX(9999px);
+#news .inner .wrap > div article .inner .box {
+  width: 70%;
   opacity: 0;
+  transform: translateX(9999px);
 }
-#news .inner .wrap > div article .inner h2 a {
-  display: inline-flex;
+#news .inner .wrap > div article .inner .box a {
+  display: inline-block;
+  margin: 20px;
   font: bold 50px/1 "Diphylleia";
   color: #222;
   letter-spacing: 2px;
@@ -1300,26 +1443,29 @@ sub_header .inner > a i {
   text-align: center;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5) inset;
 }
-#news .inner .wrap > div article .inner h2 a:hover {
+#news .inner .wrap > div article .inner .box a:hover {
   animation-name: vibration;
   animation-duration: 0.5s;
   animation-iteration-count: infinite;
 }
-#news .inner .wrap > div article .inner h2 p {
-  width: 85%;
-  margin-bottom: 60px;
-  margin-top: 50px;
+#news .inner .wrap > div article .inner .box p {
+  width: 100%;
+  padding: 20px;
+  font: bold 28px/1.2 "Diphylleia";
   color: #222;
 }
-#news .inner .wrap > div article .inner h2 p span {
+#news .inner .wrap > div article .inner .box p span {
   cursor: pointer;
 }
-#news .inner .wrap > div article .inner h2 p span:hover {
+#news .inner .wrap > div article .inner .box p span:hover {
   color: #F1C376;
 }
-#news .inner .wrap > div article .inner h2 > span {
-  font-size: 25px;
+#news .inner .wrap > div article .inner .box > span {
+  display: block;
+  width: 100%;
+  font: bold 25px/1.2 "Diphylleia";
   color: #333;
+  padding: 20px;
 }
 #news .inner .wrap > div.active article .inner {
   opacity: 1;
@@ -1329,7 +1475,7 @@ sub_header .inner > a i {
   opacity: 1;
   transition: 1s;
 }
-#news .inner .wrap > div.active article .inner h2 {
+#news .inner .wrap > div.active article .inner .box {
   transform: translateX(0);
   opacity: 1;
   transition: 0.6s 0.2s;
@@ -1347,6 +1493,75 @@ sub_header .inner > a i {
   }
   100% {
     transform: rotate(1deg);
+  }
+}
+@media screen and (max-width: 295px) {
+  #news {
+    height: 623px;
+  }
+  #news .inner h1 {
+    display: none;
+  }
+  #news .inner .wrap {
+    height: 100%;
+    background-color: #333;
+  }
+  #news .inner .wrap nav a {
+    font-size: 10px;
+  }
+  #news .inner .wrap nav a::after {
+    background-color: #fff;
+  }
+  #news .inner .wrap nav a::before {
+    background-color: #fff;
+  }
+  #news .inner .wrap > div {
+    height: 100%;
+  }
+  #news .inner .wrap > div.on {
+    display: block;
+  }
+  #news .inner .wrap > div article .inner {
+    display: block;
+  }
+  #news .inner .wrap > div article .inner .pic {
+    margin-top: 2vh;
+    width: 30vw;
+    height: 20vh;
+    border-radius: 50%;
+  }
+  #news .inner .wrap > div article .inner .pic img {
+    border-radius: 50%;
+  }
+  #news .inner .wrap > div article .inner .box {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  #news .inner .wrap > div article .inner .box a {
+    font-size: 20px;
+    color: #ccc;
+  }
+  #news .inner .wrap > div article .inner .box p {
+    font-size: 15px;
+    color: #eee;
+  }
+  #news .inner .wrap > div article .inner .box p span {
+    cursor: pointer;
+  }
+  #news .inner .wrap > div article .inner .box p span:hover {
+    color: #F1C376;
+  }
+  #news .inner .wrap > div article .inner .box > span {
+    font-size: 12px;
+    color: #999;
+  }
+  #news .inner .wrap > div.active article .inner .pic {
+    margin-left: 30vw;
+    transition: 1s;
+  }
+  #news .inner .wrap > div.active article .inner .box {
+    transition: 0.8s;
   }
 }
 main {
@@ -1546,14 +1761,6 @@ main #wrap #info_news .box:hover .pic img {
   color: #E0E3DA;
   text-align: center;
 }
-#footer .inner::after {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 80%;
-  height: 1px;
-  background-color: #fff;
-}
 #footer .inner address {
   color: #E0E3DA;
   text-align: center;
@@ -1577,19 +1784,31 @@ footer .inner p {
   color: #E0E3DA;
   text-align: center;
 }
-footer .inner::after {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 80%;
-  height: 1px;
-  background-color: #fff;
-}
 footer .inner address {
   color: #E0E3DA;
   text-align: center;
 }
 
+@media screen and (max-width: 295px) {
+  #footer {
+    height: 100px;
+  }
+  #footer .inner p {
+    font-size: 10px;
+  }
+  #footer .inner address {
+    font-size: 10px;
+  }
+  footer {
+    height: 100px;
+  }
+  footer .inner p {
+    font-size: 10px;
+  }
+  footer .inner address {
+    font-size: 10px;
+  }
+}
 .notDragging {
   -ms-user-select: none;
   -moz-user-select: -moz-none;
@@ -1605,7 +1824,7 @@ body {
 ul#scrollBtn {
   position: fixed;
   z-index: 10;
-  right: 50px;
+  right: 10px;
   top: 50%;
   transform: translateY(-50%);
 }
@@ -1620,6 +1839,12 @@ ul#scrollBtn li {
 ul#scrollBtn li.on {
   height: 70px;
   background: #000;
+}
+
+@media screen and (max-width: 295px) {
+  ul#scrollBtn {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

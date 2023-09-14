@@ -20,20 +20,18 @@ const panels = banner.querySelectorAll(".panel>li");
 const len = panels.length - 1;
 let num = 0;
 let timer = null;
-const interval = 3000;
+const interval = 5000;
 
 // 헤더 부분
 gnb_li.forEach((el) => {
     el.addEventListener("mouseenter", (e) => {
         const sub = e.currentTarget.querySelector(".sub");
         let isBlock = window.getComputedStyle(sub).getPropertyValue("display");
-        // console.log(isBlock);
         sub.style.height = "0";
 
         if (isBlock == "none") {
             sub.style.display = "block";
             let subHeight = sub.scrollHeight;
-            // console.log(subHeight); 
             sub.style.height = subHeight + "px";
         }
     });
@@ -48,7 +46,6 @@ gnb_li.forEach((el) => {
             sub.style.display = "0";
             sub.addEventListener("transitionend", function end() {
                 sub.removeEventListener("transitionend", end);
-
                 sub.style.display = "none";
             });
         }
@@ -59,9 +56,8 @@ gnb_li.forEach((el) => {
 startRolling();
 
 function startRolling() {
-    active(num);
     timer = setInterval(rolling, interval);
-    // console.log(num);
+    active(num);
 }
 
 function active(index) {
@@ -85,18 +81,15 @@ function rolling() {
 for (let i = 0; i < 2; i++) {
     frame.prepend(frame.lastElementChild);
 }
-
 next.addEventListener("click", () => {
     frame.append(frame.firstElementChild);
 })
 prev.addEventListener("click", () => {
     frame.prepend(frame.lastElementChild);
 })
-
 opens.forEach((el, index) => {
     el.addEventListener("click", (e) => {
         e.target.closest("article").classList.add("on");
-
         for (let ele of articles) !ele.classList.contains("on") && ele.classList.add("hide");
     })
 })

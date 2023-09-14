@@ -5,31 +5,17 @@
     opacity: 0.8;
     background-color: #606C5D;
     transition: .5s;
-
-    &::after {
-        content: '';
-        display: block;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-    }
-
+    
     &.on {
         opacity: 1;
-
-        &::after {
-            display: none;
-        }
     }
 
     >.frame {
         width: 100%;
-        transition: 0.5s; //
+        transition: 0.5s; 
 
         article {
-            width: 24vw; //
+            width: 24vw;
             height: 70vh;
             position: absolute;
             top: 40%;
@@ -54,7 +40,7 @@
 
                 strong {
                     font: 1vw/1 "Playfair Display";
-                    color: #888;
+                    color: #aaa;
                 }
 
                 p {
@@ -67,7 +53,7 @@
 
                 h2 {
                     font: 2vw/1 "Playfair Display";
-                    color: #769FCD;
+                    color: #9dab87;
                     position: absolute;
                     top: 75%;
                     left: 2vw;
@@ -83,8 +69,7 @@
                         background-color: #fff;
                         top: 0;
                         left: -10px;
-                        transition: height 1s 0.5s;
-
+                        transition: height 1s 0.2s;
                     }
                 }
 
@@ -94,9 +79,9 @@
                     position: absolute;
                     top: 60%;
                     left: 5vw;
-                    font: 18px/1.3 "IBM Plex Sans KR";
+                    font: 13px/1.2 "IBM Plex Sans KR";
                     letter-spacing: 2px;
-                    color: #aaa;
+                    color: #aaa;    
                 }
             }
 
@@ -151,8 +136,7 @@
             .close {
                 cursor: pointer;
                 position: absolute;
-                top: 11vh;
-                right: -10vh;
+                top: 10vh;
                 font: bold 20px/1 "Playfair Display";
                 letter-spacing: 2px;
                 color: #ddd;
@@ -178,13 +162,6 @@
                     h2::before {
                         height: 100%;
                     }
-
-                    svg {
-                        path {
-                            stroke-dashoffset: 0;
-                            fill: #111;
-                        }
-                    }
                 }
 
                 .pic {
@@ -203,7 +180,7 @@
                     }
 
                     i {
-                        margin-right: 30px;
+                        margin-right: 20px;
                         opacity: 1;
                         transition: 0.5s 0.8s;
                     }
@@ -233,53 +210,37 @@
             z-index: 2;
             transition-duration: 0.8s;
             transition-delay: 0.5s;
-
             .txt {
                 width: 55%;
                 height: 100%;
                 padding: 5vw;
                 transition: 0.5s 0.5s;
-
-                strong {
-                    top: 15vh;
-                    left: 5vw;
-                }
-
                 h2 {
-                    top: calc(100% - 5vw);
-                    left: 5vw;
-                    transition: 0.5s;
+                    opacity: 0;
                 }
-
                 .desc {
                     visibility: visible;
                     top: 30%;
                     transition: 1s 1s;
                 }
             }
-
             .pic {
                 width: 45%;
                 height: 100%;
                 transition: 0.5s 0.5s;
             }
-
             .open {
                 opacity: 0;
                 margin-top: 1000px;
             }
-
             .close {
                 opacity: 1;
                 right: 5vw;
                 transition: 0.5s 1s;
                 transition-timing-function: cubic-bezier(0.48, -0.67, 0.54, 1.68);
             }
-
         }
-
         article.hide {
-            margin-top: -10000px;
             opacity: 0;
         }
     }
@@ -293,7 +254,6 @@
         gap: 50px;
         transition: 0.5s;
         cursor: pointer;
-
         p {
             width: 150px;
             height: 40px;
@@ -302,11 +262,72 @@
             text-align: center;
             border-radius: 5px;
             transition: .2s;
-
             &:hover {
-                // background-color: #566270;
                 border-bottom: 1px solid #fff;
                 color: #fff;
+            }
+        }
+    }
+}
+@media screen and (max-width: 295px) {
+    #main {
+        opacity: 1;
+        >.frame {
+            article {
+                width: 80vw;
+                margin-left: -40vw;
+                .txt {
+                    strong {
+                        font-size: 4vw;
+                    }
+                    p {
+                        font-size: 4vw;
+                        text-align: center;
+                    }
+                    h2 {
+                        font-size: 7vw;
+                        top: 70%;
+                        left: 10vw;
+                    }
+                    .desc {
+                        width: 90%;
+                        font-size: 11px;
+                        color: #bbb;
+                    }
+                }
+                .open {
+                    height: 40px;
+                    span {
+                        font-size: 12px;
+                    }
+                }
+                .close {
+                    font-size: 12px;
+                }
+                &:nth-of-type(3) {
+                    .open {
+                        width: 100%;
+                    }
+                }
+            }
+            article.on {
+                .txt {
+                    width: 100%;
+                    .desc {
+                        top: 15%;
+                    }
+                }
+                .pic {
+                    width: 0%;
+                }
+            }
+        }
+        nav {
+            top: 6%;
+            gap: 10px;
+            p {
+                width: 120px;
+                font-size: 20px;
             }
         }
     }
