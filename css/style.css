@@ -17,9 +17,8 @@ a {
 }
 
 #header {
-  width: 100%;
+  width: 100vw;
   position: relative;
-  z-index: 5;
 }
 #header .inner {
   width: 100%;
@@ -41,12 +40,14 @@ a {
   width: 150px;
   position: relative;
 }
-#header .inner nav #gnb > li:hover a {
+#header .inner nav #gnb > li:hover > a {
   color: #222;
 }
-#header .inner nav #gnb > li:hover a::after {
+#header .inner nav #gnb > li:hover > a::after {
   content: "";
   display: block;
+  position: absolute;
+  top: 50%;
   width: 100%;
   height: 1px;
   background-color: #fff;
@@ -54,8 +55,8 @@ a {
 #header .inner nav #gnb > li > a {
   display: block;
   width: 100%;
-  padding: 10px 20px;
-  font: bold 20px/1 "IBM Plex Sans KR";
+  height: 100px;
+  font: bold 20px/100px "IBM Plex Sans KR";
   color: #EEE0C9;
   text-align: center;
 }
@@ -65,7 +66,17 @@ a {
   width: 0;
   height: 1px;
   background-color: #fff;
-  transition: 1s;
+  transition: 0.5s;
+}
+#header .inner nav #gnb > li .back {
+  width: 110vw;
+  position: absolute;
+  left: -68vw;
+  top: 100px;
+  z-index: 10;
+  display: none;
+  background-color: #434c41;
+  transition: 0.5s ease;
 }
 #header .inner nav #gnb > li .sub {
   position: absolute;
@@ -91,10 +102,11 @@ a {
 #header .inner nav #gnb > a {
   display: block;
   width: 150px;
-  padding: 10px 20px;
-  font: bold 20px/1 "IBM Plex Sans KR";
+  height: 100px;
+  font: bold 20px/100px "IBM Plex Sans KR";
   color: #EEE0C9;
   text-align: center;
+  position: relative;
 }
 #header .inner nav #gnb > a::after {
   content: "";
@@ -102,7 +114,7 @@ a {
   width: 0;
   height: 1px;
   background-color: #fff;
-  transition: 1s;
+  transition: 0.5s;
 }
 #header .inner nav #gnb > a:hover {
   color: #222;
@@ -110,6 +122,8 @@ a {
 #header .inner nav #gnb > a:hover::after {
   content: "";
   display: block;
+  position: absolute;
+  top: 50%;
   width: 100%;
   height: 1px;
   background-color: #fff;
@@ -131,6 +145,18 @@ a {
   position: absolute;
   color: #fff;
   font-size: 20px;
+}
+#header .inner .bars {
+  position: absolute;
+  right: 10vw;
+  bottom: 3vh;
+}
+#header .inner .bars i {
+  font-size: 30px;
+  cursor: pointer;
+}
+#header .inner .bars.hide {
+  display: none;
 }
 
 sub_header {
@@ -158,10 +184,10 @@ sub_header .inner nav #gnb > li {
   width: 150px;
   position: relative;
 }
-sub_header .inner nav #gnb > li:hover a {
+sub_header .inner nav #gnb > li:hover > a {
   color: #222;
 }
-sub_header .inner nav #gnb > li:hover a::after {
+sub_header .inner nav #gnb > li:hover > a::after {
   content: "";
   display: block;
   width: 100%;
@@ -287,26 +313,21 @@ sub_header .inner > a i {
   #header .inner > a {
     display: none;
   }
-  sub_header {
-    width: 100%;
-    position: relative;
-    z-index: 5;
-  }
   sub_header .inner {
     flex-wrap: wrap;
   }
   sub_header .inner h1 a {
-    font: bold 25px/1 "Playfair Display";
+    font-size: 25px;
   }
   sub_header .inner nav #gnb > li > a {
-    font: bold 15px/1 "IBM Plex Sans KR";
+    font-size: 15px;
   }
   sub_header .inner nav #gnb > li .sub li a {
     width: 100vw;
     font: 12px/50px "IBM Plex Sans KR";
   }
   sub_header .inner nav #gnb > a {
-    font: bold 15px/1 "IBM Plex Sans KR";
+    font-size: 15px;
   }
   sub_header .inner > a {
     display: none;
@@ -430,7 +451,7 @@ sub_header .inner > a i {
   height: 100%;
   top: 0;
   right: 0;
-  background-color: #f5dec1;
+  background-color: #f1f0e8;
   z-index: 0;
   transform-origin: left center;
   transition-duration: 1s;
@@ -537,7 +558,6 @@ sub_header .inner > a i {
   object-fit: cover;
 }
 #sub_banner .inner #page2 {
-  background-color: #f1f0e8;
   z-index: 0;
   box-shadow: 15px 0px 2px rgba(0, 0, 0, 0.4), -2px 0 2px rgba(0, 0, 0, 0.4);
   padding: 1vh 2vw;
@@ -601,7 +621,6 @@ sub_header .inner > a i {
   font: 18px/1.5 "Diphylleia";
 }
 #sub_banner .inner #page3 {
-  background-color: #f1f0e8;
   z-index: -1;
   box-shadow: 20px 0px 2px rgba(0, 0, 0, 0.4), -2px 0 2px rgba(0, 0, 0, 0.4);
   padding: 1vh 2vw;
@@ -907,6 +926,9 @@ sub_header .inner > a i {
     transform: translate(-50%, -50%);
     text-align: center;
   }
+  #sub_banner {
+    background-color: #333;
+  }
   #sub_banner .inner {
     width: 100%;
     height: 70%;
@@ -989,24 +1011,15 @@ sub_header .inner > a i {
   }
   #sub_banner .inner #page4 > h2 {
     font-size: 20px;
+    margin-bottom: 5%;
   }
   #sub_banner .inner #page4 .inner .vidList article {
-    width: 55vw;
+    width: 50vw;
     margin-bottom: 0;
   }
   #sub_banner .inner #page4 .inner .vidList article .pic {
-    padding: 5px;
-  }
-  #sub_banner .inner #page4 .inner .vidList article .con {
-    width: 100%;
-    height: 40%;
-    padding: 10px;
-  }
-  #sub_banner .inner #page4 .inner .vidList article .con h2 {
-    font: bold 20px/1.2 "Diphylleia";
-    color: black;
-    margin-bottom: 15px;
-    width: 100%;
+    height: 30vw;
+    padding: 2px;
   }
   #sub_banner .inner #page4 .inner .vidList .pop {
     width: 100vw;

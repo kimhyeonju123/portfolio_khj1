@@ -122,7 +122,7 @@
             height: 100%;
             top: 0;
             right: 0;
-            background-color: #f5dec1;
+            background-color: #f1f0e8;
             z-index: 0;
             transform-origin: left center;
             transition-duration: 1s;
@@ -238,7 +238,6 @@
             
         }
         #page2 {
-            background-color: #f1f0e8;
             z-index: 0;
             box-shadow: 15px 0px 2px rgba(0, 0, 0, 0.4), -2px 0 2px rgba(0, 0, 0, 0.4);
             padding: 1vh 2vw;
@@ -307,7 +306,6 @@
             }
         }
         #page3 {
-            background-color: #f1f0e8;
             z-index: -1;
              box-shadow: 20px 0px 2px rgba(0, 0, 0, 0.4), -2px 0 2px rgba(0, 0, 0, 0.4);
             padding: 1vh 2vw;
@@ -663,6 +661,7 @@ $maxHeight: 623px;
         }
     }
     #sub_banner{
+        background-color: #333;
         .inner{
             width: 100%;
             height: 70%;
@@ -754,27 +753,16 @@ $maxHeight: 623px;
             #page4 {
                 >h2{
                     font-size: 20px;
+                    margin-bottom: 5%;
                 }
                 .inner{
                     .vidList {
                         article {
-                            width: 55vw;
+                            width: 50vw;
                             margin-bottom: 0;
                             .pic {
-                                padding: 5px;
-                            }
-    
-                            .con {
-                                width: 100%;
-                                height: 40%;
-                                padding: 10px;
-    
-                                h2 {
-                                    font: bold 20px/1.2 "Diphylleia";
-                                    color: black;
-                                    margin-bottom: 15px;
-                                    width: 100%;
-                                }
+                                height: 30vw;
+                                padding: 2px;
                             }
                         }
                         .pop {
