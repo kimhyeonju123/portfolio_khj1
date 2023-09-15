@@ -17,7 +17,7 @@ a {
 }
 
 #header {
-  width: 100vw;
+  width: 100%;
   position: relative;
 }
 #header .inner {
@@ -63,6 +63,8 @@ a {
 #header .inner nav #gnb > li > a::after {
   content: "";
   display: block;
+  position: absolute;
+  top: 50%;
   width: 0;
   height: 1px;
   background-color: #fff;
@@ -111,6 +113,8 @@ a {
 #header .inner nav #gnb > a::after {
   content: "";
   display: block;
+  position: absolute;
+  top: 50%;
   width: 0;
   height: 1px;
   background-color: #fff;
@@ -146,18 +150,6 @@ a {
   color: #fff;
   font-size: 20px;
 }
-#header .inner .bars {
-  position: absolute;
-  right: 10vw;
-  bottom: 3vh;
-}
-#header .inner .bars i {
-  font-size: 30px;
-  cursor: pointer;
-}
-#header .inner .bars.hide {
-  display: none;
-}
 
 sub_header {
   width: 100%;
@@ -190,25 +182,39 @@ sub_header .inner nav #gnb > li:hover > a {
 sub_header .inner nav #gnb > li:hover > a::after {
   content: "";
   display: block;
+  position: absolute;
+  top: 50%;
   width: 100%;
   height: 1px;
   background-color: #fff;
 }
 sub_header .inner nav #gnb > li > a {
   display: block;
-  padding: 10px 20px;
-  font: bold 20px/1 "IBM Plex Sans KR";
+  width: 100%;
+  height: 100px;
+  font: bold 20px/100px "IBM Plex Sans KR";
   color: #EEE0C9;
   text-align: center;
-  margin-right: 10px;
 }
 sub_header .inner nav #gnb > li > a::after {
   content: "";
   display: block;
+  position: absolute;
+  top: 50%;
   width: 0;
   height: 1px;
   background-color: #fff;
-  transition: 1s;
+  transition: 0.5s;
+}
+sub_header .inner nav #gnb > li .back {
+  width: 110vw;
+  position: absolute;
+  left: -68vw;
+  top: 100px;
+  z-index: 10;
+  display: none;
+  background-color: #434c41;
+  transition: 0.5s ease;
 }
 sub_header .inner nav #gnb > li .sub {
   position: absolute;
@@ -234,19 +240,21 @@ sub_header .inner nav #gnb > li .sub li a:hover {
 sub_header .inner nav #gnb > a {
   display: block;
   width: 150px;
-  padding: 10px 20px;
-  font: bold 20px/1 "IBM Plex Sans KR";
+  height: 100px;
+  font: bold 20px/100px "IBM Plex Sans KR";
   color: #EEE0C9;
   text-align: center;
-  margin-right: 10px;
+  position: relative;
 }
 sub_header .inner nav #gnb > a::after {
   content: "";
   display: block;
+  position: absolute;
+  top: 50%;
   width: 0;
   height: 1px;
   background-color: #fff;
-  transition: 1s;
+  transition: 0.5s;
 }
 sub_header .inner nav #gnb > a:hover {
   color: #222;
@@ -254,6 +262,8 @@ sub_header .inner nav #gnb > a:hover {
 sub_header .inner nav #gnb > a:hover::after {
   content: "";
   display: block;
+  position: absolute;
+  top: 50%;
   width: 100%;
   height: 1px;
   background-color: #fff;
@@ -295,42 +305,90 @@ sub_header .inner > a i {
 }
 @media screen and (max-width: 295px) {
   #header .inner {
-    flex-wrap: wrap;
+    display: flex;
+    flex-direction: column;
+    position: relative;
   }
   #header .inner h1 a {
-    font: bold 25px/1 "Playfair Display";
+    font-size: 25px;
   }
   #header .inner nav #gnb > li > a {
-    font: bold 15px/1 "IBM Plex Sans KR";
+    height: 50px;
+    font: bold 15px/50px "IBM Plex Sans KR";
+    color: #EEE0C9;
+    text-align: center;
+  }
+  #header .inner nav #gnb > li > a::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 1px;
+    background-color: #fff;
+    transition: 0.5s;
+  }
+  #header .inner nav #gnb > li .back {
+    width: 170vw;
+    position: absolute;
+    right: -100%;
+    top: 50px;
+    transition: 0.5s ease;
   }
   #header .inner nav #gnb > li .sub li a {
-    width: 100vw;
-    font: 12px/50px "IBM Plex Sans KR";
+    font-size: 11px;
   }
   #header .inner nav #gnb > a {
-    font: bold 15px/1 "IBM Plex Sans KR";
+    height: 50px;
+    font: bold 15px/50px "IBM Plex Sans KR";
   }
   #header .inner > a {
-    display: none;
+    width: 30px;
+    height: 30px;
+  }
+  #header .inner > a i {
+    font-size: 15px;
   }
   sub_header .inner {
-    flex-wrap: wrap;
+    display: flex;
+    flex-direction: column;
+    position: relative;
   }
   sub_header .inner h1 a {
     font-size: 25px;
   }
   sub_header .inner nav #gnb > li > a {
-    font-size: 15px;
+    height: 50px;
+    font: bold 15px/50px "IBM Plex Sans KR";
+    color: #EEE0C9;
+    text-align: center;
+  }
+  sub_header .inner nav #gnb > li > a::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 1px;
+    background-color: #fff;
+    transition: 0.5s;
+  }
+  sub_header .inner nav #gnb > li .back {
+    width: 170vw;
+    position: absolute;
+    right: -100%;
+    top: 50px;
+    transition: 0.5s ease;
   }
   sub_header .inner nav #gnb > li .sub li a {
-    width: 100vw;
-    font: 12px/50px "IBM Plex Sans KR";
+    font-size: 11px;
   }
   sub_header .inner nav #gnb > a {
-    font-size: 15px;
+    height: 50px;
+    font: bold 15px/50px "IBM Plex Sans KR";
   }
   sub_header .inner > a {
-    display: none;
+    width: 30px;
+    height: 30px;
+  }
+  sub_header .inner > a i {
+    font-size: 15px;
   }
 }
 #banner {
@@ -1088,7 +1146,7 @@ sub_header .inner > a i {
 }
 #main > .frame article .txt h2 {
   font: 2vw/1 "Playfair Display";
-  color: #9dab87;
+  color: #eee;
   position: absolute;
   top: 75%;
   left: 2vw;
@@ -1711,6 +1769,51 @@ main #wrap #info_news .box:hover .pic img {
   text-align: center;
 }
 
+@media screen and (max-width: 295px) {
+  main #wrap {
+    overflow: hidden;
+  }
+  main #wrap .inner {
+    height: 20%;
+  }
+  main #wrap .inner h2 {
+    position: absolute;
+    top: 5%;
+    font-size: 20px;
+  }
+  main #wrap .inner > svg {
+    width: 10%;
+  }
+  main #wrap #info_news {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  main #wrap #info_news > h1 {
+    position: relative;
+    z-index: 10;
+    top: 0%;
+    font-size: 20px;
+    padding: 10px 0 10px 0;
+  }
+  main #wrap #info_news .box {
+    width: 100%;
+    height: 150px;
+  }
+  main #wrap #info_news .box h2 {
+    top: 40%;
+    left: -50%;
+    z-index: 3;
+    font-size: 14px;
+  }
+  main #wrap #info_news .box:hover h2 {
+    top: 40%;
+    left: 0%;
+  }
+  #info_banner {
+    display: none;
+  }
+}
 #location {
   width: 100%;
 }
@@ -1756,6 +1859,36 @@ main #wrap #info_news .box:hover .pic img {
   opacity: 0.2;
 }
 
+@media screen and (max-width: 295px) {
+  #location {
+    width: 100%;
+  }
+  #location .inner {
+    position: relative;
+    width: 100%;
+  }
+  #location .inner h1 {
+    font-size: 20px;
+  }
+  #location .inner #map {
+    width: 80%;
+    margin: 0 auto;
+    height: 300px;
+    margin-bottom: 20px;
+  }
+  #location .inner .traffic {
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  #location .inner .traffic li {
+    margin-right: 0;
+  }
+  #location .inner .traffic li a {
+    width: 100px;
+    border-radius: 10px;
+    font-size: 11px;
+  }
+}
 #footer {
   width: 100%;
   height: 300px;

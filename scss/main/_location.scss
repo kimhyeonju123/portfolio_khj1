@@ -44,3 +44,34 @@
         }
     }
 }
+
+@media screen and (max-width: 295px) {
+    #location{
+        width: 100%;
+        .inner{
+            position: relative;
+            width: 100%;
+            h1{
+                font-size: 20px;
+            }
+            #map{
+                width: 80%;
+                margin: 0 auto;
+                height: 300px;
+                margin-bottom: 20px;
+            }
+            .traffic{
+                justify-content: space-evenly;
+                align-items: center;
+                li{
+                    margin-right: 0;
+                    a{
+                        width: 100px;
+                        border-radius: 10px;
+                        font-size: 11px;
+                    }
+                }
+            }
+        }
+    }
+}

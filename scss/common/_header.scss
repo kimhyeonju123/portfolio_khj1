@@ -1,5 +1,5 @@
 #header {
-    width: 100vw;
+    width: 100%;
     position: relative; //
 
     .inner {
@@ -22,7 +22,6 @@
         nav {
             #gnb {
                 display: flex;
-
                 >li {
                     width: 150px;
                     position: relative;
@@ -50,6 +49,8 @@
                         &::after{
                             content: '';
                             display: block;
+                            position: absolute;
+                            top: 50%;
                             width: 0;
                             height: 1px;
                             background-color: #fff;
@@ -102,6 +103,8 @@
                     &::after{
                         content: '';
                         display: block;
+                        position: absolute;
+                        top: 50%;
                         width: 0;
                         height: 1px;
                         background-color: #fff;
@@ -141,18 +144,6 @@
                 font-size: 20px;
             }
         }
-        .bars{
-            position: absolute;
-            right: 10vw;
-            bottom: 3vh;
-            i{
-                font-size: 30px;
-                cursor: pointer;
-            }
-            &.hide{
-                display: none;
-            }
-        }
     }
 }
 
@@ -181,7 +172,6 @@ sub_header {
         nav {
             #gnb {
                 display: flex;
-
                 >li {
                     width: 150px;
                     position: relative;
@@ -191,6 +181,8 @@ sub_header {
                             &::after{
                                 content: '';
                                 display: block;
+                                position: absolute;
+                                top: 50%;
                                 width: 100%;
                                 height: 1px;
                                 background-color: #fff;
@@ -199,26 +191,36 @@ sub_header {
                     }
                     >a {
                         display: block;
-                        padding: 10px 20px;
-                        font: bold 20px/1 "IBM Plex Sans KR";
+                        width: 100%;
+                        height: 100px;
+                        font: bold 20px/100px "IBM Plex Sans KR";
                         color: #EEE0C9;
                         text-align: center;
-                        margin-right: 10px;
-
                         &::after{
                             content: '';
                             display: block;
+                            position: absolute;
+                            top: 50%;
                             width: 0;
                             height: 1px;
                             background-color: #fff;
-                            transition: 1s;
+                            transition: .5s;
                         }
                     }
-                    
+                    .back{
+                        width: 110vw;
+                        position: absolute;
+                        left: -68vw;
+                        top: 100px;
+                        z-index: 10;
+                        display: none;
+                        background-color: #434c41;
+                        transition: 0.5s ease;
+                    }
                     .sub{
                         position: absolute;
                         left: 0;
-                        display: none;
+                        display: none; //
                         overflow: hidden;
                         transition: height 0.5s ease;
                         z-index: 10;
@@ -242,25 +244,29 @@ sub_header {
                 >a{
                     display: block;
                     width: 150px;
-                    padding: 10px 20px;
-                    font: bold 20px/1 "IBM Plex Sans KR";
+                    height: 100px;
+                    font: bold 20px/100px "IBM Plex Sans KR";
                     color: #EEE0C9;
                     text-align: center;
-                    margin-right: 10px;
+                    position: relative;
 
                     &::after{
                         content: '';
                         display: block;
+                        position: absolute;
+                        top: 50%;
                         width: 0;
                         height: 1px;
                         background-color: #fff;
-                        transition: 1s;
+                        transition: .5s;
                     }
                     &:hover {
                         color: #222;
                         &::after{
                             content: '';
                             display: block;
+                            position: absolute;
+                            top: 50%;
                             width: 100%;
                             height: 1px;
                             background-color: #fff;
@@ -319,70 +325,115 @@ sub_header {
 @media screen and (max-width: 295px) {
     #header {
         .inner {
-            flex-wrap: wrap;
-            h1 {
-                a {
-                    font: bold 25px/1 "Playfair Display";
-                }
-            }
-    
-            nav {
-                #gnb {
-                    >li {
-                        >a {
-                            font: bold 15px/1 "IBM Plex Sans KR";
-                        }
-                        .sub{
-                            li{
-                                a{
-                                    width: 100vw;
-                                    font: 12px/50px "IBM Plex Sans KR";
-                                }
-                            }
-                        }
-                    }
-                    >a{
-                        font: bold 15px/1 "IBM Plex Sans KR";
-                    }
-                }
-            }
-            >a{
-                display: none;
-            }
-        }
-    }
-    
-    sub_header {
-        .inner {
-            flex-wrap: wrap;
+            display: flex;
+            flex-direction: column;
+            position: relative;
             h1 {
                 a {
                     font-size: 25px;
                 }
             }
-    
             nav {
                 #gnb {
                     >li {
                         >a {
-                            font-size: 15px;
+                            height: 50px;
+                            font: bold 15px/50px "IBM Plex Sans KR";
+                            color: #EEE0C9;
+                            text-align: center;
+                            &::after{
+                                content: '';
+                                display: block;
+                                width: 0;
+                                height: 1px;
+                                background-color: #fff;
+                                transition: .5s;
+                            }
+                        }
+                        .back{
+                            width: 170vw;
+                            position: absolute;
+                            right: -100%;
+                            top: 50px;
+                            transition: 0.5s ease;
                         }
                         .sub{
                             li{
                                 a{
-                                    width: 100vw;
-                                    font: 12px/50px "IBM Plex Sans KR";
+                                    font-size: 11px;
                                 }
                             }
                         }
                     }
                     >a{
-                        font-size: 15px;
+                        height: 50px;
+                        font: bold 15px/50px "IBM Plex Sans KR";
                     }
                 }
             }
             >a{
-                display: none;
+                width: 30px;
+                height: 30px;
+                i{
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+    sub_header {
+        .inner {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            h1 {
+                a {
+                    font-size: 25px;
+                }
+            }
+            nav {
+                #gnb {
+                    >li {
+                        >a {
+                            height: 50px;
+                            font: bold 15px/50px "IBM Plex Sans KR";
+                            color: #EEE0C9;
+                            text-align: center;
+                            &::after{
+                                content: '';
+                                display: block;
+                                width: 0;
+                                height: 1px;
+                                background-color: #fff;
+                                transition: .5s;
+                            }
+                        }
+                        .back{
+                            width: 170vw;
+                            position: absolute;
+                            right: -100%;
+                            top: 50px;
+                            transition: 0.5s ease;
+                        }
+                        .sub{
+                            li{
+                                a{
+                                    font-size: 11px;
+                                }
+                            }
+                        }
+                    }
+                    >a{
+                        height: 50px;
+                        font: bold 15px/50px "IBM Plex Sans KR";
+                    }
+                }
+            }
+            >a{
+                width: 30px;
+                height: 30px;
+                i{
+                    font-size: 15px;
+                }
             }
         }
     }

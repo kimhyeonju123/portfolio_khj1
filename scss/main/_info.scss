@@ -17,7 +17,6 @@ main {
             display: flex;
             justify-content: space-around;
             align-items: flex-end;
-
             h2 {
                 position: absolute;
                 width: 80vw;
@@ -149,3 +148,54 @@ main {
     }
 }
 
+@media screen and (max-width: 295px) {
+    main {
+        #wrap {
+                overflow: hidden;
+
+            .inner {
+                height: 20%;
+                h2 {
+                    position: absolute;
+                    top: 5%;
+                    font-size: 20px;
+                }
+                >svg {
+                    width: 10%;
+                }
+            }
+            #info_news {
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+
+                >h1{
+                    position: relative;
+                    z-index: 10;
+                    top: 0%;
+                    font-size: 20px;
+                    padding: 10px 0 10px 0;
+                }
+                .box {
+                    width: 100%;
+                    height: 150px;
+                    h2 {
+                        top: 40%;
+                        left: -50%;
+                        z-index: 3;
+                        font-size: 14px;
+                    }
+                    &:hover {
+                        h2 {
+                            top: 40%;
+                            left: 0%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #info_banner{
+        display: none;
+    }
+}
