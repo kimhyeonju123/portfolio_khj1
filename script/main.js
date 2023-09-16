@@ -116,22 +116,18 @@ btnNews.forEach((el, index) => {
         e.preventDefault();
 
         // 버튼 on
-        for (const el of btnNews) {
-            el.classList.remove("on");
-        } el.classList.add("on");
+        document.querySelector("#news>.inner>.wrap>nav>a.on").classList.remove("on");
+        btnNews[index].classList.add("on");
         
         // 박스 on
-        for (const el of boxNews) {
-            el.classList.remove("on");
-        }
+        document.querySelector("#news>.inner>.wrap>div.on").classList.remove("on");
         boxNews[index].classList.add("on");
         
-        for (const el of newsHone) {
-            el.classList.remove("on");
-        }newsHone[index].classList.add("on");
+        document.querySelector("#news>.inner>h1.on").classList.remove("on");
+        newsHone[index].classList.add("on");
 
         setTimeout(() => {
-            for (let el of boxNews) el.classList.remove("active");
+            document.querySelector("#news>.inner>.wrap>div.active").classList.remove("active");
             boxNews[index].classList.add("active");
         }, 0);
     })
