@@ -13,13 +13,6 @@
 @import "main/location";
 @import "common/footer";
 
-.notDragging{
-    -ms-user-select: none; 
-    -moz-user-select: -moz-none;
-    -khtml-user-select: none;
-    -webkit-user-select: none;
-    user-select: none;
-}
 body{
     overflow-x: hidden;
 }
