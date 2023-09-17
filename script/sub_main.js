@@ -74,16 +74,16 @@ function nextBtn() {
         page[idx].style.zIndex = 0;
     }
     if(idx == 1){
-        page[idx].style.zIndex = 1;
         page[idx].classList.add("on");
+        page[idx].style.zIndex = 1;
     }
     if(idx == 2){
-        page[idx].style.zIndex = 2;
         page[idx].classList.add("on");
+        page[idx].style.zIndex = 2;
     }
     if(idx == 3){
-        page[idx].style.zIndex = 5;
         page[idx].classList.add("on");
+        page[idx].style.zIndex = 5;
     }
     idx++;
 }
