@@ -303,7 +303,7 @@ sub_header .inner > a i {
     font-size: 18px;
   }
 }
-@media screen and (max-width: 295px) {
+@media screen and (max-width: 290px) {
   #header .inner {
     display: flex;
     flex-direction: column;
@@ -841,7 +841,7 @@ sub_header .inner > a i {
   right: 2vw;
 }
 
-@media screen and (max-width: 295px) {
+@media screen and (max-width: 290px) {
   #banner {
     height: 200px;
   }
@@ -1231,7 +1231,7 @@ sub_header .inner > a i {
   color: #fff;
 }
 
-@media screen and (max-width: 295px) {
+@media screen and (max-width: 290px) {
   #main {
     opacity: 1;
   }
@@ -1447,7 +1447,7 @@ sub_header .inner > a i {
 #news .inner .wrap > div.active article .boxInner .box {
   transform: translateX(0);
   opacity: 1;
-  transition: 0.6s 0.2s;
+  transition: 0.6s;
 }
 
 @keyframes vibration {
@@ -1464,7 +1464,7 @@ sub_header .inner > a i {
     transform: rotate(1deg);
   }
 }
-@media screen and (max-width: 295px) {
+@media screen and (max-width: 290px) {
   #news {
     height: 623px;
   }
@@ -1667,7 +1667,7 @@ main #wrap #info_news .box:hover .pic img {
   text-align: center;
 }
 
-@media screen and (max-width: 295px) {
+@media screen and (max-width: 290px) {
   main #wrap {
     overflow: hidden;
   }
@@ -1757,7 +1757,7 @@ main #wrap #info_news .box:hover .pic img {
   opacity: 0.2;
 }
 
-@media screen and (max-width: 295px) {
+@media screen and (max-width: 290px) {
   #location {
     width: 100%;
   }
@@ -1833,7 +1833,7 @@ footer .inner address {
   text-align: center;
 }
 
-@media screen and (max-width: 295px) {
+@media screen and (max-width: 290px) {
   #footer {
     height: 100px;
   }
@@ -1885,7 +1885,7 @@ ul#scrollBtn li.on {
   background: #000;
 }
 
-@media screen and (max-width: 295px) {
+@media screen and (max-width: 290px) {
   ul#scrollBtn {
     display: none;
   }
