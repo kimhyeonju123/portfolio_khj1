@@ -234,7 +234,7 @@ $maxHeight: 623px;
                         display: block;
                     }
                     article {
-                        .inner {
+                        .boxInner {
                             display: block;
                             .pic {
                                 margin-top: 2vh;
@@ -257,12 +257,6 @@ $maxHeight: 623px;
                                 p {
                                     font-size: 15px;
                                     color: #eee;
-                                    span{
-                                        cursor: pointer;
-                                        &:hover{
-                                            color: #F1C376;
-                                        }
-                                    }
                                 }
                                 >span {
                                     font-size: 12px;
@@ -274,10 +268,9 @@ $maxHeight: 623px;
     
                     &.active {
                         article {
-                            .inner {
+                            .boxInner {
                                 .pic {
                                     margin-left: 30vw;
-                                    transition: 1s;
                                 }
     
                                 .box {

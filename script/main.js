@@ -70,7 +70,7 @@ function startRolling() {
 }
 
 function active(index) {
-    for (let el of panels) el.classList.remove("on");
+    document.querySelector(".panel>li.on").classList.remove("on");
     panels[index].classList.add("on");
     num = index;
 }
@@ -114,7 +114,6 @@ closes.forEach((el, index) => {
 btnNews.forEach((el, index) => {
     el.addEventListener("click", (e) => {
         e.preventDefault();
-
         // 버튼 on
         document.querySelector("#news>.inner>.wrap>nav>a.on").classList.remove("on");
         btnNews[index].classList.add("on");
@@ -123,6 +122,7 @@ btnNews.forEach((el, index) => {
         document.querySelector("#news>.inner>.wrap>div.on").classList.remove("on");
         boxNews[index].classList.add("on");
         
+        //h1 on
         document.querySelector("#news>.inner>h1.on").classList.remove("on");
         newsHone[index].classList.add("on");
 
