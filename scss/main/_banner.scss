@@ -482,7 +482,6 @@
 }
 
 $maxHeight: 623px;
-
 @media screen and (max-width: 290px) {
     #banner {
         height: 200px;
@@ -586,10 +585,14 @@ $maxHeight: 623px;
                         font-size: 13px;
                     }
                 }
+                .pic{
+                    display: none;
+                }
                 .story{
                     top: 55%;
                     margin-left: 4%;
                     p{
+                        padding: 2%;
                         font: 11px/1.4 "Diphylleia";
                     }
                 }
@@ -609,6 +612,9 @@ $maxHeight: 623px;
                         font-size: 13px;
                     }
                 }
+                .pic{
+                    display: none;
+                }
                 .story{
                     top: 55%;
                     margin-left: 4%;
@@ -624,9 +630,19 @@ $maxHeight: 623px;
                 }
                 .inner{
                     .vidList {
+                        display: flex;
+                        flex-direction: column;
                         article {
                             width: 50vw;
-                            margin-bottom: 0;
+                            border: 1px dashed black;
+                            background-color: none;
+                            margin-bottom: 1vw;
+                            &:last-child{
+                                margin-bottom: 0;
+                            }
+                            .con {
+                                display: none;
+                            }
                             .pic {
                                 height: 30vw;
                                 padding: 2px;

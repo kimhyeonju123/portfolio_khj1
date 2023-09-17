@@ -936,11 +936,15 @@ sub_header .inner > a i {
   #sub_banner .inner #page2 .txt p {
     font-size: 13px;
   }
+  #sub_banner .inner #page2 .pic {
+    display: none;
+  }
   #sub_banner .inner #page2 .story {
     top: 55%;
     margin-left: 4%;
   }
   #sub_banner .inner #page2 .story p {
+    padding: 2%;
     font: 11px/1.4 "Diphylleia";
   }
   #sub_banner .inner #page3 span {
@@ -957,6 +961,9 @@ sub_header .inner > a i {
   #sub_banner .inner #page3 .txt p {
     font-size: 13px;
   }
+  #sub_banner .inner #page3 .pic {
+    display: none;
+  }
   #sub_banner .inner #page3 .story {
     top: 55%;
     margin-left: 4%;
@@ -968,9 +975,21 @@ sub_header .inner > a i {
     font-size: 20px;
     margin-bottom: 5%;
   }
+  #sub_banner .inner #page4 .inner .vidList {
+    display: flex;
+    flex-direction: column;
+  }
   #sub_banner .inner #page4 .inner .vidList article {
     width: 50vw;
+    border: 1px dashed black;
+    background-color: none;
+    margin-bottom: 1vw;
+  }
+  #sub_banner .inner #page4 .inner .vidList article:last-child {
     margin-bottom: 0;
+  }
+  #sub_banner .inner #page4 .inner .vidList article .con {
+    display: none;
   }
   #sub_banner .inner #page4 .inner .vidList article .pic {
     height: 30vw;
