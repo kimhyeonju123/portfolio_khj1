@@ -106,7 +106,7 @@ opens.forEach((el, index) => {
 closes.forEach((el, index) => {
     el.addEventListener("click", (e) => {
         e.target.closest("article").classList.remove("on");
-        for (let el of articles) el.classList.remove("hide");
+        document.querySelector(".frame>article.hide").classList.remove("hide");
     })
 })
 

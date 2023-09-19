@@ -16,6 +16,142 @@ a {
   text-decoration: none;
 }
 
+#header {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+#header .inner {
+  width: 100%;
+  height: 100px;
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #606C5D;
+}
+#header .inner h1 a {
+  font: bold 40px/1 "Playfair Display";
+  color: #222;
+}
+#header .inner nav #gnb {
+  display: flex;
+}
+#header .inner nav #gnb > li {
+  width: 150px;
+  position: relative;
+}
+#header .inner nav #gnb > li:hover > a {
+  color: #222;
+}
+#header .inner nav #gnb > li:hover > a::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  height: 1px;
+  background-color: #fff;
+}
+#header .inner nav #gnb > li > a {
+  display: block;
+  width: 100%;
+  height: 100px;
+  font: bold 20px/100px "IBM Plex Sans KR";
+  color: #EEE0C9;
+  text-align: center;
+}
+#header .inner nav #gnb > li > a::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  width: 0;
+  height: 1px;
+  background-color: #fff;
+  transition: 0.5s;
+}
+#header .inner nav #gnb > li .back {
+  width: 110vw;
+  position: absolute;
+  left: -68vw;
+  top: 100px;
+  z-index: 10;
+  display: none;
+  background-color: #434c41;
+  transition: 0.5s ease;
+}
+#header .inner nav #gnb > li .sub {
+  position: absolute;
+  left: 0;
+  display: none;
+  overflow: hidden;
+  transition: height 0.5s ease;
+  z-index: 10;
+}
+#header .inner nav #gnb > li .sub li a {
+  display: block;
+  width: 150px;
+  height: 50px;
+  font: 15px/50px "IBM Plex Sans KR";
+  letter-spacing: 1px;
+  text-align: center;
+  color: #fff;
+  background-color: #434c41;
+}
+#header .inner nav #gnb > li .sub li a:hover {
+  color: #888;
+}
+#header .inner nav #gnb > a {
+  display: block;
+  width: 150px;
+  height: 100px;
+  font: bold 20px/100px "IBM Plex Sans KR";
+  color: #EEE0C9;
+  text-align: center;
+  position: relative;
+}
+#header .inner nav #gnb > a::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  width: 0;
+  height: 1px;
+  background-color: #fff;
+  transition: 0.5s;
+}
+#header .inner nav #gnb > a:hover {
+  color: #222;
+}
+#header .inner nav #gnb > a:hover::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  height: 1px;
+  background-color: #fff;
+}
+#header .inner > a {
+  position: fixed;
+  z-index: 10;
+  width: 50px;
+  height: 50px;
+  background-color: #333;
+  border-radius: 50%;
+  right: 2vw;
+  bottom: 2vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#header .inner > a i {
+  position: absolute;
+  color: #fff;
+  font-size: 20px;
+}
+
 header {
   width: 100%;
   position: relative;
@@ -151,16 +287,50 @@ header .inner > a i {
   font-size: 20px;
 }
 
-@media screen and (max-width: 1179px) {
-  header .inner > a {
+@media screen and (max-width: 290px) {
+  #header .inner {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+  #header .inner h1 a {
+    font-size: 25px;
+  }
+  #header .inner nav #gnb > li > a {
+    height: 50px;
+    font: bold 15px/50px "IBM Plex Sans KR";
+    color: #EEE0C9;
+    text-align: center;
+  }
+  #header .inner nav #gnb > li > a::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 1px;
+    background-color: #fff;
+    transition: 0.5s;
+  }
+  #header .inner nav #gnb > li .back {
+    width: 170vw;
+    position: absolute;
+    right: -100%;
+    top: 50px;
+    transition: 0.5s ease;
+  }
+  #header .inner nav #gnb > li .sub li a {
+    font-size: 11px;
+  }
+  #header .inner nav #gnb > a {
+    height: 50px;
+    font: bold 15px/50px "IBM Plex Sans KR";
+  }
+  #header .inner > a {
     width: 40px;
     height: 40px;
   }
-  header .inner > a i {
+  #header .inner > a i {
     font-size: 18px;
   }
-}
-@media screen and (max-width: 290px) {
   header .inner {
     display: flex;
     flex-direction: column;
@@ -198,11 +368,11 @@ header .inner > a i {
     font: bold 15px/50px "IBM Plex Sans KR";
   }
   header .inner > a {
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
   }
   header .inner > a i {
-    font-size: 15px;
+    font-size: 18px;
   }
 }
 #banner {
@@ -828,8 +998,10 @@ header .inner > a i {
   width: 100%;
   height: 100vh;
   position: relative;
+  opacity: 0.8;
   background-color: #606C5D;
   transition: 0.5s;
+  overflow: hidden;
 }
 #main.on {
   opacity: 1;
@@ -899,7 +1071,7 @@ header .inner > a i {
   position: absolute;
   top: 60%;
   left: 5vw;
-  font: 13px/1.2 "IBM Plex Sans KR";
+  font: 0.9vw/1.2 "IBM Plex Sans KR";
   letter-spacing: 2px;
   color: #aaa;
 }
@@ -1141,8 +1313,9 @@ header .inner > a i {
   top: 20%;
 }
 #news .inner h1 p {
-  margin-top: 30px;
-  text-align: right;
+  position: absolute;
+  bottom: -50%;
+  right: 0;
   font-size: 20px;
 }
 #news .inner .wrap {
@@ -1279,7 +1452,7 @@ header .inner > a i {
 #news .inner .wrap > div.active article .boxInner .box {
   transform: translateX(0);
   opacity: 1;
-  transition: 0.6s;
+  transition: 0.6s 0.2s;
 }
 
 @keyframes vibration {
@@ -1347,12 +1520,19 @@ header .inner > a i {
     font-size: 15px;
     color: #eee;
   }
+  #news .inner .wrap > div article .boxInner .box p span {
+    cursor: pointer;
+  }
+  #news .inner .wrap > div article .boxInner .box p span:hover {
+    color: #F1C376;
+  }
   #news .inner .wrap > div article .boxInner .box > span {
     font-size: 12px;
     color: #999;
   }
   #news .inner .wrap > div.active article .boxInner .pic {
-    margin-left: 30vw;
+    margin-left: 35vw;
+    transition: 1s;
   }
   #news .inner .wrap > div.active article .boxInner .box {
     transition: 0.8s;
@@ -1612,6 +1792,30 @@ main #wrap #info_news .box:hover .pic img {
     font-size: 11px;
   }
 }
+#footer {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+}
+#footer .inner {
+  width: 100%;
+  height: 100%;
+  background-color: #353b33;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#footer .inner p {
+  color: #E0E3DA;
+  text-align: center;
+}
+#footer .inner address {
+  color: #E0E3DA;
+  text-align: center;
+}
+
 footer {
   width: 100%;
   height: 300px;
@@ -1636,6 +1840,15 @@ footer .inner address {
 }
 
 @media screen and (max-width: 290px) {
+  #footer {
+    height: 100px;
+  }
+  #footer .inner p {
+    font-size: 10px;
+  }
+  #footer .inner address {
+    font-size: 10px;
+  }
   footer {
     height: 100px;
   }
