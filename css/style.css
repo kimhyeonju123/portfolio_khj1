@@ -19,7 +19,6 @@ a {
 #header {
   width: 100%;
   position: relative;
-  overflow: hidden;
 }
 #header .inner {
   width: 100%;
@@ -151,12 +150,21 @@ a {
   color: #fff;
   font-size: 20px;
 }
+#header .ham {
+  position: absolute;
+  top: 10%;
+  right: 10px;
+  display: none;
+}
+#header .ham i {
+  font-size: 30px;
+}
 
-header {
+#sub_header {
   width: 100%;
   position: relative;
 }
-header .inner {
+#sub_header .inner {
   width: 100%;
   height: 100px;
   position: relative;
@@ -165,21 +173,21 @@ header .inner {
   align-items: center;
   background-color: #606C5D;
 }
-header .inner h1 a {
+#sub_header .inner h1 a {
   font: bold 40px/1 "Playfair Display";
   color: #222;
 }
-header .inner nav #gnb {
+#sub_header .inner nav #gnb {
   display: flex;
 }
-header .inner nav #gnb > li {
+#sub_header .inner nav #gnb > li {
   width: 150px;
   position: relative;
 }
-header .inner nav #gnb > li:hover > a {
+#sub_header .inner nav #gnb > li:hover > a {
   color: #222;
 }
-header .inner nav #gnb > li:hover > a::after {
+#sub_header .inner nav #gnb > li:hover > a::after {
   content: "";
   display: block;
   position: absolute;
@@ -188,7 +196,7 @@ header .inner nav #gnb > li:hover > a::after {
   height: 1px;
   background-color: #fff;
 }
-header .inner nav #gnb > li > a {
+#sub_header .inner nav #gnb > li > a {
   display: block;
   width: 100%;
   height: 100px;
@@ -196,7 +204,7 @@ header .inner nav #gnb > li > a {
   color: #EEE0C9;
   text-align: center;
 }
-header .inner nav #gnb > li > a::after {
+#sub_header .inner nav #gnb > li > a::after {
   content: "";
   display: block;
   position: absolute;
@@ -206,7 +214,7 @@ header .inner nav #gnb > li > a::after {
   background-color: #fff;
   transition: 0.5s;
 }
-header .inner nav #gnb > li .back {
+#sub_header .inner nav #gnb > li .back {
   width: 110vw;
   position: absolute;
   left: -68vw;
@@ -216,7 +224,7 @@ header .inner nav #gnb > li .back {
   background-color: #434c41;
   transition: 0.5s ease;
 }
-header .inner nav #gnb > li .sub {
+#sub_header .inner nav #gnb > li .sub {
   position: absolute;
   left: 0;
   display: none;
@@ -224,7 +232,7 @@ header .inner nav #gnb > li .sub {
   transition: height 0.5s ease;
   z-index: 10;
 }
-header .inner nav #gnb > li .sub li a {
+#sub_header .inner nav #gnb > li .sub li a {
   display: block;
   width: 150px;
   height: 50px;
@@ -234,10 +242,10 @@ header .inner nav #gnb > li .sub li a {
   color: #fff;
   background-color: #434c41;
 }
-header .inner nav #gnb > li .sub li a:hover {
+#sub_header .inner nav #gnb > li .sub li a:hover {
   color: #888;
 }
-header .inner nav #gnb > a {
+#sub_header .inner nav #gnb > a {
   display: block;
   width: 150px;
   height: 100px;
@@ -246,7 +254,7 @@ header .inner nav #gnb > a {
   text-align: center;
   position: relative;
 }
-header .inner nav #gnb > a::after {
+#sub_header .inner nav #gnb > a::after {
   content: "";
   display: block;
   position: absolute;
@@ -256,10 +264,10 @@ header .inner nav #gnb > a::after {
   background-color: #fff;
   transition: 0.5s;
 }
-header .inner nav #gnb > a:hover {
+#sub_header .inner nav #gnb > a:hover {
   color: #222;
 }
-header .inner nav #gnb > a:hover::after {
+#sub_header .inner nav #gnb > a:hover::after {
   content: "";
   display: block;
   position: absolute;
@@ -268,7 +276,7 @@ header .inner nav #gnb > a:hover::after {
   height: 1px;
   background-color: #fff;
 }
-header .inner > a {
+#sub_header .inner > a {
   position: fixed;
   z-index: 10;
   width: 50px;
@@ -281,13 +289,16 @@ header .inner > a {
   justify-content: center;
   align-items: center;
 }
-header .inner > a i {
+#sub_header .inner > a i {
   position: absolute;
   color: #fff;
   font-size: 20px;
 }
 
 @media screen and (max-width: 290px) {
+  #header {
+    overflow: hidden;
+  }
   #header .inner {
     display: flex;
     flex-direction: column;
@@ -331,21 +342,30 @@ header .inner > a i {
   #header .inner > a i {
     font-size: 18px;
   }
-  header .inner {
+  #header .ham {
+    position: absolute;
+    top: 10%;
+    right: 10px;
+    display: block;
+  }
+  #header .ham i {
+    font-size: 30px;
+  }
+  #sub_header .inner {
     display: flex;
     flex-direction: column;
     position: relative;
   }
-  header .inner h1 a {
+  #sub_header .inner h1 a {
     font-size: 25px;
   }
-  header .inner nav #gnb > li > a {
+  #sub_header .inner nav #gnb > li > a {
     height: 50px;
     font: bold 15px/50px "IBM Plex Sans KR";
     color: #EEE0C9;
     text-align: center;
   }
-  header .inner nav #gnb > li > a::after {
+  #sub_header .inner nav #gnb > li > a::after {
     content: "";
     display: block;
     width: 0;
@@ -353,25 +373,25 @@ header .inner > a i {
     background-color: #fff;
     transition: 0.5s;
   }
-  header .inner nav #gnb > li .back {
+  #sub_header .inner nav #gnb > li .back {
     width: 170vw;
     position: absolute;
     right: -100%;
     top: 50px;
     transition: 0.5s ease;
   }
-  header .inner nav #gnb > li .sub li a {
+  #sub_header .inner nav #gnb > li .sub li a {
     font-size: 11px;
   }
-  header .inner nav #gnb > a {
+  #sub_header .inner nav #gnb > a {
     height: 50px;
     font: bold 15px/50px "IBM Plex Sans KR";
   }
-  header .inner > a {
+  #sub_header .inner > a {
     width: 40px;
     height: 40px;
   }
-  header .inner > a i {
+  #sub_header .inner > a i {
     font-size: 18px;
   }
 }
