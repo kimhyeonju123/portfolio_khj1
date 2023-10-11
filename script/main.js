@@ -1,5 +1,7 @@
 // 헤더 변수
-const gnb_li = document.querySelectorAll("#gnb>li");
+const ham_btn = document.querySelector(".ham_btn");
+const menuOn = document.querySelector(".menuOn");
+const x_btn = document.querySelector(".x_btn");
 
 // 슬라이드 변수
 const frame = document.querySelector(".frame");
@@ -22,44 +24,20 @@ let num = 0;
 let timer = null;
 const interval = 5000;
 
-// 헤더 부분
-gnb_li.forEach((el) => {
-    el.addEventListener("mouseenter", (e) => {
-        const sub = e.currentTarget.querySelector(".sub");
-        let isBlock = window.getComputedStyle(sub).getPropertyValue("display");
-        sub.style.height = "0";
-        
-        let back = document.querySelector(".back");
-        back.style.height = "0";
-        
-        if (isBlock == "none") {
-            sub.style.display = "block";
-            back.style.display = "block";
-            let subHeight = sub.scrollHeight;
-            sub.style.height = subHeight + "px";
-            back.style.height = subHeight + "px";
-        }
-    });
-});
-gnb_li.forEach((el) => {
-    el.addEventListener("mouseleave", (e) => {
-        const sub = e.currentTarget.querySelector(".sub");
-        let isBlock = window.getComputedStyle(sub).getPropertyValue("display");
-        sub.style.height = "0";
+// 헤더부분
+ham_btn.addEventListener("click", (e) => {
+    e.preventDefault();
+    ham_btn.classList.add("del");
+    x_btn.classList.add("on");
+    menuOn.classList.add("on");
+})
 
-        let back = document.querySelector(".back");
-        back.style.height = "0";
-        
-        if (isBlock == "block") {
-            sub.style.display = "0";
-            sub.addEventListener("transitionend", function end() {
-                sub.removeEventListener("transitionend", end);
-                sub.style.display = "none";
-                back.style.display = "none";
-            });
-        }
-    });
-});
+x_btn.addEventListener("click", (e) => {
+    e.preventDefault();
+    x_btn.classList.remove('on');
+    ham_btn.classList.remove("del");
+    menuOn.classList.remove("on");
+})
 
 // 배너부분
 startRolling();
@@ -106,9 +84,7 @@ opens.forEach((el, index) => {
 closes.forEach((el, index) => {
     el.addEventListener("click", (e) => {
         e.target.closest("article").classList.remove("on");
-        for (const el of articles) {
-            el.classList.remove("hide");
-        }
+        for (let el of articles) el.classList.remove("hide");
     })
 })
 
@@ -119,11 +95,11 @@ btnNews.forEach((el, index) => {
         // 버튼 on
         document.querySelector("#news>.inner>.wrap>nav>a.on").classList.remove("on");
         btnNews[index].classList.add("on");
-        
+
         // 박스 on
         document.querySelector("#news>.inner>.wrap>div.on").classList.remove("on");
         boxNews[index].classList.add("on");
-        
+
         //h1 on
         document.querySelector("#news>.inner>h1.on").classList.remove("on");
         newsHone[index].classList.add("on");

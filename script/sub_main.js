@@ -1,5 +1,7 @@
 // 헤더 변수
-const gnb_li = document.querySelectorAll("#gnb>li");
+const ham_btn = document.querySelector(".ham_btn");
+const menuOn = document.querySelector(".menuOn");
+const x_btn = document.querySelector(".x_btn");
 
 // 배너 변수
 const prev = document.querySelector(".subPrev");
@@ -8,80 +10,55 @@ const page = document.querySelectorAll(".inner .page");
 const indexx = page.length - 1;
 console.log(indexx);
 
+// 헤더부분
+ham_btn.addEventListener("click", (e) => {
+    e.preventDefault();
+    ham_btn.classList.add("del");
+    x_btn.classList.add("on");
+    menuOn.classList.add("on");
+})
 
-// 헤더 부분
-gnb_li.forEach((el) => {
-    el.addEventListener("mouseenter", (e) => {
-        const sub = e.currentTarget.querySelector(".sub");
-        let isBlock = window.getComputedStyle(sub).getPropertyValue("display");
-        sub.style.height = "0";
-        
-        let back = document.querySelector(".back");
-        back.style.height = "0";
-        
-        if (isBlock == "none") {
-            sub.style.display = "block";
-            back.style.display = "block";
-            let subHeight = sub.scrollHeight;
-            sub.style.height = subHeight + "px";
-            back.style.height = subHeight + "px";
-        }
-    });
-});
-gnb_li.forEach((el) => {
-    el.addEventListener("mouseleave", (e) => {
-        const sub = e.currentTarget.querySelector(".sub");
-        let isBlock = window.getComputedStyle(sub).getPropertyValue("display");
-        sub.style.height = "0";
-
-        let back = document.querySelector(".back");
-        back.style.height = "0";
-        
-        if (isBlock == "block") {
-            sub.style.display = "0";
-            sub.addEventListener("transitionend", function end() {
-                sub.removeEventListener("transitionend", end);
-                sub.style.display = "none";
-                back.style.display = "none";
-            });
-        }
-    });
-});
+x_btn.addEventListener("click", (e) => {
+    e.preventDefault();
+    x_btn.classList.remove('on');
+    ham_btn.classList.remove("del");
+    menuOn.classList.remove("on");
+})
 
 // 배너 부분
 let idx = 0;
-next.addEventListener("click",(e)=>{
+next.addEventListener("click", (e) => {
     e.preventDefault();
     if (idx <= 3) {
         nextBtn();
-    }else{
+    } else {
         return
     }
 })
-prev.addEventListener("click",(e)=>{
+prev.addEventListener("click", (e) => {
     e.preventDefault();
-    if(idx >= 1){
+    if (idx >= 1) {
         prevBtn();
-    }else{
+    } else {
         return
     }
-    
+
 })
 
 function nextBtn() {
-    if(idx == 0){
+    if (idx == 0) {
         page[idx].classList.add("on");
         page[idx].style.zIndex = 0;
     }
-    if(idx == 1){
+    if (idx == 1) {
         page[idx].classList.add("on");
         page[idx].style.zIndex = 1;
     }
-    if(idx == 2){
+    if (idx == 2) {
         page[idx].classList.add("on");
         page[idx].style.zIndex = 2;
     }
-    if(idx == 3){
+    if (idx == 3) {
         page[idx].classList.add("on");
         page[idx].style.zIndex = 5;
     }
@@ -90,20 +67,20 @@ function nextBtn() {
 
 function prevBtn() {
     idx--;
-    if(idx == 0){
-        page[idx].classList.remove("on");            
+    if (idx == 0) {
+        page[idx].classList.remove("on");
         page[idx].style.zIndex = 1;
     }
-    
-    if(idx == 1){
+
+    if (idx == 1) {
         page[idx].classList.remove("on");
         page[idx].style.zIndex = 0;
     }
-    if(idx == 2){
+    if (idx == 2) {
         page[idx].classList.remove("on");
         page[idx].style.zIndex = -1;
     }
-    if(idx == 3){
+    if (idx == 3) {
         page[idx].classList.remove("on");
         page[idx].style.zIndex = -2;
     }

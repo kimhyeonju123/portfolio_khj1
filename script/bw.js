@@ -19,8 +19,8 @@ fetch(url)
         items.map((el) => {
 
             let title = el.snippet.title;
-            if(title.length > 18){
-                title = title.substr(0, 18) + "...";
+            if (title.length > 20) {
+                title = title.substr(0, 20) + "...";
             }
 
             result += `
@@ -42,7 +42,7 @@ vidList.addEventListener("click", (e) => {
 
     e.preventDefault();
 
-    if(!e.target.closest("a")){
+    if (!e.target.closest("a")) {
         return;
     }
 
@@ -50,7 +50,7 @@ vidList.addEventListener("click", (e) => {
 
     let pop = document.createElement("figure");
     pop.classList.add("pop");
-    
+
     pop.innerHTML = `
         <iframe src="https://www.youtube.com/embed/${vidId}" frameborder = "0" width="100%" height="100%" allowfullscreen></iframe>
         <span class="btnClose">close</span>
@@ -58,10 +58,10 @@ vidList.addEventListener("click", (e) => {
     vidList.append(pop);
 });
 
-vidList.addEventListener("click",(e)=>{
+vidList.addEventListener("click", (e) => {
     const pop = vidList.querySelector(".pop");
-    if(pop){
+    if (pop) {
         const close = pop.querySelector("span");
-        if(e.target == close) pop.remove();
+        if (e.target == close) pop.remove();
     }
 })

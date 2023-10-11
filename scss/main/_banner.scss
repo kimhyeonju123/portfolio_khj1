@@ -1,674 +1,682 @@
 #banner {
-    width: 100%;
-    height: 1000px;
-    background-color: #F1F0E8;
-    .inner {
-        width: 100%;
-        height: 100%;
-        position: relative;
-        overflow: hidden;
-        .panel{
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            li{
-                width: 100%;
-                height: 100%;
-                position: absolute;
-                top: 0;
-                left: 0;
-                opacity: 0;
-                z-index: 1;
-                transition: .5s;
-                &.on{
-                    opacity: 1;
-                    z-index: 2;
-                }
-            }
-            #bwBanner{
-                width: 100%;
-                height: 100%;
-                background-image: url(../img/Bernard_Werber1.png);
-                background-position: bottom left;
-                background-position-x: 20%;
-                background-repeat: no-repeat;
-                background-size: contain;
-                p{
-                    font: bold 50px/1.5 "IBM Plex Sans KR";
-                    letter-spacing: 4px;
-                    position: absolute;
-                    top: 10%;
-                    right: 19%;
-                    text-align: right;
-                    color: #000;
-                }
-            }
-            #cyBanner{
-                width: 100%;
-                height: 100%;
-                background-image: url(../img/kcy1NoBg.png);
-                background-position: bottom left;
-                background-position-x: 10%;
-                background-repeat: no-repeat;
-                background-size: contain;
-                p{
-                    font: bold 50px/1.5 "IBM Plex Sans KR";
-                    letter-spacing: 4px;
-                    position: absolute;
-                    top: 10%;
-                    right: 19%;
-                    text-align: right;
-                    color: #000;
-                }
-            }
-            #jbBanner{
-                width: 100%;
-                height: 100%;
-                background-image: url(../img/Julian_Barnes2NoBg.png);
-                background-position: bottom left;
-                background-position-x: 0%;
-                background-repeat: no-repeat;
-                background-size: contain;
-                p{
-                    font: bold 50px/1.5 "IBM Plex Sans KR";
-                    letter-spacing: 4px;
-                    position: absolute;
-                    top: 10%;
-                    right: 19%;
-                    text-align: right;
-                    color: #000;
-                }
-            }
-        }
-    }
+	width: 100%;
+	height: 1000px;
+	background-color: #f1f0e8;
+	overflow: hidden;
+	.inner {
+		width: 100%;
+		height: 100%;
+		position: relative;
+		overflow: hidden;
+		.panel {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			li {
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				top: 0;
+				left: 0;
+				opacity: 0;
+				z-index: 1;
+				transition: 0.5s;
+				&.on {
+					opacity: 1;
+					z-index: 2;
+				}
+			}
+			#bwBanner {
+				width: 100%;
+				height: 100%;
+				img {
+					width: 100%;
+					height: 100%;
+					object-fit: contain;
+					transform: translate(-20%);
+				}
+				p {
+					font: bold 50px/1.5 'IBM Plex Sans KR';
+					letter-spacing: 4px;
+					position: absolute;
+					top: 10%;
+					right: 19%;
+					text-align: right;
+					color: #000;
+				}
+			}
+			#cyBanner {
+				width: 100%;
+				height: 100%;
+				img {
+					width: 100%;
+					height: 100%;
+					object-fit: contain;
+					transform: translate(-20%);
+				}
+				p {
+					font: bold 50px/1.5 'IBM Plex Sans KR';
+					letter-spacing: 4px;
+					position: absolute;
+					top: 10%;
+					right: 19%;
+					text-align: right;
+					color: #000;
+				}
+			}
+			#jbBanner {
+				width: 100%;
+				height: 100%;
+				img {
+					width: 100%;
+					height: 100%;
+					object-fit: contain;
+					transform: translate(-20%);
+				}
+				p {
+					font: bold 50px/1.5 'IBM Plex Sans KR';
+					letter-spacing: 4px;
+					position: absolute;
+					top: 10%;
+					right: 19%;
+					text-align: right;
+					color: #000;
+				}
+			}
+		}
+	}
 }
 
-#sub_banner{
-    width: 100%;
-    height: 100vh;
-    position: relative;
+#sub_banner {
+	width: 100%;
+	height: 100vh;
+	position: relative;
 
-    .inner{
-        width: 80%;
-        height: 80%;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%,-50%);
-        display: flex;
-        perspective: 4000px; //3d
+	.inner {
+		width: 80%;
+		height: 80%;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		display: flex;
+		perspective: 4000px; //3d
 
-        .bar{
-            width: 10vw;
-            height: 80vh;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%,-50%);
-            border-radius: 10px;
-            background-color: black;
-            box-shadow: 10px 0px 2px rgba(0, 0, 0, 0.4);
-            z-index: -3;
-        }
-        .page {
-            position: absolute;
-            width: 50%;
-            height: 100%;
-            top: 0;
-            right: 0;
-            background-color: #f1f0e8;
-            z-index: 0;
-            transform-origin: left center;
-            transition-duration: 1s;
-            transition-timing-function: ease-in;
+		.bar {
+			width: 10vw;
+			height: 80vh;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			border-radius: 10px;
+			background-color: black;
+			box-shadow: 10px 0px 2px rgba(0, 0, 0, 0.4);
+			z-index: -3;
+		}
+		.page {
+			position: absolute;
+			width: 50%;
+			height: 100%;
+			top: 0;
+			right: 0;
+			background-color: #f1f0e8;
+			z-index: 0;
+			transform-origin: left center;
+			transition-duration: 1s;
+			transition-timing-function: ease-in;
 
-            .txt{
-                opacity: 1;
-                transition: 1s .6s;
-                .info{
-                    font: 12px/1 "arial";
-                    position: absolute;
-                    right: 10px;
-                    bottom: 10px;
-                    color: #aaa;
-                }
-            }
-            h2{
-                opacity: 1;
-                transition: 1s .6s;
-            }
-            span{
-                opacity: 1;
-                transition: 1s .6s;
-            }
-            p{
-                opacity: 1;
-                transition: 1s .6s;
-            }
-            .pic{
-                opacity: 1;
+			.txt {
+				opacity: 1;
+				transition: 1s 0.6s;
+				.info {
+					font: 12px/1 'arial';
+					position: absolute;
+					right: 10px;
+					bottom: 10px;
+					color: #aaa;
+				}
+			}
+			h2 {
+				opacity: 1;
+				transition: 1s 0.6s;
+			}
+			span {
+				opacity: 1;
+				transition: 1s 0.6s;
+			}
+			p {
+				opacity: 1;
+				transition: 1s 0.6s;
+			}
+			.pic {
+				opacity: 1;
 
-                img{
-                    opacity: 1;
-                    transition: 1s .6s;
+				img {
+					opacity: 1;
+					transition: 1s 0.6s;
+				}
+			}
+			.story {
+				opacity: 1;
+				transition: 1s 0.6s;
+			}
 
-                }
-            }
-            .story{
-                opacity: 1;
-                transition: 1s .6s;
-            }
-            
-            &.on{
-                transform: rotateY(-180deg);
-                .txt{
-                    transition: .5s;
-                    opacity: 0;   
-                }
-                h2{
-                    transition: .5s;
-                    opacity: 0;
-                }
-                span{
-                    transition: .5s;
-                    opacity: 0;
-                }
-                p{
-                    transition: .5s;
-                    opacity: 0;
-                }
-                .pic{
-                    opacity: 0;
-                    img{
-                        opacity: 0;
-                        transition: .5s;
-                    }
-                }
-                .story{
-                    transition: .5s;
-                    opacity: 0;
-                }
-                article{
-                    visibility: hidden;
-                    transition: .5s;
-                }
-            }
-        }
-        // 개별
-        #page1 {
-            z-index: 1;
-            box-shadow: 10px 0px 2px rgba(0, 0, 0, 0.4), -2px 0 2px rgba(0, 0, 0, 0.4);
-            background-color: #5F7161;
+			&.on {
+				transform: rotateY(-180deg);
+				.txt {
+					transition: 0.5s;
+					opacity: 0;
+				}
+				h2 {
+					transition: 0.5s;
+					opacity: 0;
+				}
+				span {
+					transition: 0.5s;
+					opacity: 0;
+				}
+				p {
+					transition: 0.5s;
+					opacity: 0;
+				}
+				.pic {
+					opacity: 0;
+					img {
+						opacity: 0;
+						transition: 0.5s;
+					}
+				}
+				.story {
+					transition: 0.5s;
+					opacity: 0;
+				}
+				article {
+					visibility: hidden;
+					transition: 0.5s;
+				}
+			}
+		}
+		// 개별
+		#page1 {
+			z-index: 1;
+			box-shadow: 10px 0px 2px rgba(0, 0, 0, 0.4), -2px 0 2px rgba(0, 0, 0, 0.4);
+			background-color: #5f7161;
 
-            h2{
-                font: bold 3vw/1 "Diphylleia";
-                color: #fff;
-                text-align: center;
-                margin-bottom: 2%;
-            }
-            span{
-                display: block;
-                padding: 0 20%;
-                margin-top: 3%;
-                text-align: center;
-                color: #bbb;
-                font: 1vw/1.2 "Diphylleia";
-            }
+			h2 {
+				font: bold 3vw/1 'Diphylleia';
+				color: #fff;
+				text-align: center;
+				margin-bottom: 2%;
+			}
+			span {
+				display: block;
+				padding: 0 20%;
+				margin-top: 3%;
+				text-align: center;
+				color: #bbb;
+				font: 1vw/1.2 'Diphylleia';
+			}
 
-            .pic{
-                margin-top: 4vw;
-                margin-left: 7vw;
-                margin-bottom: 2%;
-                opacity: 1;
-                width: 25vw;
-                height: auto;
-                
-                img{
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
-                }
-            }
-            
-        }
-        #page2 {
-            z-index: 0;
-            box-shadow: 15px 0px 2px rgba(0, 0, 0, 0.4), -2px 0 2px rgba(0, 0, 0, 0.4);
-            padding: 1vh 2vw;
-            
-            span{
-                width: 100%;
-                display: block;
-                text-align: left;
-                color: #777;
-                font: 24px/1.2 "Diphylleia";
-                margin-top: 2%;
-            }
-            .txt{
-                position: absolute;
-                width: 20vw;
-                height: 40vh;
-                background-color: #fff;
-                box-shadow: inset 2px 2px 10px rgba(0, 0, 0, 0.4);
-                top: 10%;
-                right: 5%;
-                border-radius: 10px;
-                padding: 2vh 1vw;
+			.pic {
+				margin-top: 4vw;
+				margin-left: 7vw;
+				margin-bottom: 2%;
+				opacity: 1;
+				width: 25vw;
+				height: auto;
 
-                h2{
-                    font: bold 30px/1.2 "Diphylleia";
-                    border-bottom: 1px dashed #000;
-                    margin-bottom: 15%;
-                    padding-bottom: 10px;
-                }
-                p{
-                    font: 18px/1.2 "Diphylleia";
-                    margin-bottom: 3%;
-                }
-            }
-            
-            .pic{
-                position: absolute;
-                top: 10%;
-                opacity: 1;
-                width: 15vw;
-                height: 40vh;
-                border-radius: 10px;
-                
-                img{
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
-                    border-radius: 10px;
-                }
-            }
-            .story{
-                position: absolute;
-                width: 90%;
-                background-color: rgba(0, 0, 0, 0.04);
-                top: 65%;
-                border-radius: 30px;
-                padding: 10px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
+				img {
+					width: 100%;
+					height: 100%;
+					object-fit: cover;
+				}
+			}
+		}
+		#page2 {
+			z-index: 0;
+			box-shadow: 15px 0px 2px rgba(0, 0, 0, 0.4), -2px 0 2px rgba(0, 0, 0, 0.4);
+			padding: 1vh 2vw;
 
-                p{
-                    padding: 2%;
-                    font: 18px/1.5 "Diphylleia";
-                }
-            }
-        }
-        #page3 {
-            z-index: -1;
-             box-shadow: 20px 0px 2px rgba(0, 0, 0, 0.4), -2px 0 2px rgba(0, 0, 0, 0.4);
-            padding: 1vh 2vw;
+			span {
+				width: 100%;
+				display: block;
+				text-align: left;
+				color: #777;
+				font: 24px/1.2 'Diphylleia';
+				margin-top: 2%;
+			}
+			.txt {
+				position: absolute;
+				width: 20vw;
+				height: 40vh;
+				background-color: #fff;
+				box-shadow: inset 2px 2px 10px rgba(0, 0, 0, 0.4);
+				top: 10%;
+				right: 5%;
+				border-radius: 10px;
+				padding: 2vh 1vw;
 
-            span{
-                width: 100%;
-                display: block;
-                text-align: left;
-                color: #777;
-                font: 24px/1.2 "Diphylleia";
-                margin-top: 2%;
-            }
-            .txt{
-                position: absolute;
-                width: 20vw;
-                height: 40vh;
-                background-color: #fff;
-                box-shadow: inset 2px 2px 10px rgba(0, 0, 0, 0.4);
-                top: 10%;
-                right: 5%;
-                border-radius: 10px;
-                padding: 2vh 1vw;
+				h2 {
+					font: bold 30px/1.2 'Diphylleia';
+					border-bottom: 1px dashed #000;
+					margin-bottom: 15%;
+					padding-bottom: 10px;
+				}
+				p {
+					font: 18px/1.2 'Diphylleia';
+					margin-bottom: 3%;
+				}
+			}
 
-                h2{
-                    font: bold 30px/1.2 "Diphylleia";
-                    border-bottom: 1px dashed #000;
-                    margin-bottom: 15%;
-                    padding-bottom: 10px;
-                }
-                p{
-                    font: 18px/1.2 "Diphylleia";
-                    margin-bottom: 3%;
-                }
-            }
-            
-            .pic{
-                position: absolute;
-                top: 10%;
-                opacity: 1;
-                width: 15vw;
-                height: 40vh;
-                border-radius: 10px;
-                
-                img{
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
-                    border-radius: 10px;
-                }
-            }
-            .story{
-                position: absolute;
-                width: 90%;
-                background-color: rgba(0, 0, 0, 0.04);
-                top: 65%;
-                border-radius: 30px;
-                padding: 10px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
+			.pic {
+				position: absolute;
+				top: 10%;
+				opacity: 1;
+				width: 15vw;
+				height: 40vh;
+				border-radius: 10px;
 
-                p{
-                    padding: 2%;
-                    font: 18px/1.5 "Diphylleia";
-                }
-            }
-        }
-        #page4 {
-            background-color: #5F7161;
-            z-index: -2;
-            box-shadow: 25px 0px 2px rgba(0, 0, 0, 0.4), -2px 0 2px rgba(0, 0, 0, 0.4);
-            padding: 1vh 2vw;
-            
-            >h2{
-                width: 100%;
-                display: block;
-                text-align: left;
-                color: black;
-                font: bold 24px/1.2 "Diphylleia";
-                margin-top: 2%;
-            }
+				img {
+					width: 100%;
+					height: 100%;
+					object-fit: cover;
+					border-radius: 10px;
+				}
+			}
+			.story {
+				position: absolute;
+				width: 90%;
+				background-color: rgba(0, 0, 0, 0.04);
+				top: 65%;
+				border-radius: 30px;
+				padding: 10px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
 
-            .inner{
-                .vidList {
-                    width: 100%;
-                    display: flex;
-                    flex-wrap: wrap;
-                    justify-content: space-evenly;
-                    align-items:center;
-                    align-content: center;
-                    position: relative; //
-                
-                    article {
-                        width: 15vw;
-                        border: 1px solid black;
-                        background-color: rgba(0, 0, 0, 0.09);
-                        margin-bottom: 20px;
+				p {
+					padding: 2%;
+					font: 18px/1.5 'Diphylleia';
+				}
+			}
+		}
+		#page3 {
+			z-index: -1;
+			box-shadow: 20px 0px 2px rgba(0, 0, 0, 0.4), -2px 0 2px rgba(0, 0, 0, 0.4);
+			padding: 1vh 2vw;
 
-                        .pic {
-                            display: block;
-                            width: 100%;
-                            height: 30%;
-                            padding: 10px;
-                            opacity: 1;
-                            transition: 1s .6s;
-                
-                            img {
-                                width: 100%;
-                                height: 100%;
-                                object-fit: cover;
-                            }
-                        }
+			span {
+				width: 100%;
+				display: block;
+				text-align: left;
+				color: #777;
+				font: 24px/1.2 'Diphylleia';
+				margin-top: 2%;
+			}
+			.txt {
+				position: absolute;
+				width: 20vw;
+				height: 40vh;
+				background-color: #fff;
+				box-shadow: inset 2px 2px 10px rgba(0, 0, 0, 0.4);
+				top: 10%;
+				right: 5%;
+				border-radius: 10px;
+				padding: 2vh 1vw;
 
-                        .con {
-                            width: 100%;
-                            height: 40%;
-                            padding: 10px;
+				h2 {
+					font: bold 30px/1.2 'Diphylleia';
+					border-bottom: 1px dashed #000;
+					margin-bottom: 15%;
+					padding-bottom: 10px;
+				}
+				p {
+					font: 18px/1.2 'Diphylleia';
+					margin-bottom: 3%;
+				}
+			}
 
-                            h2 {
-                                font: bold 20px/1.2 "Diphylleia";
-                                color: black;
-                                margin-bottom: 15px;
-                                width: 100%;
-                            }
-                        }
-                    }
-                    .pop {
-                        width: 39.3vw;
-                        height: 100%;
-                        position: fixed;
-                        top: 0;
-                        left: -3.8vw;
-                        background-color: rgba(0, 0, 0, 0.8);
-                        padding: 2vw;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                
-                        .btnClose {
-                            position: absolute;
-                            top: 10px;
-                            right: 10px;
-                            color: #fff;
-                            cursor: pointer;
-                        }
-                    }
-                }
-            }
-        }
-    }
-    
-    ul.btn{
-        display: flex;
-        li{
-            position: absolute;
-            width: 80px;
-            height: 80px;
-            top: 40vh;
-            background-color: #333;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+			.pic {
+				position: absolute;
+				top: 10%;
+				opacity: 1;
+				width: 15vw;
+				height: 40vh;
+				border-radius: 10px;
 
-            a{
-                display: block;
-                i{
-                    font-size: 60px;
-                    color: #fff;
-                }
-            }
-        }
-        .subPrev{
-            left: 2vw;
-        }
-        .subNext{
-            right: 2vw;
-        }
-    }
+				img {
+					width: 100%;
+					height: 100%;
+					object-fit: cover;
+					border-radius: 10px;
+				}
+			}
+			.story {
+				position: absolute;
+				width: 90%;
+				background-color: rgba(0, 0, 0, 0.04);
+				top: 65%;
+				border-radius: 30px;
+				padding: 10px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+
+				p {
+					padding: 2%;
+					font: 18px/1.5 'Diphylleia';
+				}
+			}
+		}
+		#page4 {
+			background-color: #5f7161;
+			z-index: -2;
+			box-shadow: 25px 0px 2px rgba(0, 0, 0, 0.4), -2px 0 2px rgba(0, 0, 0, 0.4);
+			padding: 1vh 2vw;
+
+			> h2 {
+				width: 100%;
+				display: block;
+				text-align: left;
+				color: black;
+				font: bold 24px/1.2 'Diphylleia';
+				margin-top: 2%;
+			}
+
+			.inner {
+				.vidList {
+					width: 100%;
+					display: flex;
+					flex-wrap: wrap;
+					justify-content: space-evenly;
+					align-items: center;
+					align-content: center;
+					position: relative; //
+
+					article {
+						width: 15vw;
+						border: 1px solid black;
+						background-color: rgba(0, 0, 0, 0.09);
+						margin-bottom: 20px;
+
+						.pic {
+							display: block;
+							width: 100%;
+							height: 30%;
+							padding: 10px;
+							opacity: 1;
+							transition: 1s 0.6s;
+
+							img {
+								width: 100%;
+								height: 100%;
+								object-fit: cover;
+							}
+						}
+
+						.con {
+							width: 100%;
+							height: 40%;
+							padding: 10px;
+
+							h2 {
+								font: bold 20px/1.2 'Diphylleia';
+								color: black;
+								margin-bottom: 15px;
+								width: 100%;
+							}
+						}
+					}
+					.pop {
+						width: 39.3vw;
+						height: 100%;
+						position: fixed;
+						top: 0;
+						left: -3.8vw;
+						background-color: rgba(0, 0, 0, 0.8);
+						padding: 2vw;
+						display: flex;
+						justify-content: center;
+						align-items: center;
+
+						.btnClose {
+							position: absolute;
+							top: 10px;
+							right: 10px;
+							color: #fff;
+							cursor: pointer;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	ul.btn {
+		display: flex;
+		li {
+			position: absolute;
+			width: 80px;
+			height: 80px;
+			top: 40vh;
+			background-color: #333;
+			border-radius: 50%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			a {
+				display: block;
+				i {
+					font-size: 60px;
+					color: #fff;
+				}
+			}
+		}
+		.subPrev {
+			left: 2vw;
+		}
+		.subNext {
+			right: 2vw;
+		}
+	}
 }
 
 $maxHeight: 623px;
 @media screen and (max-width: 290px) {
-    #banner {
-        height: 200px;
-        .inner {
-            .panel{
-                #bwBanner{
-                    background-image: none;
-                    background-color: #efead8;
-                    p{
-                        width: 100%;
-                        font: bold 20px/1.5 "IBM Plex Sans KR";
-                        top: 50%;
-                        left: 50%;
-                        transform: translate(-50%,-50%);
-                        text-align: center;
-                    }
-                }
-                #cyBanner{
-                    background-image: none;
-                    background-color: #f7e6c4;
-                    p{
-                        width: 100%;
-                        font: bold 20px/1.5 "IBM Plex Sans KR";
-                        top: 50%;
-                        left: 50%;
-                        transform: translate(-50%,-50%);
-                        text-align: center;
-                    }
-                }
-                #jbBanner{
-                    background-image: none;
-                    background-color: #f1c376;
-                    p{
-                        width: 100%;
-                        font: bold 20px/1.5 "IBM Plex Sans KR";
-                        top: 50%;
-                        left: 50%;
-                        transform: translate(-50%,-50%);
-                        text-align: center;
-                    }
-                }
-            }
-        }
-    }
-    #sub_banner{
-        background-color: #333;
-        .inner{
-            width: 100%;
-            height: 70%;
-            position: relative;
-            top: 0%;
-            left: 0%;
-            transform: none;
-            .bar{
-                display: none;
-            }
-            .page {
-                width: 100%;
-                .txt{
-                    .info{
-                        font-size: 5px;
-                        right: 2px;
-                        bottom: 2px;
-                    }
-                }
-            }
-            #page1 {
-                h2{
-                    font-size: 10vw;
-                    color: #fff;
-                    text-align: center;
-                    margin-bottom: 2%;
-                }
-                span{
-                    display: block;
-                    padding: 0 20%;
-                    margin-top: 3%;
-                    text-align: center;
-                    color: #bbb;
-                    font: 1vw/1.2 "Diphylleia";
-                }
-    
-                .pic{
-                    margin-top: 30vw;
-                    margin-left: 20vw;
-                    width: 50vw;
-                }
-            }
-            #page2 {
-                span{
-                    font-size: 20px;
-                }
-                .txt{
-                    width: 85vw;
-                    height: 30vh;
-                    h2{
-                        font-size: 15px;
-                        margin-bottom: 5%;
-                    }
-                    p{
-                        font-size: 13px;
-                    }
-                }
-                .pic{
-                    display: none;
-                }
-                .story{
-                    top: 55%;
-                    margin-left: 4%;
-                    p{
-                        padding: 2%;
-                        font: 11px/1.4 "Diphylleia";
-                    }
-                }
-            }
-            #page3 {
-                span{
-                    font-size: 20px;
-                }
-                .txt{
-                    width: 85vw;
-                    height: 30vh;
-                    h2{
-                        font-size: 15px;
-                        margin-bottom: 5%;
-                    }
-                    p{
-                        font-size: 13px;
-                    }
-                }
-                .pic{
-                    display: none;
-                }
-                .story{
-                    top: 55%;
-                    margin-left: 4%;
-                    p{
-                        font: 11px/1.4 "Diphylleia";
-                    }
-                }
-            }
-            #page4 {
-                >h2{
-                    font-size: 20px;
-                    margin-bottom: 5%;
-                }
-                .inner{
-                    .vidList {
-                        display: flex;
-                        flex-direction: column;
-                        article {
-                            width: 50vw;
-                            border: 1px dashed black;
-                            background-color: none;
-                            margin-bottom: 1vw;
-                            &:last-child{
-                                margin-bottom: 0;
-                            }
-                            .con {
-                                display: none;
-                            }
-                            .pic {
-                                height: 30vw;
-                                padding: 2px;
-                            }
-                        }
-                        .pop {
-                            width: 100vw;
-                            .btnClose {
-                                top: 5px;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-        ul.btn{
-            li{
-                width: 55px;
-                height: 55px;
-                top: 80vh;
-                a{
-                    i{
-                        font-size: 40px;
-                    }
-                }
-            }
-        }
-    }
+	#banner {
+		height: 200px;
+		.inner {
+			.panel {
+				#bwBanner {
+					background-color: #efead8;
+					img {
+						display: none;
+					}
+					p {
+						width: 100%;
+						font: bold 20px/1.5 'IBM Plex Sans KR';
+						top: 50%;
+						left: 50%;
+						transform: translate(-50%, -50%);
+						text-align: center;
+					}
+				}
+				#cyBanner {
+					background-color: #f7e6c4;
+					img {
+						display: none;
+					}
+					p {
+						width: 100%;
+						font: bold 20px/1.5 'IBM Plex Sans KR';
+						top: 50%;
+						left: 50%;
+						transform: translate(-50%, -50%);
+						text-align: center;
+					}
+				}
+				#jbBanner {
+					background-color: #f1c376;
+					img {
+						display: none;
+					}
+					p {
+						width: 100%;
+						font: bold 20px/1.5 'IBM Plex Sans KR';
+						top: 50%;
+						left: 50%;
+						transform: translate(-50%, -50%);
+						text-align: center;
+					}
+				}
+			}
+		}
+	}
+	#sub_banner {
+		background-color: #333;
+		.inner {
+			width: 100%;
+			height: 70%;
+			position: relative;
+			top: 0%;
+			left: 0%;
+			transform: none;
+			.bar {
+				display: none;
+			}
+			.page {
+				width: 100%;
+				.txt {
+					.info {
+						font-size: 5px;
+						right: 2px;
+						bottom: 2px;
+					}
+				}
+			}
+			#page1 {
+				h2 {
+					font-size: 10vw;
+					color: #fff;
+					text-align: center;
+					margin-bottom: 2%;
+				}
+				span {
+					display: block;
+					padding: 0 20%;
+					margin-top: 3%;
+					text-align: center;
+					color: #bbb;
+					font: 1vw/1.2 'Diphylleia';
+				}
+
+				.pic {
+					margin-top: 30vw;
+					margin-left: 20vw;
+					width: 50vw;
+				}
+			}
+			#page2 {
+				span {
+					font-size: 20px;
+				}
+				.txt {
+					width: 85vw;
+					height: 30vh;
+					h2 {
+						font-size: 15px;
+						margin-bottom: 5%;
+					}
+					p {
+						font-size: 13px;
+					}
+				}
+				.pic {
+					display: none;
+				}
+				.story {
+					top: 55%;
+					margin-left: 4%;
+					p {
+						padding: 2%;
+						font: 11px/1.4 'Diphylleia';
+					}
+				}
+			}
+			#page3 {
+				span {
+					font-size: 20px;
+				}
+				.txt {
+					width: 85vw;
+					height: 30vh;
+					h2 {
+						font-size: 15px;
+						margin-bottom: 5%;
+					}
+					p {
+						font-size: 13px;
+					}
+				}
+				.pic {
+					display: none;
+				}
+				.story {
+					top: 55%;
+					margin-left: 4%;
+					p {
+						font: 11px/1.4 'Diphylleia';
+					}
+				}
+			}
+			#page4 {
+				> h2 {
+					font-size: 20px;
+					margin-bottom: 5%;
+				}
+				.inner {
+					.vidList {
+						display: flex;
+						flex-direction: column;
+						article {
+							width: 50vw;
+							border: 1px dashed black;
+							background-color: none;
+							margin-bottom: 1vw;
+							&:last-child {
+								margin-bottom: 0;
+							}
+							.con {
+								display: none;
+							}
+							.pic {
+								height: 30vw;
+								padding: 2px;
+							}
+						}
+						.pop {
+							width: 100vw;
+							.btnClose {
+								top: 5px;
+							}
+						}
+					}
+				}
+			}
+		}
+		ul.btn {
+			li {
+				width: 55px;
+				height: 55px;
+				top: 80vh;
+				a {
+					i {
+						font-size: 40px;
+					}
+				}
+			}
+		}
+	}
 }

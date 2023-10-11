@@ -1,430 +1,216 @@
 #header {
-    width: 100%;
-    position: relative;
+	width: 100%;
+	position: relative;
+	background-color: #f1f0e8;
+	border-bottom: 1px solid black;
+	margin-top: -1px;
+	.inner {
+		width: 1180px;
+		margin: 0 auto;
+		height: 100px;
+		position: relative;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
 
-    .inner {
-        width: 100%;
-        height: 100px;
-        position: relative;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        background-color: #606C5D;
+		> h1 {
+			a {
+				font: bold 40px/1 'Playfair Display';
+				color: #222;
+			}
+		}
 
-        h1 {
-            a {
-                font: bold 40px/1 "Playfair Display";
-                color: #222;
+		.menu {
+			#gnb {
+				display: flex;
+				gap: 30px;
+				li {
+					width: 100%;
+					height: 100%;
+					a {
+						display: block;
+						width: 100%;
+						height: 100%;
+						color: #333;
+						font: bold 20px/50px 'IBM Plex Sans KR';
+						transition: 0.2s;
+						position: relative;
+						&::after {
+							content: '';
+							display: block;
+							position: absolute;
+							left: 50%;
+							top: 50%;
+							width: 0;
+							height: 1px;
+							background-color: #333;
+						}
+						&::before {
+							content: '';
+							display: block;
+							position: absolute;
+							content: '';
+							display: block;
+							position: absolute;
+							left: 50%;
+							bottom: 50%;
+							width: 0;
+							height: 1px;
+							background-color: #333;
+						}
+						&:hover {
+							color: #606c5d;
+							&::after {
+								width: 100%;
+								left: 0;
+								top: 5px;
+								transition: top 0.3s;
+							}
+							&::before {
+								width: 100%;
+								left: 0;
+								bottom: 5px;
+								transition: bottom 0.3s;
+							}
+						}
+					}
+				}
+			}
+		}
+		.menuOn {
+			width: 200px;
+			height: 100vh;
+			background: #e1e1e1;
+			position: fixed;
+			top: 0;
+			left: -200px;
+			padding: 30px 10px;
+			z-index: 10;
+			transition: 0.5s;
+			&.on {
+				left: 0;
+			}
+			> h1 {
+				padding-bottom: 10px;
+				border-bottom: 1px solid #666;
+				a {
+					display: block;
+					font: bold 25px/1 'Playfair Display';
+					color: #606c5d;
+					text-align: center;
+				}
+			}
+			#gnbOn {
+				li {
+					> a {
+						display: block;
+						width: 100%;
+						padding: 20px 0;
+						font: bold 14px/1 'IBM Plex Sans KR';
+						color: #606c5d;
+						text-align: center;
+					}
+					&:last-child {
+						position: absolute;
+						bottom: 25vh;
+						width: 90%;
+						height: 40px;
+						padding: 0;
+						> a {
+							padding: 0;
+							line-height: 40px;
+							border: 1px solid black;
+						}
+					}
+				}
+			}
+		}
+		> a {
+			position: fixed;
+			z-index: 10;
+			width: 50px;
+			height: 50px;
+			background-color: #333;
+			border-radius: 50%;
+			right: 2vw;
+			bottom: 2vh;
+			display: flex;
+			justify-content: center;
+			align-items: center;
 
-            }
-        }
-
-        nav {
-            #gnb {
-                display: flex;
-                >li {
-                    width: 150px;
-                    position: relative;
-                    &:hover {
-                        >a{
-                            color: #222;
-                            &::after{
-                                content: '';
-                                display: block;
-                                position: absolute;
-                                top: 50%;
-                                width: 100%;
-                                height: 1px;
-                                background-color: #fff;
-                            }
-                        }
-                    }
-                    >a {
-                        display: block;
-                        width: 100%;
-                        height: 100px;
-                        font: bold 20px/100px "IBM Plex Sans KR";
-                        color: #EEE0C9;
-                        text-align: center;
-                        &::after{
-                            content: '';
-                            display: block;
-                            position: absolute;
-                            top: 50%;
-                            width: 0;
-                            height: 1px;
-                            background-color: #fff;
-                            transition: .5s;
-                        }
-                    }
-                    .back{
-                        width: 110vw;
-                        position: absolute;
-                        left: -68vw;
-                        top: 100px;
-                        z-index: 10;
-                        display: none;
-                        background-color: #434c41;
-                        transition: 0.5s ease;
-                    }
-                    .sub{
-                        position: absolute;
-                        left: 0;
-                        display: none; //
-                        overflow: hidden;
-                        transition: height 0.5s ease;
-                        z-index: 10;
-                        li{
-                            a{
-                                display: block;
-                                width: 150px;
-                                height: 50px;
-                                font: 15px/50px "IBM Plex Sans KR";
-                                letter-spacing: 1px;
-                                text-align: center;
-                                color:#fff;
-                                background-color: #434c41;
-                                &:hover{
-                                    color: #888;
-                                }
-                            }
-                        }
-                    }
-                }
-                >a{
-                    display: block;
-                    width: 150px;
-                    height: 100px;
-                    font: bold 20px/100px "IBM Plex Sans KR";
-                    color: #EEE0C9;
-                    text-align: center;
-                    position: relative;
-
-                    &::after{
-                        content: '';
-                        display: block;
-                        position: absolute;
-                        top: 50%;
-                        width: 0;
-                        height: 1px;
-                        background-color: #fff;
-                        transition: .5s;
-                    }
-                    &:hover {
-                        color: #222;
-                        &::after{
-                            content: '';
-                            display: block;
-                            position: absolute;
-                            top: 50%;
-                            width: 100%;
-                            height: 1px;
-                            background-color: #fff;
-                        }
-                    }
-                }
-            }
-        }
-        >a{
-            position: fixed;
-            z-index: 10;
-            width: 50px;
-            height: 50px;
-            background-color: #333;
-            border-radius: 50%;
-            right: 2vw;
-            bottom: 2vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            
-            i{
-                position: absolute;
-                color: #fff;
-                font-size: 20px;
-            }
-        }
-    }
-    .ham{
-        position: absolute;
-        top: 10%;
-        right: 10px;
-        display: none;
-        i{
-            font-size: 30px;
-        }
-    }
+			i {
+				position: absolute;
+				color: #fff;
+				font-size: 20px;
+			}
+		}
+		.ham_btn {
+			width: 30px;
+			height: 30px;
+			position: absolute;
+			top: 35px;
+			right: 0;
+			display: none;
+			justify-content: center;
+			align-items: center;
+			cursor: pointer;
+			> i {
+				font-size: 30px;
+			}
+		}
+		.x_btn {
+			width: 30px;
+			height: 30px;
+			position: absolute;
+			top: 35px;
+			right: 0;
+			display: none;
+			justify-content: center;
+			align-items: center;
+			cursor: pointer;
+			> i {
+				font-size: 30px;
+			}
+		}
+	}
 }
-#sub_header {
-    width: 100%;
-    position: relative;
-    .inner {
-        width: 100%;
-        height: 100px;
-        position: relative;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        background-color: #606C5D;
 
-        h1 {
-            a {
-                font: bold 40px/1 "Playfair Display";
-                color: #222;
-
-            }
-        }
-
-        nav {
-            #gnb {
-                display: flex;
-                >li {
-                    width: 150px;
-                    position: relative;
-                    &:hover {
-                        >a{
-                            color: #222;
-                            &::after{
-                                content: '';
-                                display: block;
-                                position: absolute;
-                                top: 50%;
-                                width: 100%;
-                                height: 1px;
-                                background-color: #fff;
-                            }
-                        }
-                    }
-                    >a {
-                        display: block;
-                        width: 100%;
-                        height: 100px;
-                        font: bold 20px/100px "IBM Plex Sans KR";
-                        color: #EEE0C9;
-                        text-align: center;
-                        &::after{
-                            content: '';
-                            display: block;
-                            position: absolute;
-                            top: 50%;
-                            width: 0;
-                            height: 1px;
-                            background-color: #fff;
-                            transition: .5s;
-                        }
-                    }
-                    .back{
-                        width: 110vw;
-                        position: absolute;
-                        left: -68vw;
-                        top: 100px;
-                        z-index: 10;
-                        display: none;
-                        background-color: #434c41;
-                        transition: 0.5s ease;
-                    }
-                    .sub{
-                        position: absolute;
-                        left: 0;
-                        display: none; //
-                        overflow: hidden;
-                        transition: height 0.5s ease;
-                        z-index: 10;
-                        li{
-                            a{
-                                display: block;
-                                width: 150px;
-                                height: 50px;
-                                font: 15px/50px "IBM Plex Sans KR";
-                                letter-spacing: 1px;
-                                text-align: center;
-                                color:#fff;
-                                background-color: #434c41;
-                                &:hover{
-                                    color: #888;
-                                }
-                            }
-                        }
-                    }
-                }
-                >a{
-                    display: block;
-                    width: 150px;
-                    height: 100px;
-                    font: bold 20px/100px "IBM Plex Sans KR";
-                    color: #EEE0C9;
-                    text-align: center;
-                    position: relative;
-
-                    &::after{
-                        content: '';
-                        display: block;
-                        position: absolute;
-                        top: 50%;
-                        width: 0;
-                        height: 1px;
-                        background-color: #fff;
-                        transition: .5s;
-                    }
-                    &:hover {
-                        color: #222;
-                        &::after{
-                            content: '';
-                            display: block;
-                            position: absolute;
-                            top: 50%;
-                            width: 100%;
-                            height: 1px;
-                            background-color: #fff;
-                        }
-                    }
-                }
-            }
-        }
-        >a{
-            position: fixed;
-            z-index: 10;
-            width: 50px;
-            height: 50px;
-            background-color: #333;
-            border-radius: 50%;
-            right: 2vw;
-            bottom: 2vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            
-            i{
-                position: absolute;
-                color: #fff;
-                font-size: 20px;
-            }
-        }
-    }
-}
 @media screen and (max-width: 290px) {
-    #header {
-        overflow: hidden;
-        .inner {
-            display: flex;
-            flex-direction: column;
-            position: relative;
-            h1 {
-                a {
-                    font-size: 25px;
-                }
-            }
-            nav {
-                #gnb {
-                    >li {
-                        >a {
-                            height: 50px;
-                            font: bold 15px/50px "IBM Plex Sans KR";
-                            color: #EEE0C9;
-                            text-align: center;
-                            &::after{
-                                content: '';
-                                display: block;
-                                width: 0;
-                                height: 1px;
-                                background-color: #fff;
-                                transition: .5s;
-                            }
-                        }
-                        .back{
-                            width: 170vw;
-                            position: absolute;
-                            right: -100%;
-                            top: 50px;
-                            transition: 0.5s ease;
-                        }
-                        .sub{
-                            li{
-                                a{
-                                    font-size: 11px;
-                                }
-                            }
-                        }
-                    }
-                    >a{
-                        height: 50px;
-                        font: bold 15px/50px "IBM Plex Sans KR";
-                    }
-                }
-            }
-            >a{
-                width: 40px;
-                height: 40px;
-                i{
-                    font-size: 18px;
-                }
-            }
-        }
-        .ham{
-            position: absolute;
-            top: 10%;
-            right: 10px;
-            display: block;
-            i{
-                font-size: 30px;
-            }
-        }
-    }
-    #sub_header {
-        .inner {
-            display: flex;
-            flex-direction: column;
-            position: relative;
-            h1 {
-                a {
-                    font-size: 25px;
-                }
-            }
-            nav {
-                #gnb {
-                    >li {
-                        >a {
-                            height: 50px;
-                            font: bold 15px/50px "IBM Plex Sans KR";
-                            color: #EEE0C9;
-                            text-align: center;
-                            &::after{
-                                content: '';
-                                display: block;
-                                width: 0;
-                                height: 1px;
-                                background-color: #fff;
-                                transition: .5s;
-                            }
-                        }
-                        .back{
-                            width: 170vw;
-                            position: absolute;
-                            right: -100%;
-                            top: 50px;
-                            transition: 0.5s ease;
-                        }
-                        .sub{
-                            li{
-                                a{
-                                    font-size: 11px;
-                                }
-                            }
-                        }
-                    }
-                    >a{
-                        height: 50px;
-                        font: bold 15px/50px "IBM Plex Sans KR";
-                    }
-                }
-            }
-            >a{
-                width: 40px;
-                height: 40px;
-                i{
-                    font-size: 18px;
-                }
-            }
-        }
-    }
+	#header {
+		width: 100%;
+		.inner {
+			width: 100%;
+			> h1 {
+				transform: translateX(10px);
+				a {
+					font-size: 20px;
+				}
+			}
+			> a {
+				display: none;
+			}
+			.menu {
+				#gnb {
+					display: none;
+				}
+			}
+			> a {
+				position: none;
+			}
+			.ham_btn {
+				right: 10px;
+				display: flex;
+				&.del {
+					display: none;
+				}
+			}
+			.x_btn {
+				right: 10px;
+				display: none;
+				&.on {
+					display: flex;
+				}
+			}
+		}
+	}
 }

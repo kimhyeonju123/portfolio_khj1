@@ -6,36 +6,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>main</title>
     <link rel="stylesheet" href="css/style.css">
-    <script defer src="script/main.js"></script>
     <script defer src="script/scroll.js"></script>
+    <script defer src="script/main.js"></script>
     <script src="https://kit.fontawesome.com/c12878d3ba.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
     <section id="header">
         <div class="inner">
             <h1>
                 <a href="index.html">MUSNSORI</a>
             </h1>
-            <nav>
+            <nav class="menu">
                 <ul id="gnb">
-                    <li>
-                        <a href="#">AUTHOR</a>
-                        <div class="back"></div>
-                        <ul class="sub">
-                            <li><a href="BernardWerber.html">Bernard_Werber</a></li>
-                            <li><a href="KimChoyeop.html">KimChoyeop</a></li>
-                            <li><a href="JulianBarnes.html">Julian_Barnes</a></li>
-                        </ul>
-                    </li>
-                    <a href="information.html">ABOUT</a>
+                    <li><a href="BernardWerber.html">BernardWerber</a></li>
+                    <li><a href="KimChoyeop.html">KimChoyeop</a></li>
+                    <li><a href="JulianBarnes.html">JulianBarnes</a></li>
+                    <li><a href="information.html">About</a></li>
+                </ul>
+            </nav>
+            <nav class="menuOn">
+                <h1>
+                    <a href="index.html">MUSNSORI</a>
+                </h1>
+                <ul id="gnbOn">
+                    <li><a href="BernardWerber.html">BernardWerber</a></li>
+                    <li><a href="KimChoyeop.html">KimChoyeop</a></li>
+                    <li><a href="JulianBarnes.html">JulianBarnes</a></li>
+                    <li><a href="information.html">About</a></li>
+                    <li><a href="index.html">홈으로</a></li>
                 </ul>
             </nav>
             <a href="#" title="위로">
                 <i class="fa-solid fa-arrow-up"></i>
             </a>
-        </div>
-        <div class="ham">
-            <i class="fa-solid fa-bars"></i>
+            <div class="ham_btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <div class="x_btn">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
         </div>
     </section>
 
@@ -43,6 +53,7 @@
         <div class="inner">
             <ul class="panel">
                 <li id="bwBanner" class="on">
+                    <img src="img/Bernard_Werber1.png" alt="베르나르 베르베르 작가의 사진">
                     <p>
                         무슨 일이 <br>일어나더라도<br>
                         그 어떤 대가를<br> 치르더라도<br>
@@ -50,6 +61,7 @@
                     </p>
                 </li>
                 <li id="cyBanner">
+                    <img src="img/kcy1NoBg.png" alt="김초엽 작가의 사진">
                     <p>
                         ‘위로의 말’을<br>
                         건네기보다<br>
@@ -60,6 +72,7 @@
                     </p>
                 </li>
                 <li id="jbBanner">
+                    <img src="img/Julian_Barnes2NoBg.png" alt="줄리언 반스 작가의 사진">
                     <p>
                         영화 감독으로서의<br>
                         본분에 충실한 방법은<br>
@@ -70,7 +83,6 @@
             </ul>
         </div>
     </section>
-
     <section id="main">
         <div class="frame">
             <article>
@@ -82,15 +94,15 @@
                     <strong>Bernard Werber</strong>
 
                     <div class="desc">
-                            <br>최면에 성공해 무의식의 복도에 늘어선 기억의 문을 열 수 있게 된 르네.<br>
-                            문 너머에서 엿본 기억은, 제1차 세계 대전의 전장에서 목숨을 잃은 그의 전생이었다.
-                            <br>최면이 끝난 후에도 너무나 생생하고 강렬한 기억에 시달리던 그는 몸싸움에 휘말려
-                            <br>의도치 않게 사람을 죽이고 경찰에 자수할지 말지 고민하며 초조한 나날을 보내게 된다.<br>
-                            <br>한편 자신에게 총 111번의 전생이 있었다는 사실을 알고 제1차 세계 대전 참전병 외에도 여러 기억의 문을 열어 본다.
-                            <br><br>그중에서도 최초의 전생은 놀랍게도 현대인이 <아틀란티스>라고 부르는 전설 속의 섬에 사는 남자 게브였다.<br>
-                                아틀란티스가 바닷속에 잠겨 버렸다고 알고 있는 르네는 어떻게든 게브를 구하고 싶어 하고,
-                                <판도라의 상자> 무대에서 만났던 최면사 오팔이 르네의 조력자를 자처한다.
-                                    <br><br>현생에서는 경찰에 쫓기며 정신병자 취급을 받고, 전생에서는 대홍수가 예고된 가운데 <br>과연 르네와 게브의 운명은?
+                        <br>최면에 성공해 무의식의 복도에 늘어선 기억의 문을 열 수 있게 된 르네.<br>
+                        문 너머에서 엿본 기억은, 제1차 세계 대전의 전장에서 목숨을 잃은 그의 전생이었다.
+                        <br>최면이 끝난 후에도 너무나 생생하고 강렬한 기억에 시달리던 그는 몸싸움에 휘말려
+                        <br>의도치 않게 사람을 죽이고 경찰에 자수할지 말지 고민하며 초조한 나날을 보내게 된다.<br>
+                        <br>한편 자신에게 총 111번의 전생이 있었다는 사실을 알고 제1차 세계 대전 참전병 외에도 여러 기억의 문을 열어 본다.
+                        <br><br>그중에서도 최초의 전생은 놀랍게도 현대인이 <아틀란티스>라고 부르는 전설 속의 섬에 사는 남자 게브였다.<br>
+                            아틀란티스가 바닷속에 잠겨 버렸다고 알고 있는 르네는 어떻게든 게브를 구하고 싶어 하고,
+                            <판도라의 상자> 무대에서 만났던 최면사 오팔이 르네의 조력자를 자처한다.
+                                <br><br>현생에서는 경찰에 쫓기며 정신병자 취급을 받고, 전생에서는 대홍수가 예고된 가운데 <br>과연 르네와 게브의 운명은?
                     </div>
                 </div>
                 <div class="pic">
@@ -200,13 +212,13 @@
                         원서로 150페이지 남짓한 이 길지 않은 소설이 독자를 몰아치는 힘과 서스펜스, 섬세하고 정교한 구성력 때문이다.<br>
                         또한 평론가와 저널리스트들은 소설적 완성도와 비극적 테마가 주는 무게로 따질 때, <br>
                         반스의 이 최신작이 비슷한 길이의 노벨라(경장편)인 헨리 제임스의 <나사의 회전>에 필적하는 작품이라고 말한다.<br>
-                        <br>불완전하고 믿을 수 없는 1인칭 화자의 시점에 의존하여 인간의 기억과 시점의 왜곡을 탐색하고,<br>
-                        마침내 진실이 모습을 드러낼 때 묵직한 울림을 전한다는 점에서다.<br>
-                        <br>이 작품의 테마인 '왜곡된 기억'은 줄리언 반스가 논픽션인 <두려워할 것은 없다>에서 철학자인
-                        자신의 형 조너선 반스와의 쉽지 않은 관계에 대해 이야기하면서 다루었던 주제이기도 하다.<br>
-                        <br>역사란 과연 무엇인가라는 교사의 질문에 '에이드리언'이 라그랑주를 인용해<br>
-                        <br>'역사는 부정확한 기억이 불충분한 문서와 만나는 지점에서 빚어지는 확신'<br>
-                        <br>이라고 대답하는 지점에서 작가의 성찰은 시작된다.
+                            <br>불완전하고 믿을 수 없는 1인칭 화자의 시점에 의존하여 인간의 기억과 시점의 왜곡을 탐색하고,<br>
+                            마침내 진실이 모습을 드러낼 때 묵직한 울림을 전한다는 점에서다.<br>
+                            <br>이 작품의 테마인 '왜곡된 기억'은 줄리언 반스가 논픽션인 <두려워할 것은 없다>에서 철학자인
+                                자신의 형 조너선 반스와의 쉽지 않은 관계에 대해 이야기하면서 다루었던 주제이기도 하다.<br>
+                                <br>역사란 과연 무엇인가라는 교사의 질문에 '에이드리언'이 라그랑주를 인용해<br>
+                                <br>'역사는 부정확한 기억이 불충분한 문서와 만나는 지점에서 빚어지는 확신'<br>
+                                <br>이라고 대답하는 지점에서 작가의 성찰은 시작된다.
                     </div>
                 </div>
                 <div class="pic">
@@ -285,7 +297,7 @@
                     <article>
                         <div class="boxInner">
                             <div class="pic">
-                                <img src="img/Julian_Barnes.jpg" alt="줄리언 반스가 정면을 보고 있는 사진 ">
+                                <img src="img/Julian_Barnes.jpg" alt="줄리언 반스가 정면을 보고 있는 사진">
                             </div>
                             <div class="box">
                                 <a href="#;">줄리언 반스</a>
